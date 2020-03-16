@@ -14,6 +14,9 @@
 		31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C2396E2412E6E9008AC51C /* LaunchScreen.storyboard */; };
 		31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */; };
 		31C239862412E6E9008AC51C /* SecretSantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239852412E6E9008AC51C /* SecretSantaUITests.swift */; };
+		416E45F70D38E5EB91552594 /* Pods_SecretSantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */; };
+		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
+		D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		31C239622412E6E4008AC51C /* SecretSanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239652412E6E4008AC51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C239672412E6E4008AC51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		31C239812412E6E9008AC51C /* SecretSantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretSantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239852412E6E9008AC51C /* SecretSantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSantaUITests.swift; sourceTree = "<group>"; };
 		31C239872412E6E9008AC51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7B7A11AC938DCA0BDA46F0 /* Pods-SecretSanta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.debug.xcconfig"; sourceTree = "<group>"; };
+		567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		613C63F4D913B75BF03213C3 /* Pods-SecretSantaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.release.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.release.xcconfig"; sourceTree = "<group>"; };
+		71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.release.xcconfig"; sourceTree = "<group>"; };
+		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416E45F70D38E5EB91552594 /* Pods_SecretSantaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D8F766882DC3CE5F543462D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B7A11AC938DCA0BDA46F0 /* Pods-SecretSanta.debug.xcconfig */,
+				8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */,
+				71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */,
+				078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */,
+				F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */,
+				613C63F4D913B75BF03213C3 /* Pods-SecretSantaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		31C239592412E6E4008AC51C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				31C239792412E6E9008AC51C /* SecretSantaTests */,
 				31C239842412E6E9008AC51C /* SecretSantaUITests */,
 				31C239632412E6E4008AC51C /* Products */,
+				2D8F766882DC3CE5F543462D /* Pods */,
+				A0159536A99921EBC0A0CD7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +156,16 @@
 			path = SecretSantaUITests;
 			sourceTree = "<group>";
 		};
+		A0159536A99921EBC0A0CD7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */,
+				C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */,
+				DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C2398A2412E6E9008AC51C /* Build configuration list for PBXNativeTarget "SecretSanta" */;
 			buildPhases = (
+				CC3D19521BC081B802C23677 /* [CP] Check Pods Manifest.lock */,
 				31C2395E2412E6E4008AC51C /* Sources */,
 				31C2395F2412E6E4008AC51C /* Frameworks */,
 				31C239602412E6E4008AC51C /* Resources */,
+				98A89DBD68C9104F2074CF02 /* [CP] Embed Pods Frameworks */,
+				9CABE1C4411E161ECEAC12B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C2398D2412E6E9008AC51C /* Build configuration list for PBXNativeTarget "SecretSantaTests" */;
 			buildPhases = (
+				8F7A008F9AAF47EA88D1986A /* [CP] Check Pods Manifest.lock */,
 				31C239722412E6E9008AC51C /* Sources */,
 				31C239732412E6E9008AC51C /* Frameworks */,
 				31C239742412E6E9008AC51C /* Resources */,
@@ -167,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C239902412E6E9008AC51C /* Build configuration list for PBXNativeTarget "SecretSantaUITests" */;
 			buildPhases = (
+				CA81C7F36E410CDCAC077C5C /* [CP] Check Pods Manifest.lock */,
 				31C2397D2412E6E9008AC51C /* Sources */,
 				31C2397E2412E6E9008AC51C /* Frameworks */,
 				31C2397F2412E6E9008AC51C /* Resources */,
+				0F6633A6A28592C26E665058 /* [CP] Embed Pods Frameworks */,
+				121AA49C17E57DC10AC85DB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +298,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F6633A6A28592C26E665058 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		121AA49C17E57DC10AC85DB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F7A008F9AAF47EA88D1986A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SecretSantaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A89DBD68C9104F2074CF02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CABE1C4411E161ECEAC12B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta/Pods-SecretSanta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA81C7F36E410CDCAC077C5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SecretSanta-SecretSantaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3D19521BC081B802C23677 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SecretSanta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31C2395E2412E6E4008AC51C /* Sources */ = {
@@ -430,6 +615,7 @@
 		};
 		31C2398B2412E6E9008AC51C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7B7A11AC938DCA0BDA46F0 /* Pods-SecretSanta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +634,7 @@
 		};
 		31C2398C2412E6E9008AC51C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +653,7 @@
 		};
 		31C2398E2412E6E9008AC51C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +675,7 @@
 		};
 		31C2398F2412E6E9008AC51C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 613C63F4D913B75BF03213C3 /* Pods-SecretSantaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +697,7 @@
 		};
 		31C239912412E6E9008AC51C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +718,7 @@
 		};
 		31C239922412E6E9008AC51C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
