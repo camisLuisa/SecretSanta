@@ -8,9 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    var viewMenu: MenuView
+    
+    init() {
+        viewMenu = MenuView()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
+        view = viewMenu
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
