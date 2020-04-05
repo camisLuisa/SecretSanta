@@ -10,10 +10,12 @@ target 'SecretSanta' do
   pod 'GoogleSignIn', '~> 4.1.1'
   pod 'Alamofire', '~> 4.9.1'
 
+  #Util
+  pod 'SwiftGen', '~> 6.0'
+
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
-  pod 'Firebase/GoogleDataTransport'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 
