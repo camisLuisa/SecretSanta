@@ -19,6 +19,6 @@ class SplashView: UIView {
     
     private let contentView: UIView = {
         let view
-    }
+    }()
 
 }
