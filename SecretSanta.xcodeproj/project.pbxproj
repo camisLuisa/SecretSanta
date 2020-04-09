@@ -22,6 +22,7 @@
 		3113CEF5243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
 		3113CEF6243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
 		3113CEF7243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
+		3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */; };
 		314DC827243A581100CDF881 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC826243A581100CDF881 /* Reachability.swift */; };
 		314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC828243A601B00CDF881 /* HTTPMethod.swift */; };
 		316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 316CE74F241F14A500411DDF /* GoogleService-Info.plist */; };
@@ -67,6 +68,7 @@
 		3113CEEC243E9AED001DF8CB /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		3113CEF0243E9B36001DF8CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		314DC826243A581100CDF881 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		314DC828243A601B00CDF881 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		316CE74F241F14A500411DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		3113CED4243A6171001DF8CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3113CEF9243EAAB9001DF8CB /* CreateGroup */,
 				3113CED7243A6233001DF8CB /* Splash */,
 			);
 			path = Components;
@@ -172,6 +175,14 @@
 				3113CEF0243E9B36001DF8CB /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3113CEF9243EAAB9001DF8CB /* CreateGroup */ = {
+			isa = PBXGroup;
+			children = (
+				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
+			);
+			path = CreateGroup;
 			sourceTree = "<group>";
 		};
 		314DC825243A52EA00CDF881 /* Service */ = {
@@ -574,6 +585,7 @@
 				314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
+				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
 				3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */,
 				3113CEF5243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */,
