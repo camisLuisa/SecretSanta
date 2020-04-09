@@ -10,7 +10,7 @@ import UIKit
 
 class SplashView: UIView {
     
-    // MARK: - Properties
+    // MARK: - Properties -
     private let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = ColorName.red1.color
@@ -23,7 +23,7 @@ class SplashView: UIView {
         return image
     }()
     
-    // MARK: - init
+    // MARK: - init -
     init() {
         super.init(frame: .zero)
         setupViews()
@@ -34,6 +34,7 @@ class SplashView: UIView {
     }
 }
 
+// MARK: - Codeview -
 extension SplashView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
@@ -43,24 +44,11 @@ extension SplashView: CodeView {
     func setupContraints() {
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
-
-//        if #available(iOS 11.0, *) {
-//            contentView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
-//            contentView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor).isActive = true
-//            contentView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor).isActive = true
-//            contentView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
-//        } else {
-//            contentView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor).isActive = true
-//            contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-//            contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-//            contentView.bottomAnchor.constraint(equalTo: self.layoutMarginsGuide.bottomAnchor).isActive = true
-//        }
         
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//        contentView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         
