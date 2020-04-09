@@ -12,19 +12,47 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    private var applicationCoordinator: ApplicationCoordinator?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureNavigationBar()
+        createCoordinator()
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        let nav = UINavigationController()
-        let vc = ViewController()
-        window.rootViewController = nav
-        window.makeKeyAndVisible()
-        nav.pushViewController(vc, animated: true)
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = window
+//        let nav = UINavigationController()
+//        nav.navigationBar.isTranslucent = false
+//        nav.navigationBar.barTintColor = ColorName.red1.color
+//        let vc = SplashViewController()
+//        window.rootViewController = nav
+//        window.makeKeyAndVisible()
+//        nav.pushViewController(vc, animated: true)
         return true
+    }
+    
+    private func configureNavigationBar() {
+        let appearance = UINavigationBar.appearance()
+        appearance.isTranslucent = false
+        appearance.barTintColor = ColorName.red1.color
+    }
+    
+    @discardableResult
+    private func configureWindow() -> UIWindow {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.tintColor = ColorName.red1.color
+        self.window = window
+        return window
+    }
+    
+    private func createCoordinator() {
+        let window = configureWindow()
+        let navigationController = UINavigationController()
+        
+        self.applicationCoordinator = ApplicationCoordinator(window: window, navigationController:navigationController, coordinator: SplashCoordinator(window: window, navigationController: navigationController))
+        self.applicationCoordinator?.start()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

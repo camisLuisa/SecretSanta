@@ -8,9 +8,21 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
+    let viewSplash: SplashView
 
+    init() {
+        viewSplash = SplashView()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
+        view = viewSplash
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
 }

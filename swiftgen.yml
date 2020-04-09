@@ -10,7 +10,7 @@ xcassets:
     - templateName: swift4
       output: SecretSanta/SwiftGen/assets-images.swift
 colors:
-  inputs: SecretSanta/SwiftGen/colors.json
+  inputs: SecretSanta/SwiftGen/colors.txt
   outputs:
     templateName: swift4
     output: SecretSanta/SwiftGen/AssetsColors.swift
