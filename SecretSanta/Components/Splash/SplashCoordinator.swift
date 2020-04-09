@@ -21,8 +21,34 @@ final class SplashCoordinator: Coordinator {
     
     func start() {
         let splashViewController = SplashViewController()
+        
+        let timer = Timer(timeInterval: 3.0,
+                          target: self,
+                          selector: #selector(updateTimer),
+                          userInfo: nil,
+                          repeats: true)
+        
         window.rootViewController = splashViewController
         window.makeKeyAndVisible()
+        
+        RunLoop.current.add(timer, forMode: .common)
+        
+        runCreateGroupFlow()
+        
+    }
+    
+    func runCreateGroupFlow() {
+        let coordinator = CreateGroupCoordinator()
+        coordinator.start()
+        
+        window.rootViewController = coordinator.rootViewController
+        childCoordinators.append(coordinator)
+        
+    }
+    
+    @objc
+    func updateTimer(){
+        //nothing
     }
     
     

@@ -9,5 +9,23 @@
 import UIKit
 
 final class GroupViewController: UIViewController {
+    private let viewGroup: GroupView
+    
+    // MARK: - Init -
+    init() {
+        viewGroup = GroupView()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle -
+    override func viewDidLoad() {
+        view = viewGroup
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
 }

@@ -1,5 +1,5 @@
 strings:
-  inputs: SecretSanta/Base.lproj
+  inputs: SecretSanta/SwiftGen/Localizable.strings
   filter: .+\.strings$
   outputs:
     - templateName: structured-swift4

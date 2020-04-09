@@ -9,7 +9,7 @@
 import UIKit
 
 final class SplashViewController: UIViewController {
-    let viewSplash: SplashView
+    private let viewSplash: SplashView
 
     init() {
         viewSplash = SplashView()
