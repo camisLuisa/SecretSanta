@@ -31,10 +31,9 @@ final class SplashCoordinator: Coordinator {
         window.rootViewController = splashViewController
         window.makeKeyAndVisible()
         
-        RunLoop.current.add(timer, forMode: .common)
-        
-        runCreateGroupFlow()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.runCreateGroupFlow()
+        }
     }
     
     func runCreateGroupFlow() {
