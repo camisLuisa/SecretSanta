@@ -9,11 +9,15 @@
 import UIKit
 
 final class GroupViewController: UIViewController {
+    
+    // MARK: - Attributes -
     private let viewGroup: GroupView
+    private let coordinator: CreateGroupCoordinator
     
     // MARK: - Init -
-    init() {
-        viewGroup = GroupView()
+    init(coordinator: CreateGroupCoordinator) {
+        self.viewGroup = GroupView()
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,6 +30,9 @@ final class GroupViewController: UIViewController {
         view = viewGroup
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewGroup.didSelectAddGroup = {
+            self.coordinator.goToCreateGroup()
+        }
     }
     
 }

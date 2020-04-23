@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
+		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
+		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
 		3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CED5243A6213001DF8CB /* SplashViewController.swift */; };
 		3113CED9243A6282001DF8CB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CED8243A6282001DF8CB /* SplashView.swift */; };
 		3113CEDD243A7D73001DF8CB /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDB243A7D73001DF8CB /* strings.swift */; };
@@ -26,6 +29,7 @@
 		3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEFC243EAE02001DF8CB /* GroupView.swift */; };
 		3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
 		3113CF01243EB4BF001DF8CB /* CreateGroupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */; };
+		3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF03243FF8E2001DF8CB /* RedButton.swift */; };
 		314DC827243A581100CDF881 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC826243A581100CDF881 /* Reachability.swift */; };
 		314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC828243A601B00CDF881 /* HTTPMethod.swift */; };
 		316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 316CE74F241F14A500411DDF /* GoogleService-Info.plist */; };
@@ -62,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
+		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
 		3113CED5243A6213001DF8CB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3113CED8243A6282001DF8CB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3113CEDB243A7D73001DF8CB /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 		3113CEFC243EAE02001DF8CB /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		3113CEFE243EB048001DF8CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupCoordinator.swift; sourceTree = "<group>"; };
+		3113CF03243FF8E2001DF8CB /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		314DC826243A581100CDF881 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		314DC828243A601B00CDF881 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		316CE74F241F14A500411DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -144,9 +152,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3101F991244234D7006D3ED6 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
+				3113CEFC243EAE02001DF8CB /* GroupView.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		3113CED4243A6171001DF8CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3101F991244234D7006D3ED6 /* Group */,
 				3113CEF9243EAAB9001DF8CB /* CreateGroup */,
 				3113CED7243A6233001DF8CB /* Splash */,
 			);
@@ -187,9 +205,10 @@
 		3113CEF9243EAAB9001DF8CB /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
-				3113CEFC243EAE02001DF8CB /* GroupView.swift */,
+				3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */,
 				3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */,
+				3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */,
+				3101F994244235C5006D3ED6 /* CreateGroupView.swift */,
 			);
 			path = CreateGroup;
 			sourceTree = "<group>";
@@ -207,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				31FE9E99242C2B0B0034368F /* CodeView.swift */,
-				314DC82B243A611D00CDF881 /* Views */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,6 +233,7 @@
 		314DC82B243A611D00CDF881 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3113CF03243FF8E2001DF8CB /* RedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +263,7 @@
 		31C239642412E6E4008AC51C /* SecretSanta */ = {
 			isa = PBXGroup;
 			children = (
+				314DC82B243A611D00CDF881 /* Views */,
 				3113CEEB243E9A4C001DF8CB /* Coordinator */,
 				31C2396C2412E6E9008AC51C /* Assets.xcassets */,
 				3113CEDA243A7703001DF8CB /* SwiftGen */,
@@ -591,17 +611,21 @@
 				3113CEE9243A9162001DF8CB /* AssetsColors.swift in Sources */,
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
+				3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */,
 				31C239682412E6E4008AC51C /* ViewController.swift in Sources */,
+				3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */,
 				3113CED9243A6282001DF8CB /* SplashView.swift in Sources */,
 				31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */,
 				314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
+				3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */,
 				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
 				3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */,
 				3113CEF5243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */,
 				31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */,
+				3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */,
 				3113CEED243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

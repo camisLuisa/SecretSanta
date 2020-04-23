@@ -1,0 +1,74 @@
+//
+//  WhiteBoxView.swift
+//  SecretSanta
+//
+//  Created by Camila Luisa Farias de Lima on 11/04/20.
+//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
+//
+
+import UIKit
+
+enum stepViewType {
+    case step1
+    case step2
+    case step3
+}
+
+final class WhiteBoxView: UIView {
+    
+    // MARK: - Properties
+    private let contentView: UIView = {
+        let contentView = UIView()
+        contentView.layer.cornerRadius = 26
+        contentView.backgroundColor = .white
+        return contentView
+    }()
+    
+    private let nextButton: RedButton = {
+        let button = RedButton()
+        button.setTitle("Próximo", for: .normal)
+        button.isEnabled = true
+        return button
+    }()
+    
+//    private let stepView: UIView = {
+//        
+//    }
+    
+    // MARK: - init -
+    init() {
+        super.init(frame: .zero)
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+// MARK: - CodeView -
+extension WhiteBoxView: CodeView {
+    func buildViewHierarchy() {
+        addSubview(contentView)
+        contentView.addSubview(nextButton)
+    }
+    
+    func setupContraints() {
+        contentView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        contentView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        contentView.widthAnchor.constraint(equalToConstant: 325.0).isActive = true
+        contentView.heightAnchor.constraint(equalToConstant: 303.0).isActive = true
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+
+        nextButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 49).isActive = true
+        nextButton.widthAnchor.constraint(equalToConstant: 159).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -33).isActive = true
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    
+}

@@ -11,6 +11,8 @@ import UIKit
 final class GroupView: UIView {
     
     // MARK: - Properties -
+    var didSelectAddGroup: (() -> Void)?
+    
     private let contentView: UIView = {
        let contentView = UIView()
         contentView.backgroundColor = UIColor.white
@@ -28,9 +30,10 @@ final class GroupView: UIView {
         return imageView
     }()
     
-    private let addGrouButton: UIButton = {
+    private let addGroupButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(Asset.plus.image, for: .normal)
+        button.addTarget(self, action: #selector(didTapAtAddGroup), for: .touchUpInside)
         return button
     }()
     
@@ -53,13 +56,21 @@ final class GroupView: UIView {
     }
 }
 
+// MARK: - Actions -
+extension GroupView {
+    @objc
+    func didTapAtAddGroup() {
+        self.didSelectAddGroup?()
+    }
+}
+
 // MARK: - CodeView -
 extension GroupView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(topContentView)
         topContentView.addSubview(titleImageView)
-        topContentView.addSubview(addGrouButton)
+        topContentView.addSubview(addGroupButton)
         contentView.addSubview(instructionLabel)
     }
     
@@ -81,9 +92,9 @@ extension GroupView: CodeView {
         titleImageView.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
         titleImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        addGrouButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -40.0).isActive = true
-        addGrouButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
-        addGrouButton.translatesAutoresizingMaskIntoConstraints = false
+        addGroupButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -40.0).isActive = true
+        addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
+        addGroupButton.translatesAutoresizingMaskIntoConstraints = false
         
         instructionLabel.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
         instructionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 60).isActive = true
