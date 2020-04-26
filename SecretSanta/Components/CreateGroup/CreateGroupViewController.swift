@@ -28,5 +28,9 @@ final class CreateGroupViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.setHidesBackButton(true, animated: false)
+        
+        viewCreateGroup.didTapAtCloseButton = {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

@@ -32,6 +32,7 @@
 		3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF03243FF8E2001DF8CB /* RedButton.swift */; };
 		314DC827243A581100CDF881 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC826243A581100CDF881 /* Reachability.swift */; };
 		314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC828243A601B00CDF881 /* HTTPMethod.swift */; };
+		315FB8FF24511B6800872A20 /* FormInputViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FB8FE24511B6800872A20 /* FormInputViewType.swift */; };
 		316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 316CE74F241F14A500411DDF /* GoogleService-Info.plist */; };
 		31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB51C92421D5C400018DF6 /* MenuView.swift */; };
 		31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239652412E6E4008AC51C /* AppDelegate.swift */; };
@@ -41,6 +42,12 @@
 		31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C2396E2412E6E9008AC51C /* LaunchScreen.storyboard */; };
 		31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */; };
 		31C239862412E6E9008AC51C /* SecretSantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239852412E6E9008AC51C /* SecretSantaUITests.swift */; };
+		31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E02453674E0011F917 /* FieldValidator.swift */; };
+		31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E2245367C80011F917 /* ValidatorResponse.swift */; };
+		31FBA1E5245368550011F917 /* FieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E4245368550011F917 /* FieldError.swift */; };
+		31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E624536C320011F917 /* EventDateValidator.swift */; };
+		31FBA1E924539A0A0011F917 /* AmountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E824539A0A0011F917 /* AmountValidator.swift */; };
+		31FBA1EB2455CEAF0011F917 /* GroupNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1EA2455CEAF0011F917 /* GroupNameValidator.swift */; };
 		31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE9E99242C2B0B0034368F /* CodeView.swift */; };
 		416E45F70D38E5EB91552594 /* Pods_SecretSantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */; };
 		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
@@ -85,6 +92,7 @@
 		3113CF03243FF8E2001DF8CB /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		314DC826243A581100CDF881 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		314DC828243A601B00CDF881 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		315FB8FE24511B6800872A20 /* FormInputViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputViewType.swift; sourceTree = "<group>"; };
 		316CE74F241F14A500411DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31AB51C92421D5C400018DF6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		31C239622412E6E4008AC51C /* SecretSanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +108,12 @@
 		31C239812412E6E9008AC51C /* SecretSantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretSantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239852412E6E9008AC51C /* SecretSantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSantaUITests.swift; sourceTree = "<group>"; };
 		31C239872412E6E9008AC51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31FBA1E02453674E0011F917 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		31FBA1E2245367C80011F917 /* ValidatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorResponse.swift; sourceTree = "<group>"; };
+		31FBA1E4245368550011F917 /* FieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldError.swift; sourceTree = "<group>"; };
+		31FBA1E624536C320011F917 /* EventDateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateValidator.swift; sourceTree = "<group>"; };
+		31FBA1E824539A0A0011F917 /* AmountValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValidator.swift; sourceTree = "<group>"; };
+		31FBA1EA2455CEAF0011F917 /* GroupNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupNameValidator.swift; sourceTree = "<group>"; };
 		31FE9E99242C2B0B0034368F /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		4C7B7A11AC938DCA0BDA46F0 /* Pods-SecretSanta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.debug.xcconfig"; sourceTree = "<group>"; };
 		567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +223,7 @@
 				3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */,
 				3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */,
 				3101F994244235C5006D3ED6 /* CreateGroupView.swift */,
+				315FB8FE24511B6800872A20 /* FormInputViewType.swift */,
 			);
 			path = CreateGroup;
 			sourceTree = "<group>";
@@ -225,6 +240,8 @@
 		314DC82A243A60F500CDF881 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				31FBA1DF245367320011F917 /* Validator */,
+				31FBA1DE245367290011F917 /* View */,
 				31FE9E99242C2B0B0034368F /* CodeView.swift */,
 			);
 			path = Utils;
@@ -236,6 +253,18 @@
 				3113CF03243FF8E2001DF8CB /* RedButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		315FB9002453664400872A20 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				31FBA1E2245367C80011F917 /* ValidatorResponse.swift */,
+				31FBA1E4245368550011F917 /* FieldError.swift */,
+				31FBA1E624536C320011F917 /* EventDateValidator.swift */,
+				31FBA1E824539A0A0011F917 /* AmountValidator.swift */,
+				31FBA1EA2455CEAF0011F917 /* GroupNameValidator.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		31C239592412E6E4008AC51C = {
@@ -297,6 +326,22 @@
 				31C239872412E6E9008AC51C /* Info.plist */,
 			);
 			path = SecretSantaUITests;
+			sourceTree = "<group>";
+		};
+		31FBA1DE245367290011F917 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31FBA1DF245367320011F917 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				315FB9002453664400872A20 /* Configuration */,
+				31FBA1E02453674E0011F917 /* FieldValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		A0159536A99921EBC0A0CD7F /* Frameworks */ = {
@@ -612,14 +657,19 @@
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */,
+				31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */,
+				31FBA1EB2455CEAF0011F917 /* GroupNameValidator.swift in Sources */,
 				31C239682412E6E4008AC51C /* ViewController.swift in Sources */,
 				3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */,
 				3113CED9243A6282001DF8CB /* SplashView.swift in Sources */,
+				315FB8FF24511B6800872A20 /* FormInputViewType.swift in Sources */,
+				31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */,
 				31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */,
 				314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
 				3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */,
+				31FBA1E924539A0A0011F917 /* AmountValidator.swift in Sources */,
 				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
 				3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */,
@@ -627,6 +677,8 @@
 				31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */,
 				3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */,
 				3113CEED243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
+				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
+				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

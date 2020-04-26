@@ -8,9 +8,39 @@
 
 import UIKit
 
-final class CreateGroupView: UIView {
+enum CreateGroupViewType {
+    case groupName
+    case amount
+    case eventDate
     
+    var formInputViewType: FormInputViewType {
+        switch self {
+        case .groupName:
+            return .groupName
+        case .amount:
+            return .amount
+        case .eventDate:
+            return .eventDate
+        }
+    }
+}
+
+final class CreateGroupView: UIView {
     // MARK: - Properties -
+    var didTapAtCloseButton: (() -> Void)?
+    let type: CreateGroupViewType
+    
+    private lazy var validator: FieldValidator = {
+        switch type {
+        case .groupName:
+            return GroupNameValidator()
+        case .amount:
+            return AmountValidator()
+        case .eventDate:
+            return EventDateValidator()
+        }
+    }()
+    
     private let contentView: UIView = {
         let contentView = UIView()
         contentView.backgroundColor = ColorName.red1.color
@@ -35,13 +65,14 @@ final class CreateGroupView: UIView {
     private let closeButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(Asset.close.image, for: .normal)
-        button.addTarget(self, action: #selector(didTapAtCloseButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didSelectCloseButton), for: .touchUpInside)
         return button
     }()
     
     
     // MARK: - init -
-    init() {
+    init(type: CreateGroupViewType) {
+        self.type = type
         super.init(frame: .zero)
         setupViews()
     }
@@ -54,8 +85,8 @@ final class CreateGroupView: UIView {
 // MARK: - Actions -
 extension CreateGroupView {
     @objc
-   func didTapAtCloseButton() {
-        
+    func didSelectCloseButton() {
+        didTapAtCloseButton?()
     }
 }
 
