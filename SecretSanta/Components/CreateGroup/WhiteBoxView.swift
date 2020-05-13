@@ -8,13 +8,8 @@
 
 import UIKit
 
-enum stepViewType {
-    case step1
-    case step2
-    case step3
-}
-
 final class WhiteBoxView: UIView {
+    private let type: FormInputViewType
     
     // MARK: - Properties
     private let contentView: UIView = {
@@ -36,7 +31,8 @@ final class WhiteBoxView: UIView {
 //    }
     
     // MARK: - init -
-    init() {
+    init(type: FormInputViewType) {
+        self.type = type
         super.init(frame: .zero)
         setupViews()
     }

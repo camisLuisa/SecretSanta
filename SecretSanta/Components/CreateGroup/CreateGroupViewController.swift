@@ -11,10 +11,12 @@ import UIKit
 final class CreateGroupViewController: UIViewController {
     // MARK: - Attributes -
     private let viewCreateGroup: CreateGroupView
+    private let coordinator: Coordinator
     
     // MARK: - Init -
-    init() {
-        viewCreateGroup = CreateGroupView()
+    init(type: CreateGroupViewType, coordinator: Coordinator) {
+        viewCreateGroup = CreateGroupView(type: type)
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     

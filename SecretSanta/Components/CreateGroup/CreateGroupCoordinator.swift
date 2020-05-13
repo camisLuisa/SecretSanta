@@ -29,4 +29,8 @@ final class CreateGroupCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
+    func goToNextScreen(currentType type: CreateGroupViewType, currentValue: String?) {
+        <#function body#>
+    }
+    
 }
