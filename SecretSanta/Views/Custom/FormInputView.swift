@@ -18,7 +18,7 @@ final class FormInputView: UIView {
     // MARK: - Properties
     private let type: FormInputViewType
     private weak var textFieldDelegate: UITextFieldDelegate?
-    public private(set) var hasValidContent: Bool
+    public private(set) var hasValidContent: Bool?
     
     // MARK: - Views -
     private let titleFieldLabel: UILabel = {

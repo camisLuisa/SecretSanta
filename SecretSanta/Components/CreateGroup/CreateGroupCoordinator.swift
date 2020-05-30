@@ -25,12 +25,12 @@ final class CreateGroupCoordinator: Coordinator {
     }
     
     func goToCreateGroup() {
-        let controller = CreateGroupViewController()
+        let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
         navigationController.pushViewController(controller, animated: true)
     }
     
     func goToNextScreen(currentType type: CreateGroupViewType, currentValue: String?) {
-        <#function body#>
+//        function body
     }
     
 }
