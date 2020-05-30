@@ -51,10 +51,9 @@ final class FormInputView: UIView {
     }()
     
     let validationLabel: UILabel = {
-//        let label = UILabel(fontConvertible: Font..., size: 12)
         let label = UILabel()
+        label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 12.0)
         label.numberOfLines = 0
-        label.textColor = .blue
         return label
     }()
     
@@ -96,7 +95,7 @@ private extension FormInputView {
     }
     
     func setValidationLabelEmpty() {
-        validationLabel.textColor = .blue
+        validationLabel.textColor = .black
         switch type {
         case .groupName:
             validationLabel.text = "Digite o nome do grupo"
@@ -205,7 +204,7 @@ extension FormInputView: CodeView {
         titleFieldLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleFieldLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        formTextField.topAnchor.constraint(equalTo: titleFieldLabel.bottomAnchor).isActive = true
+        formTextField.topAnchor.constraint(equalTo: titleFieldLabel.bottomAnchor, constant: 40.0).isActive = true
         formTextField.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         formTextField.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         formTextField.translatesAutoresizingMaskIntoConstraints = false

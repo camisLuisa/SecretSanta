@@ -80,7 +80,7 @@ extension WhiteBoxView: CodeView {
         stepImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stepImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 33.0).isActive = true
+        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor).isActive = true
         forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         forminputView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
         forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true

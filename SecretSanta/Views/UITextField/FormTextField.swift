@@ -15,7 +15,7 @@ class FormTextField: UITextField {
         super.init(frame: .zero)
         tintColor = .black
         if bottomBorder {
-            configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .lightGray)
+//            configureBottomBorder(backgroundColor: .clear, borderColor: AssetColorTypeAlias.red)
             addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
             addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
             autocorrectionType = .no
@@ -25,7 +25,7 @@ class FormTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         tintColor = .gray
-        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .lightGray)
+        configureBottomBorder(backgroundColor: UIColor.white, borderColor: ColorName.red1.color)
         addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
         addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
         autocorrectionType = .no
@@ -45,11 +45,11 @@ class FormTextField: UITextField {
     
     @objc
     private func didBegin() {
-        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
+//        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
     }
     
     @objc
     private func didEnd() {
-        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
+//        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
     }
 }
