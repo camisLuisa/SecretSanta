@@ -40,6 +40,8 @@ final class GroupView: UIView {
     private let instructionLabel: UILabel = {
         let label = UILabel()
         label.text = L10n.instructions
+        label.font = UIFont(font: FontFamily.SegoeUI.regular, size: 17.0)
+        label.textColor = ColorName.gray1.color
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 2
         return label
