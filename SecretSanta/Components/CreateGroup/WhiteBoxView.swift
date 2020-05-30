@@ -9,9 +9,12 @@
 import UIKit
 
 final class WhiteBoxView: UIView, UITextFieldDelegate {
+    
+    // MARK: - Properties -
     private let type: FormInputViewType
     
-    // MARK: - Properties
+    var didTapNextButton: ((FormInputViewType) -> Void)?
+    
     private let contentView: UIView = {
         let contentView = UIView()
         contentView.layer.cornerRadius = 26
@@ -37,6 +40,7 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         let button = RedButton()
         button.setTitle("Próximo", for: .normal)
         button.isEnabled = true
+        button.addTarget(self, action: #selector(didTapAtNextButton), for: .touchUpInside)
         return button
     }()
     
@@ -55,7 +59,14 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+}
+
+// MARK: - Actions -
+extension WhiteBoxView {
+    @objc
+    func didTapAtNextButton() {
+        self.didTapNextButton?(type)
+    }
 }
 
 // MARK: - CodeView -

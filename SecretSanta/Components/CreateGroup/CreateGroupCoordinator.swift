@@ -24,13 +24,26 @@ final class CreateGroupCoordinator: Coordinator {
         navigationController.setViewControllers([controller], animated: false)
     }
     
+    func goToNextCreateGroup(type: FormInputViewType) {
+        switch type {
+        case .groupName:
+            let controller = CreateGroupViewController(type: CreateGroupViewType.amount, coordinator: self)
+            
+            navigationController.pushViewController(controller, animated: true)
+        case .amount:
+            let controller = CreateGroupViewController(type: CreateGroupViewType.eventDate, coordinator: self)
+            
+            navigationController.pushViewController(controller, animated: true)
+        case .eventDate:
+            let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
+            
+            navigationController.pushViewController(controller, animated: true)
+        }
+    }
+    
     func goToCreateGroup() {
         let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
+        
         navigationController.pushViewController(controller, animated: true)
     }
-    
-    func goToNextScreen(currentType type: CreateGroupViewType, currentValue: String?) {
-//        function body
-    }
-    
 }

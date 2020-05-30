@@ -11,10 +11,10 @@ import UIKit
 final class CreateGroupViewController: UIViewController {
     // MARK: - Attributes -
     private let viewCreateGroup: CreateGroupView
-    private let coordinator: Coordinator
+    private let coordinator: CreateGroupCoordinator
     
     // MARK: - Init -
-    init(type: CreateGroupViewType, coordinator: Coordinator) {
+    init(type: CreateGroupViewType, coordinator: CreateGroupCoordinator) {
         viewCreateGroup = CreateGroupView(type: type)
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -33,6 +33,10 @@ final class CreateGroupViewController: UIViewController {
         
         viewCreateGroup.didTapAtCloseButton = {
             self.navigationController?.popViewController(animated: true)
+        }
+        
+        self.viewCreateGroup.didTapAtNextButton = { type in
+            self.coordinator.goToNextCreateGroup(type: type)
         }
     }
 }

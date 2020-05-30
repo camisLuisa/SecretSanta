@@ -28,6 +28,7 @@ enum CreateGroupViewType {
 final class CreateGroupView: UIView {
     // MARK: - Properties -
     var didTapAtCloseButton: (() -> Void)?
+    var didTapAtNextButton: ((FormInputViewType) -> Void)?
     let type: CreateGroupViewType
     
     private lazy var validator: FieldValidator = {
@@ -73,7 +74,13 @@ final class CreateGroupView: UIView {
     // MARK: - init -
     init(type: CreateGroupViewType) {
         self.type = type
+        
         super.init(frame: .zero)
+        
+        self.whiteBox.didTapNextButton = { type in
+            self.didTapAtNextButton?(type)            
+        }
+        
         setupViews()
     }
     
