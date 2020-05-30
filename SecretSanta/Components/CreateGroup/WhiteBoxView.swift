@@ -19,6 +19,20 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         return contentView
     }()
     
+    private lazy var stepImageView: UIImageView = {
+        var stepImageView = UIImageView()
+        switch type {
+        case .groupName:
+            stepImageView.image = Asset.step1.image
+        case .amount:
+            stepImageView.image = Asset.step2.image
+        case .eventDate:
+            stepImageView.image = Asset.step3.image
+        }
+        
+        return stepImageView
+    }()
+    
     private let nextButton: RedButton = {
         let button = RedButton()
         button.setTitle("Próximo", for: .normal)
@@ -30,10 +44,6 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         let input = FormInputView(frame: .zero, type: self.type, delegate: self)
         return input
     }()
-    
-//    private let stepView: UIView = {
-//        
-//    }
     
     // MARK: - init -
     init(type: FormInputViewType) {
@@ -52,6 +62,7 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
 extension WhiteBoxView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
+        contentView.addSubview(stepImageView)
         contentView.addSubview(forminputView)
         contentView.addSubview(nextButton)
     }
@@ -65,8 +76,12 @@ extension WhiteBoxView: CodeView {
         contentView.heightAnchor.constraint(equalToConstant: 303.0).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
+        stepImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 33.0).isActive = true
+        stepImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stepImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 33.0).isActive = true
         forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        forminputView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         forminputView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
         forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
         forminputView.translatesAutoresizingMaskIntoConstraints = false

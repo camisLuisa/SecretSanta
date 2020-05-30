@@ -35,6 +35,10 @@
 		315FB8FF24511B6800872A20 /* FormInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FB8FE24511B6800872A20 /* FormInputView.swift */; };
 		316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 316CE74F241F14A500411DDF /* GoogleService-Info.plist */; };
 		31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB51C92421D5C400018DF6 /* MenuView.swift */; };
+		31C2244F2482EEFB00675155 /* Segoe UI Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244B2482EEFA00675155 /* Segoe UI Bold Italic.ttf */; };
+		31C224502482EEFB00675155 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244C2482EEFB00675155 /* Segoe UI Bold.ttf */; };
+		31C224512482EEFB00675155 /* Segoe UI Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244D2482EEFB00675155 /* Segoe UI Italic.ttf */; };
+		31C224522482EEFB00675155 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244E2482EEFB00675155 /* Segoe UI.ttf */; };
 		31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239652412E6E4008AC51C /* AppDelegate.swift */; };
 		31C239682412E6E4008AC51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239672412E6E4008AC51C /* ViewController.swift */; };
 		31C2396B2412E6E4008AC51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C239692412E6E4008AC51C /* Main.storyboard */; };
@@ -105,6 +109,10 @@
 		315FB8FE24511B6800872A20 /* FormInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputView.swift; sourceTree = "<group>"; };
 		316CE74F241F14A500411DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31AB51C92421D5C400018DF6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		31C2244B2482EEFA00675155 /* Segoe UI Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold Italic.ttf"; sourceTree = "<group>"; };
+		31C2244C2482EEFB00675155 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
+		31C2244D2482EEFB00675155 /* Segoe UI Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Italic.ttf"; sourceTree = "<group>"; };
+		31C2244E2482EEFB00675155 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		31C239622412E6E4008AC51C /* SecretSanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239652412E6E4008AC51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C239672412E6E4008AC51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -404,6 +412,10 @@
 		31FBA1F12455DCF60011F917 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				31C2244B2482EEFA00675155 /* Segoe UI Bold Italic.ttf */,
+				31C2244C2482EEFB00675155 /* Segoe UI Bold.ttf */,
+				31C2244D2482EEFB00675155 /* Segoe UI Italic.ttf */,
+				31C2244E2482EEFB00675155 /* Segoe UI.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -578,10 +590,14 @@
 			files = (
 				3113CEEA243A9162001DF8CB /* colors.txt in Resources */,
 				31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */,
+				31C224512482EEFB00675155 /* Segoe UI Italic.ttf in Resources */,
 				316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */,
 				3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */,
 				31C2396D2412E6E9008AC51C /* Assets.xcassets in Resources */,
+				31C2244F2482EEFB00675155 /* Segoe UI Bold Italic.ttf in Resources */,
+				31C224522482EEFB00675155 /* Segoe UI.ttf in Resources */,
 				31C2396B2412E6E4008AC51C /* Main.storyboard in Resources */,
+				31C224502482EEFB00675155 /* Segoe UI Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
