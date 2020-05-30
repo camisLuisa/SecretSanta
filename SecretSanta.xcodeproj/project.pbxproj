@@ -39,6 +39,7 @@
 		31C224502482EEFB00675155 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244C2482EEFB00675155 /* Segoe UI Bold.ttf */; };
 		31C224512482EEFB00675155 /* Segoe UI Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244D2482EEFB00675155 /* Segoe UI Italic.ttf */; };
 		31C224522482EEFB00675155 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31C2244E2482EEFB00675155 /* Segoe UI.ttf */; };
+		31C224542482F42000675155 /* assets-fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C224532482F42000675155 /* assets-fonts.swift */; };
 		31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239652412E6E4008AC51C /* AppDelegate.swift */; };
 		31C239682412E6E4008AC51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239672412E6E4008AC51C /* ViewController.swift */; };
 		31C2396B2412E6E4008AC51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C239692412E6E4008AC51C /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		31C2244C2482EEFB00675155 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		31C2244D2482EEFB00675155 /* Segoe UI Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Italic.ttf"; sourceTree = "<group>"; };
 		31C2244E2482EEFB00675155 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
+		31C224532482F42000675155 /* assets-fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-fonts.swift"; sourceTree = "<group>"; };
 		31C239622412E6E4008AC51C /* SecretSanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretSanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239652412E6E4008AC51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C239672412E6E4008AC51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		3113CEDA243A7703001DF8CB /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				31C224532482F42000675155 /* assets-fonts.swift */,
 				3113CEE7243A9162001DF8CB /* AssetsColors.swift */,
 				3113CEE8243A9162001DF8CB /* colors.txt */,
 				3113CEDC243A7D73001DF8CB /* assets-images.swift */,
@@ -814,6 +817,7 @@
 				31FBA1FC245C658D0011F917 /* EventDateTextField.swift in Sources */,
 				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
 				31FBA1F42455DFE00011F917 /* FormTextField.swift in Sources */,
+				31C224542482F42000675155 /* assets-fonts.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

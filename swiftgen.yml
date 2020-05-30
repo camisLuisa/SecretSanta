@@ -14,3 +14,8 @@ colors:
   outputs:
     templateName: swift4
     output: SecretSanta/SwiftGen/AssetsColors.swift
+fonts:
+  inputs: SecretSanta/Resources/Fonts
+  outputs:
+    templateName: swift4
+    output: SecretSanta/SwiftGen/assets-fonts.swift
