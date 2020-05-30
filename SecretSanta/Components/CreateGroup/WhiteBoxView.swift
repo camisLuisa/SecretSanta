@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class WhiteBoxView: UIView {
+final class WhiteBoxView: UIView, UITextFieldDelegate {
     private let type: FormInputViewType
     
     // MARK: - Properties
@@ -24,6 +24,11 @@ final class WhiteBoxView: UIView {
         button.setTitle("Próximo", for: .normal)
         button.isEnabled = true
         return button
+    }()
+    
+    private lazy var forminputView: FormInputView = {
+        let input = FormInputView(frame: .zero, type: self.type, delegate: self)
+        return input
     }()
     
 //    private let stepView: UIView = {
@@ -47,6 +52,7 @@ final class WhiteBoxView: UIView {
 extension WhiteBoxView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
+        contentView.addSubview(forminputView)
         contentView.addSubview(nextButton)
     }
     
@@ -58,13 +64,17 @@ extension WhiteBoxView: CodeView {
         contentView.widthAnchor.constraint(equalToConstant: 325.0).isActive = true
         contentView.heightAnchor.constraint(equalToConstant: 303.0).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        forminputView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        forminputView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
+        forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        forminputView.translatesAutoresizingMaskIntoConstraints = false
 
         nextButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 49).isActive = true
         nextButton.widthAnchor.constraint(equalToConstant: 159).isActive = true
         nextButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -33).isActive = true
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    
+    }    
 }

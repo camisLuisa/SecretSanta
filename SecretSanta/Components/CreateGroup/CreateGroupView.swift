@@ -57,8 +57,8 @@ final class CreateGroupView: UIView {
     return imageView
     }()
     
-    private let whiteBox: WhiteBoxView = {
-        let whiteBox = WhiteBoxView(type: FormInputViewType.amount)
+    private lazy var whiteBox: WhiteBoxView = {
+        let whiteBox = WhiteBoxView(type: self.type.formInputViewType)
         return whiteBox
     }()
     

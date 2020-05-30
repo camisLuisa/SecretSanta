@@ -202,17 +202,16 @@ extension FormInputView: CodeView {
     
     func setupContraints() {
         titleFieldLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        titleFieldLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        titleFieldLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleFieldLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+
         formTextField.topAnchor.constraint(equalTo: titleFieldLabel.bottomAnchor).isActive = true
         formTextField.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         formTextField.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         formTextField.translatesAutoresizingMaskIntoConstraints = false
-        
+
         validationLabel.topAnchor.constraint(equalTo: formTextField.bottomAnchor).isActive = true
         validationLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        validationLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         validationLabel.trailingAnchor.constraint(equalTo: formTextField.trailingAnchor).isActive = true
         validationLabel.translatesAutoresizingMaskIntoConstraints = false
     }
