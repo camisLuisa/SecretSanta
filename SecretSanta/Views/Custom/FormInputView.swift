@@ -22,9 +22,9 @@ final class FormInputView: UIView {
     
     // MARK: - Views -
     private let titleFieldLabel: UILabel = {
-        let label  = UILabel(frame: .zero)
+        let label  = UILabel()
         label.textColor = ColorName.red1.color
-//        label.font = UIFont(font: Font)
+        label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 25.0)
         return label
     }()
     
