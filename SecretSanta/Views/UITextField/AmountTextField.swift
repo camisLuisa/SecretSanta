@@ -62,12 +62,16 @@ final class AmountTextField: FormTextField {
 extension AmountTextField {
     @objc
     func editingChange() {
-        let text = NSMutableAttributedString(string: "R$ ", attributes: [.font: UIFont(font: FontFamily.SegoeUI.regular, size: 3.0)])
+        if self.text == "" {
+            let text = NSMutableAttributedString(string: "R$ \(self.text ?? "")", attributes: [.font: UIFont(font: FontFamily.SegoeUI.regular, size: 25.0) ?? ""])
         self.attributedText = text
+        }
     }
     
     @objc
     func editingDidBegin() {
+        editingChange()
+        
         switch bottomBorderState {
         case .alwaysShow:
             break
