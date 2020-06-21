@@ -183,6 +183,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E84394124A02ABD0029718E /* ParticipantsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ParticipantsView;
+			sourceTree = "<group>";
+		};
 		2D8F766882DC3CE5F543462D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,20 +203,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		3101F991244234D7006D3ED6 /* Group */ = {
+		3101F991244234D7006D3ED6 /* GroupView */ = {
 			isa = PBXGroup;
 			children = (
 				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
 				3113CEFC243EAE02001DF8CB /* GroupView.swift */,
 			);
-			path = Group;
+			path = GroupView;
 			sourceTree = "<group>";
 		};
 		3113CED4243A6171001DF8CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3101F991244234D7006D3ED6 /* Group */,
-				3113CEF9243EAAB9001DF8CB /* CreateGroup */,
+				1E84394124A02ABD0029718E /* ParticipantsView */,
+				3101F991244234D7006D3ED6 /* GroupView */,
+				3113CEF9243EAAB9001DF8CB /* CreateGroupView */,
 				3113CED7243A6233001DF8CB /* Splash */,
 			);
 			path = Components;
@@ -247,7 +255,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		3113CEF9243EAAB9001DF8CB /* CreateGroup */ = {
+		3113CEF9243EAAB9001DF8CB /* CreateGroupView */ = {
 			isa = PBXGroup;
 			children = (
 				3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */,
@@ -255,7 +263,7 @@
 				3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */,
 				3101F994244235C5006D3ED6 /* CreateGroupView.swift */,
 			);
-			path = CreateGroup;
+			path = CreateGroupView;
 			sourceTree = "<group>";
 		};
 		314DC825243A52EA00CDF881 /* Service */ = {
