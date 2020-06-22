@@ -7,12 +7,16 @@ final class AddParticipantView: UIView, UITextFieldDelegate {
     
     private let contentView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
+        view.alpha = 0.8
         return view
     }()
     
     private let alertView: UIView = {
         let view = UIView()
         view.backgroundColor = ColorName.red1.color
+        view.layer.cornerRadius = 15.0
+        view.alpha = 1.0
         return view
     }()
     
@@ -21,6 +25,7 @@ final class AddParticipantView: UIView, UITextFieldDelegate {
         title.text = L10n.addParticipantsTitle
         title.font = UIFont(font: FontFamily.SegoeUI.bold, size: 27)
         title.textColor = .white
+        title.textAlignment = .center
         title.lineBreakMode = .byWordWrapping
         title.numberOfLines = 2
         return title
@@ -67,8 +72,8 @@ extension AddParticipantView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(alertView)
-//        alertView.addSubview(titleLabel)
-//        alertView.addSubview(nameInputView)
+        alertView.addSubview(titleLabel)
+        alertView.addSubview(nameInputView)
 //        alertView.addSubview(emailInputView)
 //        alertView.addSubview(button)
     }
@@ -82,9 +87,14 @@ extension AddParticipantView: CodeView {
         
         alertView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         alertView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        alertView.widthAnchor.constraint(equalToConstant: 354.0).isActive = true
-        alertView.heightAnchor.constraint(equalToConstant: 342.0).isActive = true
+        alertView.widthAnchor.constraint(equalToConstant: 300.0).isActive = true
+        alertView.heightAnchor.constraint(equalToConstant: 300.0).isActive = true
         alertView.translatesAutoresizingMaskIntoConstraints = false
+        
+        titleLabel.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 30.0).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: alertView.topAnchor, constant: 30.0).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     

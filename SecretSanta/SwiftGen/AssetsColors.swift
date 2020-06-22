@@ -24,6 +24,9 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#d54545"></span>
   /// Alpha: 100% <br/> (0xd54545ff)
   internal static let red1 = ColorName(rgbaValue: 0xd54545ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+  /// Alpha: 0% <br/> (0xffffff00)
+  internal static let whiteBlur = ColorName(rgbaValue: 0xffffff00)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 
