@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */; };
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantViewController.swift */; };
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
+		1E84394C24A0487F0029718E /* AddParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394B24A0487F0029718E /* AddParticipantInputView.swift */; };
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
 		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
@@ -92,10 +94,12 @@
 
 /* Begin PBXFileReference section */
 		078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTextField.swift; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
+		1E84394B24A0487F0029718E /* AddParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantInputView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				315FB8FE24511B6800872A20 /* FormInputView.swift */,
+				1E84394B24A0487F0029718E /* AddParticipantInputView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				31FBA1F92458BFC70011F917 /* AmountTextField.swift */,
 				31FBA1FB245C658D0011F917 /* EventDateTextField.swift */,
 				31FBA206245C7EEF0011F917 /* BaseTextField.swift */,
+				1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -699,7 +705,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 		8F7A008F9AAF47EA88D1986A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -811,10 +817,12 @@
 				1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */,
 				3113CF01243EB4BF001DF8CB /* CreateGroupCoordinator.swift in Sources */,
 				3113CEDE243A7D73001DF8CB /* assets-images.swift in Sources */,
+				1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */,
 				3113CEE9243A9162001DF8CB /* AssetsColors.swift in Sources */,
 				31FBA1FF245C75F80011F917 /* TexFieldMasker.swift in Sources */,
 				1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */,
 				31FBA207245C7EEF0011F917 /* BaseTextField.swift in Sources */,
+				1E84394C24A0487F0029718E /* AddParticipantInputView.swift in Sources */,
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				31DCE00B2474A1AA0013233C /* test.swift in Sources */,

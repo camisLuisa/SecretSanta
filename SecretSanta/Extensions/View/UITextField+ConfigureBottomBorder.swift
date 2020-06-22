@@ -9,6 +9,7 @@
 import UIKit.UITextField
 
 extension UITextField {
+    
     func configureBottomBorder(backgroundColor: UIColor, borderColor: UIColor) {
         self.borderStyle = .none
         layer.backgroundColor = backgroundColor.cgColor
@@ -17,5 +18,12 @@ extension UITextField {
         layer.shadowOpacity = 1.0
         layer.shadowRadius = 0.0
         layer.shadowColor = borderColor.cgColor
+    }
+    
+    func configureWhiteInputView(backgroundColor: UIColor) {
+        layer.cornerRadius = 13.0
+        layer.backgroundColor = backgroundColor.cgColor
+        layer.masksToBounds = false
+        
     }
 }
