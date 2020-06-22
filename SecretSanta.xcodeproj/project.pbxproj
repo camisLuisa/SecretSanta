@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
+		1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantViewController.swift */; };
+		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
 		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
@@ -92,6 +94,8 @@
 		078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
+		1E84394724A039850029718E /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
+		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 			path = ParticipantsView;
 			sourceTree = "<group>";
 		};
+		1E84394624A039420029718E /* AddParticipants */ = {
+			isa = PBXGroup;
+			children = (
+				1E84394724A039850029718E /* AddParticipantViewController.swift */,
+				1E84394924A03AE50029718E /* AddParticipantView.swift */,
+			);
+			path = AddParticipants;
+			sourceTree = "<group>";
+		};
 		2D8F766882DC3CE5F543462D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		3113CED4243A6171001DF8CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1E84394624A039420029718E /* AddParticipants */,
 				1E84394124A02ABD0029718E /* ParticipantsView */,
 				3101F991244234D7006D3ED6 /* GroupView */,
 				3113CEF9243EAAB9001DF8CB /* CreateGroupView */,
@@ -794,6 +808,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */,
 				3113CF01243EB4BF001DF8CB /* CreateGroupCoordinator.swift in Sources */,
 				3113CEDE243A7D73001DF8CB /* assets-images.swift in Sources */,
 				3113CEE9243A9162001DF8CB /* AssetsColors.swift in Sources */,
@@ -834,6 +849,7 @@
 				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
 				31FBA1F42455DFE00011F917 /* FormTextField.swift in Sources */,
 				31C224542482F42000675155 /* assets-fonts.swift in Sources */,
+				1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

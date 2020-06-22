@@ -3,3 +3,6 @@ do Secret Santa";
 
 //Participants View
 "participantsScreenTitle" = "Participantes";
+
+//AddParticipants View
+"addParticipantsTitle" = "Adicione um Participante";

@@ -10,6 +10,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+  /// Adicione um Participante
+  internal static let addParticipantsTitle = L10n.tr("Localizable", "addParticipantsTitle")
   /// Toque no + para criar um novo grupo\ndo Secret Santa
   internal static let instructions = L10n.tr("Localizable", "instructions")
   /// Participantes
