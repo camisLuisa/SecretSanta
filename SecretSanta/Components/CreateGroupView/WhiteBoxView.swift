@@ -36,8 +36,8 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         return stepImageView
     }()
     
-    private let nextButton: RedButton = {
-        let button = RedButton()
+    private let nextButton: CustomButton = {
+        let button = CustomButton(backgroundColor: ColorName.red1.color)
         button.setTitle("Próximo", for: .normal)
         button.isEnabled = true
         button.addTarget(self, action: #selector(didTapAtNextButton), for: .touchUpInside)

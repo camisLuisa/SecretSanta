@@ -10,7 +10,7 @@
 		1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */; };
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
-		1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantViewController.swift */; };
+		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
@@ -34,7 +34,7 @@
 		3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEFC243EAE02001DF8CB /* GroupView.swift */; };
 		3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
 		3113CF01243EB4BF001DF8CB /* CreateGroupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */; };
-		3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF03243FF8E2001DF8CB /* RedButton.swift */; };
+		3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CF03243FF8E2001DF8CB /* CustomButton.swift */; };
 		314DC827243A581100CDF881 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC826243A581100CDF881 /* Reachability.swift */; };
 		314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DC828243A601B00CDF881 /* HTTPMethod.swift */; };
 		315FB8FF24511B6800872A20 /* FormInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FB8FE24511B6800872A20 /* FormInputView.swift */; };
@@ -96,7 +96,7 @@
 		1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTextField.swift; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
-		1E84394724A039850029718E /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
+		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		3113CEFC243EAE02001DF8CB /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		3113CEFE243EB048001DF8CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3113CF00243EB4BF001DF8CB /* CreateGroupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupCoordinator.swift; sourceTree = "<group>"; };
-		3113CF03243FF8E2001DF8CB /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
+		3113CF03243FF8E2001DF8CB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		314DC826243A581100CDF881 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		314DC828243A601B00CDF881 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		315FB8FE24511B6800872A20 /* FormInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputView.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		1E84394624A039420029718E /* AddParticipants */ = {
 			isa = PBXGroup;
 			children = (
-				1E84394724A039850029718E /* AddParticipantViewController.swift */,
+				1E84394724A039850029718E /* AddParticipantAlertViewController.swift */,
 				1E84394924A03AE50029718E /* AddParticipantView.swift */,
 			);
 			path = AddParticipants;
@@ -421,7 +421,7 @@
 		31FBA1EC2455D75B0011F917 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				3113CF03243FF8E2001DF8CB /* RedButton.swift */,
+				3113CF03243FF8E2001DF8CB /* CustomButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -822,7 +822,7 @@
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				31DCE00B2474A1AA0013233C /* test.swift in Sources */,
-				3113CF04243FF8E2001DF8CB /* RedButton.swift in Sources */,
+				3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */,
 				31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */,
 				31FBA1F82458AF150011F917 /* UITextField+ConfigureBottomBorder.swift in Sources */,
 				31FBA1FA2458BFC70011F917 /* AmountTextField.swift in Sources */,
@@ -853,7 +853,7 @@
 				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
 				31FBA1F42455DFE00011F917 /* FormTextField.swift in Sources */,
 				31C224542482F42000675155 /* assets-fonts.swift in Sources */,
-				1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */,
+				1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

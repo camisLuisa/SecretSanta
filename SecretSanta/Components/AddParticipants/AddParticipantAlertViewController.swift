@@ -1,6 +1,6 @@
 import UIKit
 
-final class AddParticipantViewController: UIViewController {
+final class AddParticipantAlertViewController: UIViewController {
     
     // MARK: - Attributes -
     private let addParticipantsView: AddParticipantView

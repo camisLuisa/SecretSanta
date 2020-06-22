@@ -25,7 +25,7 @@ final class ParticipantsViewController: UIViewController {
 
         participantsView.setupInfo(date: "12/08/2020", amount: 200.0)
         participantsView.didSelectAddParticipants = {
-//            self.coordinator.goToCreateGroup()
+            self.coordinator.goToAddParticipants()
         }
     }
     
