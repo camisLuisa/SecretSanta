@@ -19,7 +19,11 @@ final class ParticipantsView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Participantes"
+        label.text = L10n.participantsScreenTitle
+        label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 24.0)
+        label.textColor = .white
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 2
         return label
     }()
     
@@ -30,11 +34,12 @@ final class ParticipantsView: UIView {
         return button
     }()
     
-    private let instructionLabel: UILabel = {
+    private lazy var instructionLabel: UILabel = {
         let label = UILabel()
         label.text = L10n.instructions
         label.font = UIFont(font: FontFamily.SegoeUI.regular, size: 17.0)
         label.textColor = ColorName.gray1.color
+        label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 2
         return label
@@ -56,6 +61,13 @@ extension ParticipantsView {
     @objc
     func didTapAtAddParticipants() {
         self.didSelectAddParticipants?()
+    }
+}
+
+// MARK: - Setup Info -
+extension ParticipantsView {
+    func setupInfo(date: String, amount: Double) {
+        self.instructionLabel.text = "Data: \(date) \n Valor Mínimo: R$ \(amount)"
     }
 }
 
@@ -82,11 +94,11 @@ extension ParticipantsView: CodeView {
         topContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         topContentView.translatesAutoresizingMaskIntoConstraints = false
         
-        titleLabel.topAnchor.constraint(equalTo: topContentView.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20.0).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        addGroupButton.topAnchor.constraint(equalTo: topContentView.topAnchor).isActive = true
         addGroupButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -40.0).isActive = true
         addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
         addGroupButton.translatesAutoresizingMaskIntoConstraints = false

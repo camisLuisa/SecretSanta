@@ -10,6 +10,7 @@ final class ParticipantsViewController: UIViewController {
     init(coordinator: CreateGroupCoordinator) {
         self.participantsView = ParticipantsView()
         self.coordinator = coordinator
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -21,9 +22,24 @@ final class ParticipantsViewController: UIViewController {
     override func viewDidLoad() {
         view = participantsView
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        participantsView.setupInfo(date: "12/08/2020", amount: 200.0)
         participantsView.didSelectAddParticipants = {
-            self.coordinator.goToCreateGroup()
+//            self.coordinator.goToCreateGroup()
         }
+    }
+    
+    override func loadView() {
+        setupView()
+    }
+    
+    // MARK: - Setup View -
+    func setupView() {
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "Group 1"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 }
