@@ -1,6 +1,6 @@
 import UIKit
 
-final class AddParticipantView: UIView {
+final class AddParticipantView: UIView, UITextFieldDelegate {
     
     // MARK: - Properties -
     private let contentView: UIView = {
@@ -23,6 +23,18 @@ final class AddParticipantView: UIView {
         title.numberOfLines = 2
         return title
     }()
+    
+    private let nameInputView: FormInputView = {
+        let input = FormInputView(frame: .zero, type:FormInputViewType.participantName , delegate: self)
+        return input
+    }()
+    
+    private let emailInputView: FormInputView = {
+        let input = FormInputView(type: FormInputViewType.participantEmail)
+        return input
+    }()
+    
+    
         
     // MARK: - init -
     init() {

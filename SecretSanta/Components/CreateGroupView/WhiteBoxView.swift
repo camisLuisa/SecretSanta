@@ -25,7 +25,7 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     private lazy var stepImageView: UIImageView = {
         var stepImageView = UIImageView()
         switch type {
-        case .groupName:
+        case .groupName, .participantName, .participantEmail:
             stepImageView.image = Asset.step1.image
         case .amount:
             stepImageView.image = Asset.step2.image

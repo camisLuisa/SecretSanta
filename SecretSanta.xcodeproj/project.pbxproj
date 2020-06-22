@@ -12,7 +12,6 @@
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantViewController.swift */; };
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
-		1E84394C24A0487F0029718E /* AddParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394B24A0487F0029718E /* AddParticipantInputView.swift */; };
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
 		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
@@ -99,7 +98,6 @@
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
-		1E84394B24A0487F0029718E /* AddParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantInputView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				315FB8FE24511B6800872A20 /* FormInputView.swift */,
-				1E84394B24A0487F0029718E /* AddParticipantInputView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -822,7 +819,6 @@
 				31FBA1FF245C75F80011F917 /* TexFieldMasker.swift in Sources */,
 				1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */,
 				31FBA207245C7EEF0011F917 /* BaseTextField.swift in Sources */,
-				1E84394C24A0487F0029718E /* AddParticipantInputView.swift in Sources */,
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				31DCE00B2474A1AA0013233C /* test.swift in Sources */,
