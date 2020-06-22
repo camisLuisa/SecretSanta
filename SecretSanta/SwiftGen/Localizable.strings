@@ -1,2 +1,5 @@
 "instructions" = "Toque no + para criar um novo grupo
 do Secret Santa";
+
+//Participants View
+"participantsScreenTitle" = "Participantes";

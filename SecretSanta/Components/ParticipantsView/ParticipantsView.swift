@@ -1,17 +1,9 @@
-//
-//  GroupView.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 08/04/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 import UIKit
 
-final class GroupView: UIView {
+final class ParticipantsView: UIView {
     
     // MARK: - Properties -
-    var didSelectAddGroup: (() -> Void)?
+    var didSelectAddParticipants: (() -> Void)?
     
     private let contentView: UIView = {
        let contentView = UIView()
@@ -25,15 +17,16 @@ final class GroupView: UIView {
         return view
     }()
     
-    private let titleImageView: UIImageView = {
-        let imageView = UIImageView(image: Asset.groupTitle.image)
-        return imageView
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Participantes"
+        return label
     }()
     
     private let addGroupButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(Asset.plus.image, for: .normal)
-        button.addTarget(self, action: #selector(didTapAtAddGroup), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapAtAddParticipants), for: .touchUpInside)
         return button
     }()
     
@@ -59,19 +52,19 @@ final class GroupView: UIView {
 }
 
 // MARK: - Actions -
-extension GroupView {
+extension ParticipantsView {
     @objc
-    func didTapAtAddGroup() {
-        self.didSelectAddGroup?()
+    func didTapAtAddParticipants() {
+        self.didSelectAddParticipants?()
     }
 }
 
 // MARK: - CodeView -
-extension GroupView: CodeView {
+extension ParticipantsView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(topContentView)
-        topContentView.addSubview(titleImageView)
+        topContentView.addSubview(titleLabel)
         topContentView.addSubview(addGroupButton)
         contentView.addSubview(instructionLabel)
     }
@@ -89,10 +82,10 @@ extension GroupView: CodeView {
         topContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         topContentView.translatesAutoresizingMaskIntoConstraints = false
         
-        titleImageView.topAnchor.constraint(equalTo: topContentView.topAnchor).isActive = true
-        titleImageView.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20.0).isActive = true
-        titleImageView.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
-        titleImageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: topContentView.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20.0).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         addGroupButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -40.0).isActive = true
         addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true

@@ -35,9 +35,7 @@ final class CreateGroupCoordinator: Coordinator {
             
             navigationController.pushViewController(controller, animated: true)
         case .eventDate:
-            let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
-            
-            navigationController.pushViewController(controller, animated: true)
+           goToParticipants()
         }
     }
     
@@ -45,5 +43,15 @@ final class CreateGroupCoordinator: Coordinator {
         let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
         
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToParticipants() {
+        let controller = ParticipantsViewController(coordinator: self)
+        
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func goToAddParticipants() {
+        //TO DO
     }
 }
