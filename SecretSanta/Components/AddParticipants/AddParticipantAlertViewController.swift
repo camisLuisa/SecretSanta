@@ -5,7 +5,6 @@ final class AddParticipantAlertViewController: UIViewController {
     // MARK: - Attributes -
     private let addParticipantsView: AddParticipantView
 
-    
     // MARK: - init -
     init() {
         self.addParticipantsView = AddParticipantView()

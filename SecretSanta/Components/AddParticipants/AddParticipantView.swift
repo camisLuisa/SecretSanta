@@ -7,8 +7,7 @@ final class AddParticipantView: UIView, UITextFieldDelegate {
     
     private let contentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
-        view.alpha = 0.8
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         return view
     }()
     
@@ -74,7 +73,7 @@ extension AddParticipantView: CodeView {
         contentView.addSubview(alertView)
         alertView.addSubview(titleLabel)
         alertView.addSubview(nameInputView)
-//        alertView.addSubview(emailInputView)
+        alertView.addSubview(emailInputView)
 //        alertView.addSubview(button)
     }
     
@@ -95,6 +94,11 @@ extension AddParticipantView: CodeView {
         titleLabel.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
         titleLabel.topAnchor.constraint(equalTo: alertView.topAnchor, constant: 30.0).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        nameInputView.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 30.0).isActive = true
+        nameInputView.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
+        nameInputView.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 10.0).isActive = true
+        nameInputView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
