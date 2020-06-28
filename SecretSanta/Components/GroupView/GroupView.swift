@@ -49,6 +49,7 @@ final class GroupView: UIView {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .white
         return tableView
     }()
     
@@ -68,14 +69,24 @@ final class GroupView: UIView {
 // MARK: - TableViewDelegate -
 extension GroupView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
+        return cell
     }
     
-    
+    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100.0
+    }
+}
+
+// MARK: - SetupView -
+extension GroupView {
+    func setupTableView() {
+        tableView.register(GroupTableViewCell.self, forCellReuseIdentifier: "groupCell")
+    }
 }
 
 // MARK: - Actions -
@@ -93,7 +104,8 @@ extension GroupView: CodeView {
         contentView.addSubview(topContentView)
         topContentView.addSubview(titleImageView)
         topContentView.addSubview(addGroupButton)
-        contentView.addSubview(instructionLabel)
+//        contentView.addSubview(instructionLabel)
+        contentView.addSubview(tableView)
     }
     
     func setupContraints() {
@@ -118,10 +130,16 @@ extension GroupView: CodeView {
         addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
         addGroupButton.translatesAutoresizingMaskIntoConstraints = false
         
-        instructionLabel.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
-        instructionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 60).isActive = true
-        instructionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -60).isActive = true
-        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+//        instructionLabel.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
+//        instructionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 60).isActive = true
+//        instructionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -60).isActive = true
+//        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
         
     }
 }

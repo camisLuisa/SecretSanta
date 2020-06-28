@@ -29,9 +29,11 @@ final class GroupViewController: UIViewController {
     override func viewDidLoad() {
         view = viewGroup
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         viewGroup.didSelectAddGroup = {
             self.coordinator.goToCreateGroup()
         }
+        
+        viewGroup.setupTableView()
     }
 }
