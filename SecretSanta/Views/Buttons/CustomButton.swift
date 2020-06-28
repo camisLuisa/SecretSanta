@@ -4,12 +4,13 @@ final class CustomButton: UIButton {
     
     // MARK: = Properties -
     let background: UIColor
+    let titleColor: UIColor
     
     // MARK: - Setup View -
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        setTitleColor(.white, for: .normal)
+        setTitleColor(titleColor, for: .normal)
         layer.cornerRadius = 20
     }
     
@@ -23,8 +24,9 @@ final class CustomButton: UIButton {
         }
     }
     
-    init(backgroundColor: UIColor) {
+    init(backgroundColor: UIColor, titleColor: UIColor) {
         self.background = backgroundColor
+        self.titleColor = titleColor
         
         super.init(frame: .zero)
     }

@@ -1,11 +1,3 @@
-//
-//  UITextField+ConfigureBottomBorder.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 28/04/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 import UIKit.UITextField
 
 extension UITextField {
@@ -22,8 +14,7 @@ extension UITextField {
     
     func configureWhiteInputView(backgroundColor: UIColor) {
         layer.cornerRadius = 13.0
+        layer.masksToBounds = true
         layer.backgroundColor = backgroundColor.cgColor
-        layer.masksToBounds = false
-        
     }
 }

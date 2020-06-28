@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */; };
+		1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */; };
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
@@ -94,6 +95,7 @@
 /* Begin PBXFileReference section */
 		078824235CDA5F975CE1D3F5 /* Pods-SecretSanta-SecretSantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTextField.swift; sourceTree = "<group>"; };
+		1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInputView.swift; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				315FB8FE24511B6800872A20 /* FormInputView.swift */,
+				1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
 				31FBA1F42455DFE00011F917 /* FormTextField.swift in Sources */,
 				31C224542482F42000675155 /* assets-fonts.swift in Sources */,
+				1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */,
 				1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
 			);
@@ -1038,7 +1042,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited) ";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q353MJK483;
+				DEVELOPMENT_TEAM = H2GRK7445L;
 				INFOPLIST_FILE = SecretSanta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1058,7 +1062,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited) ";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q353MJK483;
+				DEVELOPMENT_TEAM = H2GRK7445L;
 				INFOPLIST_FILE = SecretSanta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -4,8 +4,6 @@ enum FormInputViewType {
     case groupName
     case amount
     case eventDate
-    case participantName
-    case participantEmail
 }
 
 final class FormInputView: UIView {
@@ -31,7 +29,7 @@ final class FormInputView: UIView {
         case .amount:
             textField = AmountTextField(frame: .zero)
             textField.keyboardType = .numberPad
-        case .eventDate, .participantName, .participantEmail:
+        case .eventDate:
             textField = EventDateTextField(frame: .zero)
             textField.keyboardType = .numberPad
         }
@@ -44,22 +42,6 @@ final class FormInputView: UIView {
         return textField
     }()
     
-    lazy var participantTextField: ParticipantTextField = {
-        let textfield: ParticipantTextField
-        switch type {
-        case .participantName, .amount, .eventDate, .groupName:
-            textfield = ParticipantTextField(frame: .zero)
-        case .participantEmail:
-            textfield = ParticipantTextField(frame: .zero)
-        }
-        
-        textfield.font = UIFont(font: FontFamily.SegoeUI.bold, size: 12.0)
-        textfield.textColor = .white
-        textfield.delegate = textFieldDelegate
-        
-        return textfield
-    }()
-    
     let validationLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 12.0)
@@ -69,7 +51,7 @@ final class FormInputView: UIView {
     
     var validator: FieldValidator {
         switch type {
-        case .groupName, .participantEmail, .participantName:
+        case .groupName:
             return GroupNameValidator()
         case .amount:
             return AmountValidator()
@@ -113,10 +95,6 @@ private extension FormInputView {
             validationLabel.text = "Digite o valor sugerido para o presente."
         case .eventDate:
             validationLabel.text = "Digite a data do evento."
-        case .participantName:
-            validationLabel.text = "Digite o nome do participante."
-        case .participantEmail:
-            validationLabel.text = "Digite o email do participante."
         }
     }
     
@@ -129,10 +107,6 @@ private extension FormInputView {
             validationLabel.text = "Digite o valor sugerido para o presente."
         case .eventDate:
             validationLabel.text = "Formato dd/mm/aaaa"
-        case .participantName:
-            validationLabel.text = "Digite o nome do participante."
-        case .participantEmail:
-            validationLabel.text = "Digite o email do participante."
         }
     }
     
@@ -140,7 +114,7 @@ private extension FormInputView {
         validationLabel.isHidden = false
         validationLabel.textColor = .red
         switch type {
-        case .groupName, .participantName, .participantEmail:
+        case .groupName:
             validationLabel.text = ""
         case .amount:
             switch reason {
@@ -170,10 +144,6 @@ private extension FormInputView {
             setupTextsForAmount()
         case .eventDate:
             setupTextsForEventDate()
-        case .participantName:
-            setupTextsForParticipantName()
-        case .participantEmail:
-            setupTextsForGroupName()
         }
     }
     
@@ -190,14 +160,6 @@ private extension FormInputView {
     func setupTextsForEventDate() {
         formTextField.placeholder = "dd/mm/aaaa"
         titleFieldLabel.text = "Data"
-    }
-    
-    func setupTextsForParticipantName() {
-        participantTextField.placeholder = "Nome"
-    }
-    
-    func setupTextsForParticipantEmail() {
-        participantTextField.placeholder = "E-mail"
     }
 }
 

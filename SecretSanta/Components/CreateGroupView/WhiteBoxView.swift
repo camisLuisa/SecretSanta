@@ -25,7 +25,7 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     private lazy var stepImageView: UIImageView = {
         var stepImageView = UIImageView()
         switch type {
-        case .groupName, .participantName, .participantEmail:
+        case .groupName:
             stepImageView.image = Asset.step1.image
         case .amount:
             stepImageView.image = Asset.step2.image
@@ -37,7 +37,7 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     }()
     
     private let nextButton: CustomButton = {
-        let button = CustomButton(backgroundColor: ColorName.red1.color)
+        let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
         button.setTitle("Próximo", for: .normal)
         button.isEnabled = true
         button.addTarget(self, action: #selector(didTapAtNextButton), for: .touchUpInside)

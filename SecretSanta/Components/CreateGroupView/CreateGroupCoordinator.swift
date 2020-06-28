@@ -26,7 +26,7 @@ final class CreateGroupCoordinator: Coordinator {
     
     func goToNextCreateGroup(type: FormInputViewType) {
         switch type {
-        case .groupName, .participantName, .participantEmail:
+        case .groupName:
             let controller = CreateGroupViewController(type: CreateGroupViewType.amount, coordinator: self)
             
             navigationController.pushViewController(controller, animated: true)
@@ -53,6 +53,7 @@ final class CreateGroupCoordinator: Coordinator {
     
     func goToAddParticipants() {
         let controller = AddParticipantAlertViewController()
+        controller.modalPresentationStyle = .overCurrentContext
         
         navigationController.present(controller, animated: true, completion: nil)
     }

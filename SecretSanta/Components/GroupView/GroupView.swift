@@ -47,15 +47,35 @@ final class GroupView: UIView {
         return label
     }()
     
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+    
     // MARK: - init -
     init() {
         super.init(frame: .zero)
+        tableView.delegate = self
+        tableView.dataSource = self
         setupViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - TableViewDelegate -
+extension GroupView: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }
 
 // MARK: - Actions -
