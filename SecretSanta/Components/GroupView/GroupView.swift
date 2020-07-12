@@ -1,11 +1,3 @@
-//
-//  GroupView.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 08/04/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 import UIKit
 
 final class GroupView: UIView {
@@ -47,9 +39,10 @@ final class GroupView: UIView {
         return label
     }()
     
-    private let tableView: UITableView = {
+    var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -68,16 +61,16 @@ final class GroupView: UIView {
 
 // MARK: - TableViewDelegate -
 extension GroupView: UITableViewDelegate, UITableViewDataSource {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
         return cell
     }
     
-    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
 }
@@ -96,6 +89,8 @@ extension GroupView {
         self.didSelectAddGroup?()
     }
 }
+
+// MARK: - TableView
 
 // MARK: - CodeView -
 extension GroupView: CodeView {
@@ -130,7 +125,7 @@ extension GroupView: CodeView {
         addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
         addGroupButton.translatesAutoresizingMaskIntoConstraints = false
         
-        tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 10.0).isActive = true
         tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
