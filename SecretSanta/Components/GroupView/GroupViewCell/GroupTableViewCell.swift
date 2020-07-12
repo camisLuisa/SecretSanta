@@ -3,9 +3,8 @@ import UIKit
 final class GroupTableViewCell: UITableViewCell {
     
     // MARK: - Attributes -
-    private let contentCell: UIView = {
+    var contentCell: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
         return view
     }()
     
@@ -63,7 +62,7 @@ extension GroupTableViewCell: CodeView {
     
     func setupContraints() {
         contentCell.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
-        contentCell.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        contentCell.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         contentCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         contentCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         contentCell.translatesAutoresizingMaskIntoConstraints = false
@@ -86,6 +85,4 @@ extension GroupTableViewCell: CodeView {
         groupNumber.trailingAnchor.constraint(equalTo: contentInfo.trailingAnchor, constant: -10.0).isActive = true
         groupNumber.translatesAutoresizingMaskIntoConstraints = false
     }
-    
-    
 }
