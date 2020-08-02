@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.2.1)
   - Firebase/Analytics (6.19.0):
     - Firebase/Core
   - Firebase/Core (6.19.0):
@@ -94,7 +94,7 @@ PODS:
   - SwiftGen (6.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.9.1)
+  - Alamofire (~> 5.2)
   - Firebase/Analytics
   - Firebase/Core
   - GoogleAPIClientForREST/Sheets (~> 1.2.1)
@@ -124,7 +124,7 @@ SPEC REPOS:
     - SwiftGen
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Firebase: d55ddb0e0bb3207166cddc028647833d8a1b5b6f
   FirebaseAnalytics: 572e467f3d977825266e8ccd52674aa3e6f47eac
   FirebaseCore: ed0a24c758a57c2b88c5efa8e6a8195e868af589
@@ -144,6 +144,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: db00a7c8338626f7ffe65864dd432f0e3ced99ac
+PODFILE CHECKSUM: 5550f3cbba7b8dae55b6af459081d09300dc8b05
 
 COCOAPODS: 1.9.3
