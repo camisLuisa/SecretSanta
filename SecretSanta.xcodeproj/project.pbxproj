@@ -10,6 +10,7 @@
 		1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */; };
 		1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */; };
 		1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E5F1F24C10A36005805FC /* BaseWebService.swift */; };
+		1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866824D7435C002D6CAE /* TutorialViewController.swift */; };
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
@@ -99,6 +100,7 @@
 		1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTextField.swift; sourceTree = "<group>"; };
 		1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInputView.swift; sourceTree = "<group>"; };
 		1E6E5F1F24C10A36005805FC /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
+		1E6E866824D7435C002D6CAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6E866724D74319002D6CAE /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				1E6E866824D7435C002D6CAE /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		1E84394124A02ABD0029718E /* ParticipantsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +261,7 @@
 		3113CED4243A6171001DF8CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1E6E866724D74319002D6CAE /* Tutorial */,
 				1E84394624A039420029718E /* AddParticipants */,
 				1E84394124A02ABD0029718E /* ParticipantsView */,
 				3101F991244234D7006D3ED6 /* GroupView */,
@@ -838,6 +849,7 @@
 				31FBA207245C7EEF0011F917 /* BaseTextField.swift in Sources */,
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
+				1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */,
 				1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */,
 				31DCE00B2474A1AA0013233C /* test.swift in Sources */,
 				3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */,

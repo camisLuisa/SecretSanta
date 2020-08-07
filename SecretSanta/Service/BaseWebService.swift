@@ -3,9 +3,9 @@ import Alamofire
 
 class BaseWebService {
     
-    func request(url: URL, parameters: Parameters) {
-        AF.request(url, method: .post, parameters: parameters, headers: nil).responseJSON { response in
-            
+    func request(url: URL) {
+        AF.request(url, method: .get).responseJSON { response in
+            print(response)
         }
     }
 }

@@ -23,6 +23,8 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         view = viewSplash
         super.viewDidLoad()
+        
+        BaseWebService().request(url: URL(string: "https://postman-echo.com/get?foo1=bar1&foo2=bar2")!)
         // Do any additional setup after loading the view.
     }
 }

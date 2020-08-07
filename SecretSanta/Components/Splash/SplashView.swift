@@ -18,7 +18,7 @@ class SplashView: UIView {
     }()
     
     private let logoView: UIImageView = {
-        let image = UIImageView(image: Asset.logoSecretSanta.image)
+        let image = UIImageView(image: Asset.logoAmiguSecreto.image)
         image.contentMode = .scaleAspectFit
         return image
     }()
