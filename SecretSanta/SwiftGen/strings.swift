@@ -12,6 +12,8 @@ import Foundation
 internal enum L10n {
   /// Adicione um Participante
   internal static let addParticipantsTitle = L10n.tr("Localizable", "addParticipantsTitle")
+  /// Crie sua conta
+  internal static let createUserLoginTitle = L10n.tr("Localizable", "createUserLoginTitle")
   /// Toque no + para criar um novo grupo\ndo Secret Santa
   internal static let instructions = L10n.tr("Localizable", "instructions")
   /// Participantes

@@ -3,4 +3,102 @@
    uuid = "561E2C2C-AC21-4882-9DEB-B7625DB53C18"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "509EF4AE-87F4-43FA-A8DA-39011FAE44BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SecretSanta/Components/Splash/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05FAF2DC-8409-45A3-9116-CB76244751FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SecretSanta/Components/CreateUserLogin/CreateUserLoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05FAF2DC-8409-45A3-9116-CB76244751FB - 74ecd6c2fce14457"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;__C.FIRAuthDataResult, Swift.Error&gt;) -&gt; () in closure #1 (Swift.String, Swift.String, Swift.String) -&gt; () in SecretSanta.CreateUserLoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "SecretSanta"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/camilaluisafarias/Development/SecretSanta/SecretSanta/Components/CreateUserLogin/CreateUserLoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  uuid = "05FAF2DC-8409-45A3-9116-CB76244751FB - 74ecd6c2fce14457"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;__C.FIRAuthDataResult, Swift.Error&gt;) -&gt; () in closure #1 (Swift.String, Swift.String, Swift.String) -&gt; () in SecretSanta.CreateUserLoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "SecretSanta"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/camilaluisafarias/Development/SecretSanta/SecretSanta/Components/CreateUserLogin/CreateUserLoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B63CAB04-7C57-421F-86FA-1F1D436F7D2E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SecretSanta/Components/CreateUserLogin/CreateUserLoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9281EED7-C667-417F-8074-DEF81596A787"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SecretSanta/Components/CreateUserLogin/CreateUserLoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

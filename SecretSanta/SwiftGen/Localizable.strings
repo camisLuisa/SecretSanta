@@ -6,3 +6,6 @@ do Secret Santa";
 
 //AddParticipants View
 "addParticipantsTitle" = "Adicione um Participante";
+
+//CreateUserLogin View
+"createUserLoginTitle" = "Crie sua conta";
