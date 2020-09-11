@@ -20,7 +20,8 @@ final class CreateGroupCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = GroupViewController(coordinator: self)
+//        let controller = GroupViewController(coordinator: self)
+        let controller = CreateUserLoginViewController()
         navigationController.setViewControllers([controller], animated: false)
     }
     

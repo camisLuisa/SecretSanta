@@ -17,4 +17,15 @@ extension UITextField {
         layer.masksToBounds = true
         layer.backgroundColor = backgroundColor.cgColor
     }
+    
+    func configureRedFrameInputView() {
+        layer.cornerRadius = 5.0
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1.0
+        layer.masksToBounds = true
+        layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        layer.shadowRadius = 5.0
+        layer.shadowOpacity = 0.5
+        layer.shadowColor = UIColor.black.cgColor
+    }
 }

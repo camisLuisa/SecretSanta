@@ -26,5 +26,9 @@ final class SplashViewController: UIViewController {
         
         BaseWebService().request(url: URL(string: "https://postman-echo.com/get?foo1=bar1&foo2=bar2")!)
         // Do any additional setup after loading the view.
+        
+//        CreateAccountService.createAccount(with: "camilateste@gmail.com", password: "123456") { result in
+//            print(result)
+//        }
     }
 }

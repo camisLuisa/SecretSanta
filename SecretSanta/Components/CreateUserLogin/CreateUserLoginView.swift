@@ -19,8 +19,8 @@ final class CreateUserLoginView: UIView {
         return title
     }()
     
-    private let inputName: UITextView = {
-        let inputName = UITextView()
+    private let inputName: CustomTextField = {
+        let inputName = CustomTextField(frame: .zero)
         inputName.font = UIFont(font: FontFamily.SegoeUI.regular, size: 16.0)
         return inputName
     }()
@@ -68,7 +68,7 @@ final class CreateUserLoginView: UIView {
 private extension CreateUserLoginView {
     @objc
     func didTapAtEnterButton() {
-        self.didTapEnterButton?(inputName.text, inputEmail.text, inputPassword.text)
+        self.didTapEnterButton?("", inputEmail.text, inputPassword.text)
     }
 }
 
