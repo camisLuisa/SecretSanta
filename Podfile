@@ -12,6 +12,7 @@ target 'SecretSanta' do
 
   #Util
   pod 'SwiftGen', '~> 6.0'
+  pod 'SwiftLint'
 
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'

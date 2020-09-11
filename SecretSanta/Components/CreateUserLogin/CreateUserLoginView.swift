@@ -96,7 +96,7 @@ extension CreateUserLoginView: CodeView {
         titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        inputName.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+        inputName.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         inputName.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputName.translatesAutoresizingMaskIntoConstraints = false
         

@@ -575,6 +575,7 @@
 				98A89DBD68C9104F2074CF02 /* [CP] Embed Pods Frameworks */,
 				9CABE1C4411E161ECEAC12B6 /* [CP] Copy Pods Resources */,
 				3113CEE6243A8F2F001DF8CB /* SwiftGen */,
+				1E3CC269250BFE8D00158B27 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -736,6 +737,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1E3CC269250BFE8D00158B27 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		3113CEE6243A8F2F001DF8CB /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
