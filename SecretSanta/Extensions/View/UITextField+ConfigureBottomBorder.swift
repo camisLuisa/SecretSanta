@@ -18,7 +18,7 @@ extension UITextField {
         layer.backgroundColor = backgroundColor.cgColor
     }
     
-    func configureRedFrameInputView() {
+    func configureVisualFrameInputView() {
         layer.cornerRadius = 5.0
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1.0
@@ -27,5 +27,9 @@ extension UITextField {
         layer.shadowRadius = 5.0
         layer.shadowOpacity = 0.3
         layer.shadowColor = UIColor.black.cgColor
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+        leftViewMode = .always
+        leftView = paddingView
     }
 }

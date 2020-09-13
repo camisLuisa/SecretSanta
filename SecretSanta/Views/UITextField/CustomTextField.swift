@@ -6,7 +6,7 @@ class CustomTextField: UITextField {
         super.init(frame: frame)
         tintColor = .white
         textColor = .white
-        configureRedFrameInputView()
+        configureVisualFrameInputView()
         addTarget(self, action: #selector(editingChange), for: .editingChanged)
         addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)
         addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
