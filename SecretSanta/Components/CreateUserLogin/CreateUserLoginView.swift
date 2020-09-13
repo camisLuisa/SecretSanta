@@ -40,7 +40,7 @@ final class CreateUserLoginView: UIView {
     private let enterButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(didTapAtEnterButton), for: .touchUpInside)
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle("Criar Conta", for: .normal)
         return button
     }()
     
@@ -119,5 +119,5 @@ extension CreateUserLoginView: CodeView {
         enterButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    
+
 }

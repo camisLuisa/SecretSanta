@@ -2,10 +2,10 @@ import UIKit
 
 final class CreateUserLoginViewController: UIViewController {
     
-    //MARK: - Attibutes
+    //MARK: - Attributes
     private let createUserLoginView: CreateUserLoginView
     
-    //MARK: - init
+    // MARK: - init
     init() {
         self.createUserLoginView = CreateUserLoginView()
         super.init(nibName: nil, bundle: nil)
@@ -15,7 +15,7 @@ final class CreateUserLoginViewController: UIViewController {
             fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Lifecycle -
+    // MARK: - Lifecycle -
     override func viewDidLoad() {
         view = createUserLoginView
         super.viewDidLoad()
