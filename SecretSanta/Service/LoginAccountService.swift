@@ -1,10 +1,10 @@
 import Foundation
 import Firebase
 
-final class CreateAccountService {
+final class LoginAccountService {
     
-  static func createAccount(with email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+    static func loginAccount(with email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(error))
