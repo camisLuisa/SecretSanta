@@ -18,7 +18,7 @@ class SplashView: UIView {
     }()
     
     private let logoView: UIImageView = {
-        let image = UIImageView(image: Asset.logoAmiguSecreto.image)
+        let image = UIImageView(image: Asset.logoAmiguSecretoSplash.image)
         image.contentMode = .scaleAspectFit
         return image
     }()
