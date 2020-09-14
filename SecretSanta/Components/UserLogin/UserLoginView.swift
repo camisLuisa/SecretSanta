@@ -61,13 +61,13 @@ final class UserLoginView: UIView {
     }()
     
     private let loginWithGoogleButton: CustomButton = {
-        let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
+        let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
         button.setTitle("Entrar com o Google", for: .normal)
         return button
     }()
-    
+
     private let loginWithFacebookButton: CustomButton = {
-        let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
+        let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
         button.setTitle("Entrar com o Facebook", for: .normal)
         return button
     }()
@@ -80,10 +80,16 @@ final class UserLoginView: UIView {
     
     private let createAccountButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Crie sua conta", for: .normal)
+        let attributedString = NSAttributedString(string: "Crie sua conta", attributes:[
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16.0),
+            NSAttributedString.Key.foregroundColor : UIColor.gray,
+            NSAttributedString.Key.underlineStyle: 1.0
+        ])
+        
+        button.setAttributedTitle(attributedString, for: .normal)
         return button
     }()
-    
+
     // MARK: - init
     init() {
         super.init(frame: .zero)
@@ -95,7 +101,7 @@ final class UserLoginView: UIView {
     }
 }
 
-//MARK: - Action
+// MARK: - Action
 private extension UserLoginView {
     @objc
     func didTapAtEnterButton() {
@@ -107,10 +113,11 @@ private extension UserLoginView {
 extension UserLoginView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
-        addSubview(stackView)
-        stackView.addArrangedSubview(inputEmail)
-        stackView.addArrangedSubview(inputPassword)
-        stackView.addArrangedSubview(loginButton)
+        addSubview(titleLabel)
+//        addSubview(stackView)
+//        stackView.addArrangedSubview(inputEmail)
+//        stackView.addArrangedSubview(inputPassword)
+//        stackView.addArrangedSubview(loginButton)
     }
     
     func setupContraints() {
@@ -123,7 +130,7 @@ extension UserLoginView: CodeView {
         inputEmail.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputEmail.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputEmail.translatesAutoresizingMaskIntoConstraints = false
-        
+
         inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputPassword.translatesAutoresizingMaskIntoConstraints = false
@@ -131,7 +138,7 @@ extension UserLoginView: CodeView {
         loginButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
-        
+
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 46.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false

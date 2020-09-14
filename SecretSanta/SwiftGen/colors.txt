@@ -1,5 +1,6 @@
 Red1: #D54545
 Red2: #F4C7C8
+MediumRed: #E97E80
 Gray1: #707070
 WhiteBlur: #FFFFFF00
 
