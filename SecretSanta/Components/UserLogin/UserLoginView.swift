@@ -37,6 +37,15 @@ final class UserLoginView: UIView {
         return button
     }()
     
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 10
+        return stackView
+    }()
+    
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()
         button.setTitle("Esqueci minha senha", for: .normal)
@@ -57,13 +66,22 @@ final class UserLoginView: UIView {
         return button
     }()
     
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = .fill
-        stackView.spacing = 10
-        return stackView
+    private let loginWithFacebookButton: CustomButton = {
+        let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
+        button.setTitle("Entrar com o Facebook", for: .normal)
+        return button
+    }()
+    
+    private let askLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Não possui login?"
+        return label
+    }()
+    
+    private let createAccountButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Crie sua conta", for: .normal)
+        return button
     }()
     
     // MARK: - init
