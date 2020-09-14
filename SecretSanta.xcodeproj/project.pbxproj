@@ -10,6 +10,7 @@
 		1E3CC26C250EB98C00158B27 /* LoginAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CC26B250EB98C00158B27 /* LoginAccountService.swift */; };
 		1E3CC26E250EBBD600158B27 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CC26D250EBBD600158B27 /* UserLoginViewController.swift */; };
 		1E3CC270250EBD7700158B27 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CC26F250EBD7700158B27 /* UserLoginView.swift */; };
+		1E3CC274250FF08100158B27 /* QuicksandVariableFontwght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E3CC273250FF08100158B27 /* QuicksandVariableFontwght.ttf */; };
 		1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */; };
 		1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */; };
 		1E60AA8A25093A4C0008C7D3 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */; };
@@ -108,6 +109,7 @@
 		1E3CC26B250EB98C00158B27 /* LoginAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountService.swift; sourceTree = "<group>"; };
 		1E3CC26D250EBBD600158B27 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		1E3CC26F250EBD7700158B27 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
+		1E3CC273250FF08100158B27 /* QuicksandVariableFontwght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuicksandVariableFontwght.ttf; sourceTree = "<group>"; };
 		1E5E28F724A0F3680077B3E3 /* ParticipantTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTextField.swift; sourceTree = "<group>"; };
 		1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInputView.swift; sourceTree = "<group>"; };
 		1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				31C2244B2482EEFA00675155 /* SegoeUIBoldItalic.ttf */,
 				31C2244C2482EEFB00675155 /* SegoeUIBold.ttf */,
 				31C2244D2482EEFB00675155 /* SegoeUIItalic.ttf */,
+				1E3CC273250FF08100158B27 /* QuicksandVariableFontwght.ttf */,
 				31C2244E2482EEFB00675155 /* SegoeUI.ttf */,
 			);
 			path = Fonts;
@@ -697,6 +700,7 @@
 				316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */,
 				3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */,
 				31C2396D2412E6E9008AC51C /* Assets.xcassets in Resources */,
+				1E3CC274250FF08100158B27 /* QuicksandVariableFontwght.ttf in Resources */,
 				31C2244F2482EEFB00675155 /* SegoeUIBoldItalic.ttf in Resources */,
 				31C224522482EEFB00675155 /* SegoeUI.ttf in Resources */,
 				31C2396B2412E6E4008AC51C /* Main.storyboard in Resources */,
