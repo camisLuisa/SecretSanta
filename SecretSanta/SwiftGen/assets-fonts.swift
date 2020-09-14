@@ -24,6 +24,10 @@ internal enum FontFamily {
     internal static let regular = FontConvertible(name: "Quicksand-Light_Regular", family: "Quicksand", path: "QuicksandVariableFontwght.ttf")
     internal static let all: [FontConvertible] = [light, bold, medium, regular]
   }
+  internal enum Roboto {
+    internal static let regular = FontConvertible(name: "Roboto-Regular", family: "Roboto", path: "Roboto-Regular.ttf")
+    internal static let all: [FontConvertible] = [regular]
+  }
   internal enum SegoeUI {
     internal static let regular = FontConvertible(name: "SegoeUI", family: "Segoe UI", path: "SegoeUI.ttf")
     internal static let bold = FontConvertible(name: "SegoeUI-Bold", family: "Segoe UI", path: "SegoeUIBold.ttf")
@@ -31,7 +35,7 @@ internal enum FontFamily {
     internal static let italic = FontConvertible(name: "SegoeUI-Italic", family: "Segoe UI", path: "SegoeUIItalic.ttf")
     internal static let all: [FontConvertible] = [regular, bold, boldItalic, italic]
   }
-  internal static let allCustomFonts: [FontConvertible] = [Quicksand.all, SegoeUI.all].flatMap { $0 }
+  internal static let allCustomFonts: [FontConvertible] = [Quicksand.all, Roboto.all, SegoeUI.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

@@ -11,6 +11,13 @@ final class UserLoginView: UIView {
         return view
     }()
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Entre Agora"
+        label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 24)
+        return label
+    }()
+    
     private let inputEmail: CustomTextField = {
         let textfield = CustomTextField()
         textfield.placeholder = "E-mail"
@@ -23,10 +30,30 @@ final class UserLoginView: UIView {
         return textfield
     }()
     
-    private let loginButton: UIButton = {
-        let button = UIButton()
+    private let loginButton: CustomButton = {
+        let button = CustomButton(backgroundColor: .white, titleColor: ColorName.red1.color)
         button.addTarget(self, action: #selector(didTapAtEnterButton), for: .touchUpInside)
         button.setTitle("Entrar", for: .normal)
+        return button
+    }()
+    
+    private let forgotPasswordButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Esqueci minha senha", for: .normal)
+        button.titleLabel?.font = UIFont(font: FontFamily.Roboto.regular, size: 12)
+        return button
+    }()
+    
+    private let orEnterWithTitle: UILabel = {
+       let label = UILabel()
+        label.text = "Ou entre com:"
+        label.font = UIFont(font: FontFamily.Quicksand.medium, size: 14)
+        return label
+    }()
+    
+    private let loginWithGoogleButton: CustomButton = {
+        let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
+        button.setTitle("Entrar com o Google", for: .normal)
         return button
     }()
     
