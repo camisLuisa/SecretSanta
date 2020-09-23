@@ -15,6 +15,7 @@ final class UserLoginView: UIView {
         let label = UILabel()
         label.text = "Entre Agora"
         label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 24)
+        label.textColor = UIColor.white
         return label
     }()
     
@@ -114,8 +115,8 @@ extension UserLoginView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         addSubview(titleLabel)
-//        addSubview(stackView)
-//        stackView.addArrangedSubview(inputEmail)
+        addSubview(stackView)
+        stackView.addArrangedSubview(inputEmail)
 //        stackView.addArrangedSubview(inputPassword)
 //        stackView.addArrangedSubview(loginButton)
     }
@@ -126,20 +127,24 @@ extension UserLoginView: CodeView {
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
+
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
         inputEmail.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputEmail.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputEmail.translatesAutoresizingMaskIntoConstraints = false
-
-        inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-        inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
-        inputPassword.translatesAutoresizingMaskIntoConstraints = false
-        
-        loginButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-        loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 46.0).isActive = true
+//
+//        inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+//        inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
+//        inputPassword.translatesAutoresizingMaskIntoConstraints = false
+//
+//        loginButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+//        loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
+//        loginButton.translatesAutoresizingMaskIntoConstraints = false
+//
+        stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
     }
