@@ -17,19 +17,14 @@ extension UITextField {
         layer.masksToBounds = true
         layer.backgroundColor = backgroundColor.cgColor
     }
-    
+
     func configureVisualFrameInputView() {
-        layer.cornerRadius = 5.0
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1.0
-        layer.masksToBounds = true
+        borderStyle = .none
+        layer.backgroundColor = ColorName.red1.color.cgColor
+        layer.masksToBounds = false
+        layer.shadowColor = ColorName.roseRed.color.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        layer.shadowRadius = 5.0
-        layer.shadowOpacity = 0.3
-        layer.shadowColor = UIColor.black.cgColor
-        
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
-        leftViewMode = .always
-        leftView = paddingView
+        layer.shadowOpacity = 1.0
+        layer.shadowRadius = 0.0
     }
 }

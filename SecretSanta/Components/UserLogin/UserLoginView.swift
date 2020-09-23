@@ -20,7 +20,7 @@ final class UserLoginView: UIView {
     }()
     
     private let inputEmail: CustomTextField = {
-        let textfield = CustomTextField()
+        let textfield = CustomTextField(frame: .zero)
         textfield.placeholder = "E-mail"
         return textfield
     }()
@@ -46,7 +46,7 @@ final class UserLoginView: UIView {
         stackView.spacing = 10
         return stackView
     }()
-    
+
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()
         button.setTitle("Esqueci minha senha", for: .normal)
@@ -60,7 +60,7 @@ final class UserLoginView: UIView {
         label.font = UIFont(font: FontFamily.Quicksand.medium, size: 14)
         return label
     }()
-    
+
     private let loginWithGoogleButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
         button.setTitle("Entrar com o Google", for: .normal)
