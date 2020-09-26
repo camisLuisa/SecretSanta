@@ -13,7 +13,7 @@ final class UserLoginView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Entre Agora"
+        label.text = L10n.enterNow
         label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 24)
         label.textColor = UIColor.white
         return label
@@ -21,7 +21,7 @@ final class UserLoginView: UIView {
     
     private let inputEmail: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)
-        textfield.attributedPlaceholder = NSAttributedString(string: "E-mail",
+        textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
                                                              attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
@@ -35,7 +35,7 @@ final class UserLoginView: UIView {
     
     private let inputPassword: CustomTextField = {
         let textfield = CustomTextField()
-        textfield.attributedPlaceholder = NSAttributedString(string: "Senha",
+        textfield.attributedPlaceholder = NSAttributedString(string: L10n.password,
                                                              attributes: [.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
@@ -66,7 +66,7 @@ final class UserLoginView: UIView {
 
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()
-        let attributeString = NSMutableAttributedString(string: "Esqueci minha senha",
+        let attributeString = NSMutableAttributedString(string: L10n.forgotPassword,
                                                         attributes: [
                                                             .font: UIFont.systemFont(ofSize: 14),
                                                             .foregroundColor: UIColor.white,
@@ -78,7 +78,7 @@ final class UserLoginView: UIView {
     
     private let orEnterWithTitle: UILabel = {
        let label = UILabel()
-        label.text = "Ou entre com:"
+        label.text = L10n.orLoginWith
         label.font = UIFont(font: FontFamily.Quicksand.medium, size: 14)
         label.textColor = UIColor.white
         return label
@@ -86,14 +86,14 @@ final class UserLoginView: UIView {
 
     private let loginWithGoogleButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
-        button.setTitle("Entrar com o Google", for: .normal)
+        button.setTitle(L10n.enterWithGoogle, for: .normal)
         button.isEnabled = true
         return button
     }()
 
     private let loginWithFacebookButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
-        button.setTitle("Entrar com o Facebook", for: .normal)
+        button.setTitle(L10n.enterWithFacebook, for: .normal)
         button.isEnabled = true
         return button
     }()
@@ -109,14 +109,14 @@ final class UserLoginView: UIView {
 
     private let askLabel: UILabel = {
         let label = UILabel()
-        label.text = "Não possui login?"
+        label.text = L10n.dontHaveLogin
         label.textColor = .white
         return label
     }()
 
     private let createAccountButton: UIButton = {
         let button = UIButton()
-        let attributeString = NSMutableAttributedString(string: "Crie sua conta", attributes: [
+        let attributeString = NSMutableAttributedString(string: L10n.createAccount, attributes: [
                                                             .font: UIFont.systemFont(ofSize: 16),
                                                             .foregroundColor: ColorName.appYellow.color,
                                                             .underlineStyle: NSUnderlineStyle.single.rawValue])

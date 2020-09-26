@@ -9,3 +9,15 @@ do Secret Santa";
 
 //CreateUserLogin View
 "createUserLoginTitle" = "Crie sua conta";
+
+//UserLogin View
+"enterNow"= "Entre Agora";
+"email" = "E-mail";
+"password" = "Senha";
+"enter" = "Entrar";
+"forgotPassword" = "Esqueci minha senha";
+"orLoginWith" = "Ou entre com:";
+"enterWithGoogle" = "Entrar com o Google";
+"enterWithFacebook" = "Entrar com o Facebook";
+"dontHaveLogin"= "Não possui login?";
+"createAccount" = "Crie sua conta";
