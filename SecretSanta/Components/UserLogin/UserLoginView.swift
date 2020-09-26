@@ -68,7 +68,11 @@ final class UserLoginView: UIView {
         let button = UIButton()
         
         let attributeString = NSMutableAttributedString(string: "Esqueci minha senha",
-                                                        attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue])
+                                                        attributes: [
+                                                            .font: UIFont.systemFont(ofSize: 14),
+                                                            .foregroundColor: UIColor.white,
+                                                            .underlineStyle: NSUnderlineStyle.single.rawValue])
+        
         button.setAttributedTitle(attributeString, for: .normal)
         return button
     }()
@@ -94,7 +98,7 @@ final class UserLoginView: UIView {
         button.isEnabled = true
         return button
     }()
-    
+
     private let stackViewTwo: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -107,19 +111,28 @@ final class UserLoginView: UIView {
     private let askLabel: UILabel = {
         let label = UILabel()
         label.text = "Não possui login?"
+        label.textColor = .white
         return label
     }()
 
     private let createAccountButton: UIButton = {
         let button = UIButton()
-        let attributedString = NSAttributedString(string: "Crie sua conta", attributes:[
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16.0),
-            NSAttributedString.Key.foregroundColor : UIColor.gray,
-            NSAttributedString.Key.underlineStyle: 1.0
-        ])
-        
-        button.setAttributedTitle(attributedString, for: .normal)
+        let attributeString = NSMutableAttributedString(string: "Crie sua conta", attributes: [
+                                                            .font: UIFont.systemFont(ofSize: 16),
+                                                            .foregroundColor: ColorName.appYellow.color,
+                                                            .underlineStyle: NSUnderlineStyle.single.rawValue])
+
+        button.setAttributedTitle(attributeString, for: .normal)
         return button
+    }()
+    
+    private let stackViewThree: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 3
+        return stackView
     }()
 
     // MARK: - init
@@ -155,8 +168,11 @@ extension UserLoginView: CodeView {
         addSubview(stackViewTwo)
         stackViewTwo.addArrangedSubview(loginWithGoogleButton)
         stackViewTwo.addArrangedSubview(loginWithFacebookButton)
+        addSubview(stackViewThree)
+        stackViewThree.addArrangedSubview(askLabel)
+        stackViewThree.addArrangedSubview(createAccountButton)
     }
-    
+
     func setupContraints() {
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -164,7 +180,7 @@ extension UserLoginView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -203,6 +219,14 @@ extension UserLoginView: CodeView {
         stackViewTwo.topAnchor.constraint(equalTo: orEnterWithTitle.bottomAnchor, constant: 10.0).isActive = true
         stackViewTwo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackViewTwo.translatesAutoresizingMaskIntoConstraints = false
+
+        askLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        createAccountButton.translatesAutoresizingMaskIntoConstraints = false
+
+        stackViewThree.topAnchor.constraint(equalTo: stackViewTwo.bottomAnchor, constant: 10.0).isActive = true
+        stackViewThree.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackViewThree.translatesAutoresizingMaskIntoConstraints = false
 
     }
 }

@@ -4,6 +4,7 @@ MediumRed: #E97E80
 RoseRed: #D38789
 Gray1: #707070
 WhiteBlur: #FFFFFF00
+appYellow: #F5F18E
 
 
 
