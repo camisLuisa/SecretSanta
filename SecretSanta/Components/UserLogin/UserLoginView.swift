@@ -55,7 +55,7 @@ final class UserLoginView: UIView {
         return button
     }()
 
-    private let stackView: UIStackView = {
+    private let stackViewOne: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fill
@@ -70,7 +70,6 @@ final class UserLoginView: UIView {
         let attributeString = NSMutableAttributedString(string: "Esqueci minha senha",
                                                         attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue])
         button.setAttributedTitle(attributeString, for: .normal)
-
         return button
     }()
     
@@ -85,13 +84,24 @@ final class UserLoginView: UIView {
     private let loginWithGoogleButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
         button.setTitle("Entrar com o Google", for: .normal)
+        button.isEnabled = true
         return button
     }()
 
     private let loginWithFacebookButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
         button.setTitle("Entrar com o Facebook", for: .normal)
+        button.isEnabled = true
         return button
+    }()
+    
+    private let stackViewTwo: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 10
+        return stackView
     }()
 
     private let askLabel: UILabel = {
@@ -136,12 +146,15 @@ extension UserLoginView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         addSubview(titleLabel)
-        addSubview(stackView)
-        stackView.addArrangedSubview(inputEmail)
-        stackView.addArrangedSubview(inputPassword)
-        stackView.addArrangedSubview(loginButton)
+        addSubview(stackViewOne)
+        stackViewOne.addArrangedSubview(inputEmail)
+        stackViewOne.addArrangedSubview(inputPassword)
+        stackViewOne.addArrangedSubview(loginButton)
         addSubview(forgotPasswordButton)
         addSubview(orEnterWithTitle)
+        addSubview(stackViewTwo)
+        stackViewTwo.addArrangedSubview(loginWithGoogleButton)
+        stackViewTwo.addArrangedSubview(loginWithFacebookButton)
     }
     
     func setupContraints() {
@@ -167,16 +180,29 @@ extension UserLoginView: CodeView {
         loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
 
-        stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackViewOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
+        stackViewOne.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackViewOne.translatesAutoresizingMaskIntoConstraints = false
 
-        forgotPasswordButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10.0).isActive = true
-        forgotPasswordButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+        forgotPasswordButton.topAnchor.constraint(equalTo: stackViewOne.bottomAnchor, constant: 10.0).isActive = true
+        forgotPasswordButton.trailingAnchor.constraint(equalTo: stackViewOne.trailingAnchor).isActive = true
         forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
-        
+
         orEnterWithTitle.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 40.0).isActive = true
         orEnterWithTitle.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         orEnterWithTitle.translatesAutoresizingMaskIntoConstraints = false
+
+        loginWithGoogleButton.heightAnchor.constraint(equalToConstant: 43.0).isActive = true
+        loginWithGoogleButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
+        loginWithGoogleButton.translatesAutoresizingMaskIntoConstraints = false
+
+        loginWithFacebookButton.heightAnchor.constraint(equalToConstant: 43.0).isActive = true
+        loginWithFacebookButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
+        loginWithFacebookButton.translatesAutoresizingMaskIntoConstraints = false
+
+        stackViewTwo.topAnchor.constraint(equalTo: orEnterWithTitle.bottomAnchor, constant: 10.0).isActive = true
+        stackViewTwo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackViewTwo.translatesAutoresizingMaskIntoConstraints = false
+
     }
 }
