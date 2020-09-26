@@ -66,7 +66,6 @@ final class UserLoginView: UIView {
 
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()
-        
         let attributeString = NSMutableAttributedString(string: "Esqueci minha senha",
                                                         attributes: [
                                                             .font: UIFont.systemFont(ofSize: 14),
@@ -196,16 +195,17 @@ extension UserLoginView: CodeView {
         loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
 
-        stackViewOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
+        stackViewOne.topAnchor.constraint(greaterThanOrEqualTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
         stackViewOne.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackViewOne.translatesAutoresizingMaskIntoConstraints = false
 
         forgotPasswordButton.topAnchor.constraint(equalTo: stackViewOne.bottomAnchor, constant: 10.0).isActive = true
         forgotPasswordButton.trailingAnchor.constraint(equalTo: stackViewOne.trailingAnchor).isActive = true
+        forgotPasswordButton.bottomAnchor.constraint(greaterThanOrEqualTo: orEnterWithTitle.topAnchor, constant: -50).isActive = true
         forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
 
-        orEnterWithTitle.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 40.0).isActive = true
         orEnterWithTitle.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        orEnterWithTitle.bottomAnchor.constraint(equalTo: stackViewTwo.topAnchor, constant: -20.0).isActive = true
         orEnterWithTitle.translatesAutoresizingMaskIntoConstraints = false
 
         loginWithGoogleButton.heightAnchor.constraint(equalToConstant: 43.0).isActive = true
@@ -216,17 +216,16 @@ extension UserLoginView: CodeView {
         loginWithFacebookButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         loginWithFacebookButton.translatesAutoresizingMaskIntoConstraints = false
 
-        stackViewTwo.topAnchor.constraint(equalTo: orEnterWithTitle.bottomAnchor, constant: 10.0).isActive = true
         stackViewTwo.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackViewTwo.bottomAnchor.constraint(equalTo: stackViewThree.topAnchor, constant: -40.0).isActive = true
         stackViewTwo.translatesAutoresizingMaskIntoConstraints = false
 
         askLabel.translatesAutoresizingMaskIntoConstraints = false
 
         createAccountButton.translatesAutoresizingMaskIntoConstraints = false
 
-        stackViewThree.topAnchor.constraint(equalTo: stackViewTwo.bottomAnchor, constant: 10.0).isActive = true
         stackViewThree.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackViewThree.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -35.0).isActive = true
         stackViewThree.translatesAutoresizingMaskIntoConstraints = false
-
     }
 }
