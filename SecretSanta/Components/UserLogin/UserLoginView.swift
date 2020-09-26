@@ -46,11 +46,12 @@ final class UserLoginView: UIView {
         textfield.leftView = view
         return textfield
     }()
-    
+
     private let loginButton: CustomButton = {
         let button = CustomButton(backgroundColor: .white, titleColor: ColorName.red1.color)
         button.addTarget(self, action: #selector(didTapAtEnterButton), for: .touchUpInside)
         button.setTitle("Entrar", for: .normal)
+        button.isEnabled = true
         return button
     }()
     
@@ -112,7 +113,7 @@ final class UserLoginView: UIView {
         super.init(frame: .zero)
         setupViews()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -134,7 +135,7 @@ extension UserLoginView: CodeView {
         addSubview(stackView)
         stackView.addArrangedSubview(inputEmail)
         stackView.addArrangedSubview(inputPassword)
-//        stackView.addArrangedSubview(loginButton)
+        stackView.addArrangedSubview(loginButton)
     }
     
     func setupContraints() {
@@ -155,11 +156,11 @@ extension UserLoginView: CodeView {
         inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputPassword.translatesAutoresizingMaskIntoConstraints = false
-//
-//        loginButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-//        loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
-//        loginButton.translatesAutoresizingMaskIntoConstraints = false
-//
+
+        loginButton.heightAnchor.constraint(equalToConstant: 43.0).isActive = true
+        loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+
         stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
