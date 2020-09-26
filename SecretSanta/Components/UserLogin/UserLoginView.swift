@@ -78,6 +78,7 @@ final class UserLoginView: UIView {
        let label = UILabel()
         label.text = "Ou entre com:"
         label.font = UIFont(font: FontFamily.Quicksand.medium, size: 14)
+        label.textColor = UIColor.white
         return label
     }()
 
@@ -136,10 +137,11 @@ extension UserLoginView: CodeView {
         addSubview(contentView)
         addSubview(titleLabel)
         addSubview(stackView)
-        addSubview(forgotPasswordButton)
         stackView.addArrangedSubview(inputEmail)
         stackView.addArrangedSubview(inputPassword)
         stackView.addArrangedSubview(loginButton)
+        addSubview(forgotPasswordButton)
+        addSubview(orEnterWithTitle)
     }
     
     func setupContraints() {
@@ -172,5 +174,9 @@ extension UserLoginView: CodeView {
         forgotPasswordButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10.0).isActive = true
         forgotPasswordButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        orEnterWithTitle.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 40.0).isActive = true
+        orEnterWithTitle.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        orEnterWithTitle.translatesAutoresizingMaskIntoConstraints = false
     }
 }
