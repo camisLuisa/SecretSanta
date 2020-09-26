@@ -23,12 +23,27 @@ final class UserLoginView: UIView {
         let textfield = CustomTextField(frame: .zero)
         textfield.attributedPlaceholder = NSAttributedString(string: "E-mail",
                                                              attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
+        textfield.leftViewMode = .always
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+        imgView.image = Asset.idIcon.image
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imgView)
+        textfield.leftView = view
         return textfield
     }()
     
     private let inputPassword: CustomTextField = {
         let textfield = CustomTextField()
-        textfield.placeholder = "Password"
+        textfield.attributedPlaceholder = NSAttributedString(string: "Senha",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
+        textfield.leftViewMode = .always
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+        imgView.image = Asset.passwordIcon.image
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imgView)
+        textfield.leftView = view
         return textfield
     }()
     
@@ -44,7 +59,7 @@ final class UserLoginView: UIView {
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.spacing = 10
+        stackView.spacing = 40
         return stackView
     }()
 
@@ -118,7 +133,7 @@ extension UserLoginView: CodeView {
         addSubview(titleLabel)
         addSubview(stackView)
         stackView.addArrangedSubview(inputEmail)
-//        stackView.addArrangedSubview(inputPassword)
+        stackView.addArrangedSubview(inputPassword)
 //        stackView.addArrangedSubview(loginButton)
     }
     
@@ -129,17 +144,17 @@ extension UserLoginView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         inputEmail.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputEmail.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputEmail.translatesAutoresizingMaskIntoConstraints = false
-//
-//        inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-//        inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
-//        inputPassword.translatesAutoresizingMaskIntoConstraints = false
+
+        inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+        inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
+        inputPassword.translatesAutoresizingMaskIntoConstraints = false
 //
 //        loginButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
 //        loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
