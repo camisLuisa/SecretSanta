@@ -36,7 +36,7 @@ final class UserLoginView: UIView {
     private let inputPassword: CustomTextField = {
         let textfield = CustomTextField()
         textfield.attributedPlaceholder = NSAttributedString(string: "Senha",
-                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
+                                                             attributes: [.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
         imgView.image = Asset.passwordIcon.image
@@ -54,7 +54,7 @@ final class UserLoginView: UIView {
         button.isEnabled = true
         return button
     }()
-    
+
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -66,8 +66,11 @@ final class UserLoginView: UIView {
 
     private let forgotPasswordButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Esqueci minha senha", for: .normal)
-        button.titleLabel?.font = UIFont(font: FontFamily.Roboto.regular, size: 12)
+        
+        let attributeString = NSMutableAttributedString(string: "Esqueci minha senha",
+                                                        attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue])
+        button.setAttributedTitle(attributeString, for: .normal)
+
         return button
     }()
     
@@ -89,13 +92,13 @@ final class UserLoginView: UIView {
         button.setTitle("Entrar com o Facebook", for: .normal)
         return button
     }()
-    
+
     private let askLabel: UILabel = {
         let label = UILabel()
         label.text = "Não possui login?"
         return label
     }()
-    
+
     private let createAccountButton: UIButton = {
         let button = UIButton()
         let attributedString = NSAttributedString(string: "Crie sua conta", attributes:[
@@ -133,6 +136,7 @@ extension UserLoginView: CodeView {
         addSubview(contentView)
         addSubview(titleLabel)
         addSubview(stackView)
+        addSubview(forgotPasswordButton)
         stackView.addArrangedSubview(inputEmail)
         stackView.addArrangedSubview(inputPassword)
         stackView.addArrangedSubview(loginButton)
@@ -164,5 +168,9 @@ extension UserLoginView: CodeView {
         stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        forgotPasswordButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10.0).isActive = true
+        forgotPasswordButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
     }
 }
