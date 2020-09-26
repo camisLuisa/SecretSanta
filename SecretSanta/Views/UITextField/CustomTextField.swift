@@ -4,8 +4,8 @@ class CustomTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        tintColor = .white
-        textColor = .white
+        tintColor = ColorName.roseRed.color
+        textColor = ColorName.roseRed.color
         configureVisualFrameInputView()
         addTarget(self, action: #selector(editingChange), for: .editingChanged)
         addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)

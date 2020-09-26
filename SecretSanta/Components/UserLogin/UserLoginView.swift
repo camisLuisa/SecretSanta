@@ -21,7 +21,8 @@ final class UserLoginView: UIView {
     
     private let inputEmail: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)
-        textfield.placeholder = "E-mail"
+        textfield.attributedPlaceholder = NSAttributedString(string: "E-mail",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
         return textfield
     }()
     
