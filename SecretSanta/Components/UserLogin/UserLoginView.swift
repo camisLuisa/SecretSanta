@@ -4,6 +4,9 @@ final class UserLoginView: UIView {
     
     // MARK: - Attributes
     var didTapEnterButton: ((String, String) -> Void)?
+    var didTapEnterWithGoogleButton: (() -> Void)?
+    var didTapEnterWithFacebookButton: (() -> Void)?
+    var didTapCreateAccountButton: (() -> Void)?
     
     private let contentView: UIView = {
         let view = UIView()
@@ -50,7 +53,7 @@ final class UserLoginView: UIView {
     private let loginButton: CustomButton = {
         let button = CustomButton(backgroundColor: .white, titleColor: ColorName.red1.color)
         button.addTarget(self, action: #selector(didTapAtEnterButton), for: .touchUpInside)
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle(L10n.enter, for: .normal)
         button.isEnabled = true
         return button
     }()
@@ -71,11 +74,11 @@ final class UserLoginView: UIView {
                                                             .font: UIFont.systemFont(ofSize: 14),
                                                             .foregroundColor: UIColor.white,
                                                             .underlineStyle: NSUnderlineStyle.single.rawValue])
-        
+
         button.setAttributedTitle(attributeString, for: .normal)
         return button
     }()
-    
+
     private let orEnterWithTitle: UILabel = {
        let label = UILabel()
         label.text = L10n.orLoginWith
@@ -86,6 +89,7 @@ final class UserLoginView: UIView {
 
     private let loginWithGoogleButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
+        button.addTarget(self, action: #selector(didTapAtEnterWithGoogle), for: .touchUpInside)
         button.setTitle(L10n.enterWithGoogle, for: .normal)
         button.isEnabled = true
         return button
@@ -93,6 +97,7 @@ final class UserLoginView: UIView {
 
     private let loginWithFacebookButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.mediumRed.color, titleColor: .white)
+        button.addTarget(self, action: #selector(didTapAtEnterWithFacebook), for: .touchUpInside)
         button.setTitle(L10n.enterWithFacebook, for: .normal)
         button.isEnabled = true
         return button
@@ -116,6 +121,7 @@ final class UserLoginView: UIView {
 
     private let createAccountButton: UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(didTapAtCreateAccount), for: .touchUpInside)
         let attributeString = NSMutableAttributedString(string: L10n.createAccount, attributes: [
                                                             .font: UIFont.systemFont(ofSize: 16),
                                                             .foregroundColor: ColorName.appYellow.color,
@@ -150,6 +156,21 @@ private extension UserLoginView {
     @objc
     func didTapAtEnterButton() {
         self.didTapEnterButton?(inputEmail.text!, inputPassword.text!)
+    }
+    
+    @objc
+    func didTapAtEnterWithGoogle() {
+        self.didTapEnterWithGoogleButton?()
+    }
+    
+    @objc
+    func didTapAtEnterWithFacebook() {
+        self.didTapEnterWithFacebookButton?()
+    }
+    
+    @objc
+    func didTapAtCreateAccount() {
+        self.didTapCreateAccountButton?()
     }
 }
 
