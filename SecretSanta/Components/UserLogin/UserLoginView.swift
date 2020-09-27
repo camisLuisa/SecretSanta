@@ -195,13 +195,12 @@ extension UserLoginView: CodeView {
         loginButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
 
-        stackViewOne.topAnchor.constraint(greaterThanOrEqualTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
+        stackViewOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
         stackViewOne.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackViewOne.translatesAutoresizingMaskIntoConstraints = false
 
         forgotPasswordButton.topAnchor.constraint(equalTo: stackViewOne.bottomAnchor, constant: 10.0).isActive = true
         forgotPasswordButton.trailingAnchor.constraint(equalTo: stackViewOne.trailingAnchor).isActive = true
-        forgotPasswordButton.bottomAnchor.constraint(greaterThanOrEqualTo: orEnterWithTitle.topAnchor, constant: -50).isActive = true
         forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
 
         orEnterWithTitle.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
