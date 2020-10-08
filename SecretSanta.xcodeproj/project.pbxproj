@@ -65,7 +65,6 @@
 		31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C2396E2412E6E9008AC51C /* LaunchScreen.storyboard */; };
 		31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */; };
 		31C239862412E6E9008AC51C /* SecretSantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C239852412E6E9008AC51C /* SecretSantaUITests.swift */; };
-		31DCE00B2474A1AA0013233C /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCE00A2474A1AA0013233C /* test.swift */; };
 		31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E02453674E0011F917 /* FieldValidator.swift */; };
 		31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E2245367C80011F917 /* ValidatorResponse.swift */; };
 		31FBA1E5245368550011F917 /* FieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA1E4245368550011F917 /* FieldError.swift */; };
@@ -164,7 +163,6 @@
 		31C239812412E6E9008AC51C /* SecretSantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretSantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C239852412E6E9008AC51C /* SecretSantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSantaUITests.swift; sourceTree = "<group>"; };
 		31C239872412E6E9008AC51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31DCE00A2474A1AA0013233C /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		31FBA1E02453674E0011F917 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		31FBA1E2245367C80011F917 /* ValidatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorResponse.swift; sourceTree = "<group>"; };
 		31FBA1E4245368550011F917 /* FieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldError.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 		31C239642412E6E4008AC51C /* SecretSanta */ = {
 			isa = PBXGroup;
 			children = (
-				31DCE0092474A12D0013233C /* Template */,
 				31FBA1F52458AEDB0011F917 /* Extensions */,
 				31FBA1F02455DCE20011F917 /* Resources */,
 				314DC82B243A611D00CDF881 /* Views */,
@@ -458,14 +455,6 @@
 				31C239872412E6E9008AC51C /* Info.plist */,
 			);
 			path = SecretSantaUITests;
-			sourceTree = "<group>";
-		};
-		31DCE0092474A12D0013233C /* Template */ = {
-			isa = PBXGroup;
-			children = (
-				31DCE00A2474A1AA0013233C /* test.swift */,
-			);
-			path = Template;
 			sourceTree = "<group>";
 		};
 		31FBA1DE245367290011F917 /* View */ = {
@@ -596,6 +585,7 @@
 				9CABE1C4411E161ECEAC12B6 /* [CP] Copy Pods Resources */,
 				3113CEE6243A8F2F001DF8CB /* SwiftGen */,
 				1E3CC269250BFE8D00158B27 /* ShellScript */,
+				1E27728B2521047800D558B4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -759,6 +749,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1E27728B2521047800D558B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		1E3CC269250BFE8D00158B27 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -915,7 +922,6 @@
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */,
 				1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */,
-				31DCE00B2474A1AA0013233C /* test.swift in Sources */,
 				3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */,
 				31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */,
 				31FBA1F82458AF150011F917 /* UITextField+ConfigureBottomBorder.swift in Sources */,

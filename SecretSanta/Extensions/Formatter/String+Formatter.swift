@@ -1,11 +1,3 @@
-//
-//  String+Formatter.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 01/05/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 extension String {
     func trim() -> String {
         return trimmingCharacters(in: .whitespacesAndNewlines)

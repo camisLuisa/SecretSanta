@@ -110,6 +110,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - GoogleAPIClientForREST/Sheets (~> 1.2.1)
+  - GoogleSignIn
   - GoogleSignIn (~> 4.1.1)
   - SwiftGen (~> 6.0)
   - SwiftLint
@@ -163,6 +164,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 1216c910d27c2633ade33b4f071bb6b930982e62
 
-PODFILE CHECKSUM: c418e0d0f9daf11a327d0def9c11da3042b336af
+PODFILE CHECKSUM: 25a870a57c6d93ec6639eaf4488d1fda6059b0b0
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.3

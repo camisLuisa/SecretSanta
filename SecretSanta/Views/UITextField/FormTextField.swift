@@ -1,11 +1,3 @@
-//
-//  AmountTextField.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 26/04/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 import UIKit.UITextField
 
 class FormTextField: UITextField {
@@ -15,7 +7,6 @@ class FormTextField: UITextField {
         super.init(frame: .zero)
         tintColor = .black
         if bottomBorder {
-//            configureBottomBorder(backgroundColor: .clear, borderColor: AssetColorTypeAlias.red)
             addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
             addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
             autocorrectionType = .no

@@ -1,7 +1,7 @@
 import UIKit.UITextField
 
 extension UITextField {
-    
+
     func configureBottomBorder(backgroundColor: UIColor, borderColor: UIColor) {
         self.borderStyle = .none
         layer.backgroundColor = backgroundColor.cgColor
