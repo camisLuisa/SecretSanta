@@ -7,7 +7,6 @@ target 'SecretSanta' do
 
   # Pods for SecretSanta
   pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
-  pod 'GoogleSignIn', '~> 4.1.1'
   pod 'Alamofire', '~> 5.2'
 
   #Util
@@ -18,7 +17,7 @@ target 'SecretSanta' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'GoogleSignIn'
+  pod 'GoogleSignIn', '~> 5.0.2'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 
