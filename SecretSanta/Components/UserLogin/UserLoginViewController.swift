@@ -38,6 +38,9 @@ final class UserLoginViewController: UIViewController {
         userLoginView.didTapCreateAccountButton = {
             
         }
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
     }
 }
 
