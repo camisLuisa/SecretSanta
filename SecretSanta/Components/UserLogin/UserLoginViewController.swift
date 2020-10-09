@@ -28,7 +28,8 @@ final class UserLoginViewController: UIViewController {
         }
         
         userLoginView.didTapEnterWithGoogleButton = {
-            
+            GIDSignIn.sharedInstance()?.presentingViewController = self
+            GIDSignIn.sharedInstance().signIn()
         }
         
         userLoginView.didTapEnterWithFacebookButton = {
@@ -38,9 +39,6 @@ final class UserLoginViewController: UIViewController {
         userLoginView.didTapCreateAccountButton = {
             
         }
-        
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
     }
 }
 

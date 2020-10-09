@@ -77,16 +77,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-      // ...
-      if let error = error {
-        // ...
+      
+        //handle sign-in errors
+        if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.")
+            } else {
+            print("error signing into Google \(error.localizedDescription)")
+            }
         return
-      }
-
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+        }
+        
+        // Get credential object using Google ID token and Google access token
+        guard let authentication = user.authentication else { return }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
-      // ...
+        
+        // Authenticate with Firebase using the credential object
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                print("authentication error \(error.localizedDescription)")
+            }
+        }
     }
 
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
