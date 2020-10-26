@@ -14,42 +14,67 @@ final class CreateUserLoginView: UIView {
     private let titleLabel: UILabel = {
        let title = UILabel()
         title.textColor = .white
-        title.font = UIFont(font: FontFamily.SegoeUI.regular, size: 32.0)
+        title.font = UIFont(font: FontFamily.SegoeUI.regular, size: 24.0)
         title.text = L10n.createUserLoginTitle
         return title
     }()
     
     private let inputName: CustomTextField = {
-        let inputName = CustomTextField(frame: .zero)
-        inputName.font = UIFont(font: FontFamily.SegoeUI.regular, size: 16.0)
-        return inputName
+        let textfield = CustomTextField(frame: .zero)
+        textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
+                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
+        textfield.leftViewMode = .always
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+        imgView.image = Asset.idIcon.image
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imgView)
+        textfield.leftView = view
+        return textfield
     }()
     
-    private let inputEmail: UITextView = {
-        let inputEmail = UITextView()
-        inputEmail.font = UIFont(font: FontFamily.SegoeUI.regular, size: 16.0)
-        return inputEmail
+    private let inputEmail: CustomTextField = {
+        let textfield = CustomTextField()
+        textfield.attributedPlaceholder = NSAttributedString(string: L10n.password,
+                                                             attributes: [.foregroundColor: ColorName.roseRed.color])
+        textfield.leftViewMode = .always
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+        imgView.image = Asset.passwordIcon.image
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imgView)
+        textfield.leftView = view
+        return textfield
     }()
-    
-    private let inputPassword: UITextView = {
-        let inputPassword = UITextView()
-        inputPassword.font = UIFont(font: FontFamily.SegoeUI.regular, size: 16.0)
-        return inputPassword
+
+    private let inputPassword: CustomTextField = {
+        let textfield = CustomTextField()
+        textfield.attributedPlaceholder = NSAttributedString(string: L10n.password,
+                                                             attributes: [.foregroundColor: ColorName.roseRed.color])
+        textfield.leftViewMode = .always
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+        imgView.image = Asset.passwordIcon.image
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imgView)
+        textfield.leftView = view
+        return textfield
     }()
-    
-    private let enterButton: UIButton = {
-        let button = UIButton()
+
+    private let enterButton: CustomButton = {
+        let button = CustomButton(backgroundColor: .white, titleColor: ColorName.red1.color)
         button.addTarget(self, action: #selector(didTapAtEnterButton), for: .touchUpInside)
         button.setTitle("Criar Conta", for: .normal)
+        button.isEnabled = true
         return button
     }()
-    
+
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.spacing = 10
+        stackView.spacing = 40
         return stackView
     }()
     
@@ -64,11 +89,11 @@ final class CreateUserLoginView: UIView {
     }
 }
 
-//MARK: - Action
+// MARK: - Action
 private extension CreateUserLoginView {
     @objc
     func didTapAtEnterButton() {
-        self.didTapEnterButton?("", inputEmail.text, inputPassword.text)
+        self.didTapEnterButton?("", inputEmail.text!, inputPassword.text!)
     }
 }
 
@@ -91,7 +116,7 @@ extension CreateUserLoginView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 80.0).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 60.0).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -110,9 +135,11 @@ extension CreateUserLoginView: CodeView {
         stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 46.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         enterButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 40.0).isActive = true
         enterButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        enterButton.heightAnchor.constraint(equalToConstant: 43.0).isActive = true
+        enterButton.widthAnchor.constraint(equalToConstant: 276).isActive = true
         enterButton.translatesAutoresizingMaskIntoConstraints = false
     }
 }

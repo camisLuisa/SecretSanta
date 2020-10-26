@@ -162,12 +162,12 @@ private extension UserLoginView {
     func didTapAtEnterWithGoogle() {
         self.didTapEnterWithGoogleButton?()
     }
-    
+
     @objc
     func didTapAtEnterWithFacebook() {
         self.didTapEnterWithFacebookButton?()
     }
-    
+
     @objc
     func didTapAtCreateAccount() {
         self.didTapCreateAccountButton?()
