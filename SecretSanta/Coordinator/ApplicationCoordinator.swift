@@ -12,7 +12,6 @@ final class ApplicationCoordinator: Coordinator {
         self.splashCoordinator = coordinator
         self.childCoordinators = [coordinator]
         self.navigationController = navigationController
-
     }
 
     func start() {
