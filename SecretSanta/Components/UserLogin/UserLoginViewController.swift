@@ -50,7 +50,6 @@ extension UserLoginViewController {
         LoginAccountService.loginAccount(with: email, password: password) { (result) in
             switch result {
             case .success(let result):
-                self.showAlert()
                 print(result.credential.debugDescription)
                 self.coordinator?.runCreateGroupFlow()
             case .failure(let error):
@@ -61,7 +60,10 @@ extension UserLoginViewController {
     }
 
     private func showAlert() {
-        let alert = UIAlertController(title: "Teste", message: "Teste", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Ops!", message: "Algum problema aconteceu", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(action)
+        
         self.navigationController?.present(alert, animated: true, completion: nil)
     }
 }
