@@ -52,6 +52,7 @@ extension UserLoginViewController {
             case .success(let result):
                 self.showAlert()
                 print(result.credential.debugDescription)
+                self.coordinator?.runCreateGroupFlow()
             case .failure(let error):
                 self.showAlert()
                 print(error.localizedDescription)

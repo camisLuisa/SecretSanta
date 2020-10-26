@@ -25,20 +25,12 @@ final class SplashCoordinator: Coordinator {
         
         navigationController.pushViewController(loginViewController, animated: true)
     }
-    
+
     func runCreateGroupFlow() {
         let coordinator = CreateGroupCoordinator()
         coordinator.start()
         
         window.rootViewController = coordinator.rootViewController
         childCoordinators.append(coordinator)
-        
     }
-    
-    @objc
-    func updateTimer(){
-        //nothing
-    }
-    
-    
 }
