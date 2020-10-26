@@ -24,6 +24,7 @@ final class UserLoginViewController: UIViewController {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().delegate = self
         
         userLoginView.didTapEnterButton = { [weak self] email, password in
             guard let self = self else { return }
@@ -69,38 +70,23 @@ extension UserLoginViewController {
 }
 
 // MARK: - GoogleSignIn
-extension UserLoginViewController {
+extension UserLoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
         
-       print("Google Sing In didSignInForUser")
-       if let error = error {
-         print(error.localizedDescription)
-         return
-       }
+        guard let auth = user.authentication else { return }
         
-       guard let authentication = user.authentication else { return }
-       let credential = GoogleAuthProvider.credential(withIDToken: (authentication.idToken)!, accessToken: (authentication.accessToken)!)
-   // When user is signed in
-       Auth.auth().signIn(with: credential, completion: { (user, error) in
-         if let error = error {
-           print("Login error: \(error.localizedDescription)")
-           return
-         }
-       })
-     }
-
-     // Start Google OAuth2 Authentication
-     func sign(_ signIn: GIDSignIn?, present viewController: UIViewController?) {
-
-       // Showing OAuth2 authentication window
-       if let aController = viewController {
-         present(aController, animated: true) {() -> Void in }
-       }
-     }
-
-     // After Google OAuth2 authentication
-     func sign(_ signIn: GIDSignIn?, dismiss viewController: UIViewController?) {
-       // Close OAuth2 authentication window
-       dismiss(animated: true) {() -> Void in }
-     }
+        let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+        Auth.auth().signIn(with: credentials) { (_, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Login Successful.")
+                self.coordinator?.runCreateGroupFlow()
+            }
+        }
+    }
 }
