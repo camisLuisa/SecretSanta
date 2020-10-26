@@ -7,7 +7,7 @@ final class UserLoginViewController: UIViewController {
     // MARK: - Attributes
     private let userLoginView: UserLoginView
     weak var coordinator: SplashCoordinator?
-    
+
     // MARK: - init
     init() {
         self.userLoginView = UserLoginView()
@@ -35,11 +35,11 @@ final class UserLoginViewController: UIViewController {
         }
         
         userLoginView.didTapEnterWithFacebookButton = {
-            
+
         }
         
         userLoginView.didTapCreateAccountButton = {
-            
+
         }
     }
 }
@@ -68,13 +68,16 @@ extension UserLoginViewController {
     }
 }
 
+// MARK: - GoogleSignIn
 extension UserLoginViewController {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
        print("Google Sing In didSignInForUser")
        if let error = error {
          print(error.localizedDescription)
          return
        }
+        
        guard let authentication = user.authentication else { return }
        let credential = GoogleAuthProvider.credential(withIDToken: (authentication.idToken)!, accessToken: (authentication.accessToken)!)
    // When user is signed in
