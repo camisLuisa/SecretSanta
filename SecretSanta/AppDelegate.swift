@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     private func createCoordinator() {
         let navigationController = UINavigationController()
         
-        self.applicationCoordinator = ApplicationCoordinator(window: window!, navigationController:navigationController, coordinator: SplashCoordinator(window: window!, navigationController: navigationController))
+        self.applicationCoordinator = ApplicationCoordinator(window: window!, navigationController:navigationController, coordinator: MainCoordinator(window: window!, navigationController: navigationController))
         self.applicationCoordinator?.start()
         
         window?.rootViewController = navigationController

@@ -7,36 +7,20 @@ final class GroupView: UIView {
     
     private let contentView: UIView = {
        let contentView = UIView()
-        contentView.backgroundColor = UIColor.white
+        contentView.backgroundColor = ColorName.gray2.color
         return contentView
     }()
     
     private let topContentView: UIView = {
         let view = UIView()
-        view.backgroundColor = ColorName.red1.color
+        view.backgroundColor = ColorName.white1.color
+        view.layer.cornerRadius = 70
         return view
     }()
     
     private let titleImageView: UIImageView = {
         let imageView = UIImageView(image: Asset.groupTitle.image)
         return imageView
-    }()
-    
-    private let addGroupButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setImage(Asset.plus.image, for: .normal)
-        button.addTarget(self, action: #selector(didTapAtAddGroup), for: .touchUpInside)
-        return button
-    }()
-    
-    private let instructionLabel: UILabel = {
-        let label = UILabel()
-        label.text = L10n.instructions
-        label.font = UIFont(font: FontFamily.SegoeUI.regular, size: 17.0)
-        label.textColor = ColorName.gray1.color
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
-        return label
     }()
     
     var tableView: UITableView = {
@@ -53,7 +37,7 @@ final class GroupView: UIView {
         tableView.dataSource = self
         setupViews()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -103,44 +87,19 @@ extension GroupView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(topContentView)
-        topContentView.addSubview(titleImageView)
-        topContentView.addSubview(addGroupButton)
-//        contentView.addSubview(instructionLabel)
-        contentView.addSubview(tableView)
     }
-    
+
     func setupContraints() {
-        
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        topContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        topContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+
+        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100).isActive = true
+        topContentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        topContentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        topContentView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         topContentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        titleImageView.topAnchor.constraint(equalTo: topContentView.topAnchor).isActive = true
-        titleImageView.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20.0).isActive = true
-        titleImageView.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
-        titleImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        addGroupButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -40.0).isActive = true
-        addGroupButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -10.0).isActive = true
-        addGroupButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 10.0).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-//        instructionLabel.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
-//        instructionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 60).isActive = true
-//        instructionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -60).isActive = true
-//        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
     }
 }

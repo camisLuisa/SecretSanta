@@ -13,6 +13,9 @@ target 'SecretSanta' do
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftLint'
 
+  # Facebook
+  pod 'FBSDKLoginKit'
+
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'

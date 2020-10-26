@@ -3,7 +3,9 @@ Red2: #F4C7C8
 MediumRed: #E97E80
 RoseRed: #D38789
 Gray1: #707070
+gray2: #EFF3F4
 WhiteBlur: #FFFFFF00
+white1: #FFFEFE
 appYellow: #F5F18E
 
 

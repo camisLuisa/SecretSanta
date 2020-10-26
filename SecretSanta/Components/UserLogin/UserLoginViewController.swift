@@ -6,7 +6,7 @@ final class UserLoginViewController: UIViewController {
 
     // MARK: - Attributes
     private let userLoginView: UserLoginView
-    weak var coordinator: SplashCoordinator?
+    weak var coordinator: MainCoordinator?
 
     // MARK: - init
     init() {

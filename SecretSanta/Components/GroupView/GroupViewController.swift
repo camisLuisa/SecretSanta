@@ -10,9 +10,9 @@ final class GroupViewController: UIViewController {
     init(coordinator: CreateGroupCoordinator) {
         self.viewGroup = GroupView()
         self.coordinator = coordinator
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: nil)        
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

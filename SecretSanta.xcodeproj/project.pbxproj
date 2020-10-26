@@ -28,8 +28,6 @@
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
 		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
-		3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CED5243A6213001DF8CB /* SplashViewController.swift */; };
-		3113CED9243A6282001DF8CB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CED8243A6282001DF8CB /* SplashView.swift */; };
 		3113CEDD243A7D73001DF8CB /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDB243A7D73001DF8CB /* strings.swift */; };
 		3113CEDE243A7D73001DF8CB /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDC243A7D73001DF8CB /* assets-images.swift */; };
 		3113CEE9243A9162001DF8CB /* AssetsColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEE7243A9162001DF8CB /* AssetsColors.swift */; };
@@ -40,9 +38,9 @@
 		3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF0243E9B36001DF8CB /* Coordinator.swift */; };
 		3113CEF2243E9B36001DF8CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF0243E9B36001DF8CB /* Coordinator.swift */; };
 		3113CEF3243E9B36001DF8CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF0243E9B36001DF8CB /* Coordinator.swift */; };
-		3113CEF5243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
-		3113CEF6243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
-		3113CEF7243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */; };
+		3113CEF5243E9F3C001DF8CB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* MainCoordinator.swift */; };
+		3113CEF6243E9F3C001DF8CB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* MainCoordinator.swift */; };
+		3113CEF7243E9F3C001DF8CB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEF4243E9F3C001DF8CB /* MainCoordinator.swift */; };
 		3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */; };
 		3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEFC243EAE02001DF8CB /* GroupView.swift */; };
 		3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
@@ -126,15 +124,13 @@
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
-		3113CED5243A6213001DF8CB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		3113CED8243A6282001DF8CB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3113CEDB243A7D73001DF8CB /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		3113CEDC243A7D73001DF8CB /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
 		3113CEE7243A9162001DF8CB /* AssetsColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsColors.swift; sourceTree = "<group>"; };
 		3113CEE8243A9162001DF8CB /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
 		3113CEEC243E9AED001DF8CB /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		3113CEF0243E9B36001DF8CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		3113CEF4243E9F3C001DF8CB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		3113CEFC243EAE02001DF8CB /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		3113CEFE243EB048001DF8CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -310,9 +306,7 @@
 		3113CED7243A6233001DF8CB /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				3113CED5243A6213001DF8CB /* SplashViewController.swift */,
-				3113CED8243A6282001DF8CB /* SplashView.swift */,
-				3113CEF4243E9F3C001DF8CB /* SplashCoordinator.swift */,
+				3113CEF4243E9F3C001DF8CB /* MainCoordinator.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -931,7 +925,6 @@
 				31C239682412E6E4008AC51C /* ViewController.swift in Sources */,
 				3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */,
 				1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */,
-				3113CED9243A6282001DF8CB /* SplashView.swift in Sources */,
 				315FB8FF24511B6800872A20 /* FormInputView.swift in Sources */,
 				31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */,
 				1E3CC26C250EB98C00158B27 /* LoginAccountService.swift in Sources */,
@@ -950,8 +943,7 @@
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
 				1E6E867024DCE155002D6CAE /* CreateUserLoginView.swift in Sources */,
 				1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */,
-				3113CED6243A6213001DF8CB /* SplashViewController.swift in Sources */,
-				3113CEF5243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */,
+				3113CEF5243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				1E6E866E24DCDEB5002D6CAE /* CreateUserLoginViewController.swift in Sources */,
 				31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */,
 				3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */,
@@ -971,7 +963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */,
-				3113CEF6243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */,
+				3113CEF6243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				3113CEEE243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
 				3113CEF2243E9B36001DF8CB /* Coordinator.swift in Sources */,
 			);
@@ -982,7 +974,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C239862412E6E9008AC51C /* SecretSantaUITests.swift in Sources */,
-				3113CEF7243E9F3C001DF8CB /* SplashCoordinator.swift in Sources */,
+				3113CEF7243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				3113CEEF243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
 				3113CEF3243E9B36001DF8CB /* Coordinator.swift in Sources */,
 			);

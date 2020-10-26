@@ -39,6 +39,12 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5f18e"></span>
   /// Alpha: 100% <br/> (0xf5f18eff)
   internal static let appYellow = ColorName(rgbaValue: 0xf5f18eff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#eff3f4"></span>
+  /// Alpha: 100% <br/> (0xeff3f4ff)
+  internal static let gray2 = ColorName(rgbaValue: 0xeff3f4ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fffefe"></span>
+  /// Alpha: 100% <br/> (0xfffefeff)
+  internal static let white1 = ColorName(rgbaValue: 0xfffefeff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 
