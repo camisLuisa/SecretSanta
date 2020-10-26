@@ -40,7 +40,7 @@ final class UserLoginViewController: UIViewController {
         }
         
         userLoginView.didTapCreateAccountButton = {
-
+            self.coordinator?.GoToCreateAccount()
         }
     }
 }

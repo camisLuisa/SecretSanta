@@ -77,39 +77,36 @@ extension CreateUserLoginView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(titleLabel)
-//        contentView.addSubview(inputName)
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(inputName)
         stackView.addArrangedSubview(inputEmail)
         stackView.addArrangedSubview(inputPassword)
         contentView.addSubview(enterButton)
     }
-    
+
     func setupContraints() {
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 80.0).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+
         inputName.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         inputName.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputName.translatesAutoresizingMaskIntoConstraints = false
-        
+
         inputEmail.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputEmail.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputEmail.translatesAutoresizingMaskIntoConstraints = false
-        
+
         inputPassword.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         inputPassword.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputPassword.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
+
         stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 46.0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,6 +115,4 @@ extension CreateUserLoginView: CodeView {
         enterButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         enterButton.translatesAutoresizingMaskIntoConstraints = false
     }
-    
-
 }

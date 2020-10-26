@@ -33,4 +33,10 @@ final class SplashCoordinator: Coordinator {
         window.rootViewController = coordinator.rootViewController
         childCoordinators.append(coordinator)
     }
+    
+    func GoToCreateAccount() {
+        let createAccountViewController = CreateUserLoginViewController()
+        
+        navigationController.pushViewController(createAccountViewController, animated: true)
+    }
 }
