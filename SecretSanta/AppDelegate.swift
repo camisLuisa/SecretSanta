@@ -6,13 +6,10 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
-    
     private var applicationCoordinator: ApplicationCoordinator?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
+
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
 
@@ -20,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         
         configureNavigationBar()
+        configureWindow()
         createCoordinator()
-        
+
         return true
     }
     
@@ -29,22 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let appearance = UINavigationBar.appearance()
         appearance.isTranslucent = false
         appearance.barTintColor = ColorName.red1.color
+        appearance.shadowImage = UIImage()
     }
     
-    @discardableResult
-    private func configureWindow() -> UIWindow {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.tintColor = ColorName.red1.color
-        self.window = window
-        return window
+    private func configureWindow() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.tintColor = ColorName.red1.color
     }
     
     private func createCoordinator() {
-        let window = configureWindow()
         let navigationController = UINavigationController()
         
-        self.applicationCoordinator = ApplicationCoordinator(window: window, navigationController:navigationController, coordinator: SplashCoordinator(window: window, navigationController: navigationController))
+        self.applicationCoordinator = ApplicationCoordinator(window: window!, navigationController:navigationController, coordinator: SplashCoordinator(window: window!, navigationController: navigationController))
         self.applicationCoordinator?.start()
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -20,20 +20,10 @@ final class SplashCoordinator: Coordinator {
     }
     
     func start() {
-        let splashViewController = SplashViewController()
+        let loginViewController = UserLoginViewController()
+        loginViewController.coordinator = self
         
-        let timer = Timer(timeInterval: 3.0,
-                          target: self,
-                          selector: #selector(updateTimer),
-                          userInfo: nil,
-                          repeats: true)
-        
-        window.rootViewController = splashViewController
-        window.makeKeyAndVisible()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.runCreateGroupFlow()
-        }
+        navigationController.pushViewController(loginViewController, animated: true)
     }
     
     func runCreateGroupFlow() {

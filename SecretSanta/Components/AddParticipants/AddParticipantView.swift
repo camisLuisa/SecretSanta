@@ -41,7 +41,7 @@ final class AddParticipantView: UIView, UITextFieldDelegate {
         input.layer.cornerRadius = 20.0
         return input
     }()
-    
+
     private let emailInputView: UITextField = {
        let input = UITextField()
         input.backgroundColor = .white
@@ -58,7 +58,7 @@ final class AddParticipantView: UIView, UITextFieldDelegate {
         button.addTarget(self, action: #selector(didTapAtConfirm), for: .touchUpInside)
         return button
     }()
-        
+
     // MARK: - init -
     init() {
         super.init(frame: .zero)
@@ -87,31 +87,31 @@ extension AddParticipantView: CodeView {
         alertView.addSubview(emailInputView)
         alertView.addSubview(button)
     }
-    
+
     func setupContraints() {
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         alertView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         alertView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         alertView.widthAnchor.constraint(equalToConstant: 300.0).isActive = true
         alertView.heightAnchor.constraint(equalToConstant: 300.0).isActive = true
         alertView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         titleLabel.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 30.0).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
         titleLabel.topAnchor.constraint(equalTo: alertView.topAnchor, constant: 30.0).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+
         nameInputView.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 30.0).isActive = true
         nameInputView.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
         nameInputView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10.0).isActive = true
         nameInputView.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         nameInputView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         emailInputView.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 30.0).isActive = true
         emailInputView.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -30.0).isActive = true
         emailInputView.topAnchor.constraint(equalTo: nameInputView.bottomAnchor, constant: 10.0).isActive = true
@@ -124,6 +124,4 @@ extension AddParticipantView: CodeView {
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         button.translatesAutoresizingMaskIntoConstraints = false
     }
-    
-    
 }
