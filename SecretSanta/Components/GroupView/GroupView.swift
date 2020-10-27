@@ -15,12 +15,21 @@ final class GroupView: UIView {
         let view = UIView()
         view.backgroundColor = ColorName.white1.color
         view.layer.cornerRadius = 70
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        view.layer.shadowOpacity = 0.1
         return view
     }()
     
-    private let titleImageView: UIImageView = {
-        let imageView = UIImageView(image: Asset.groupTitle.image)
+    lazy var userImageView: UIImageView = {
+        let imageView = UIImageView()
         return imageView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Grupos"
+        return label
     }()
     
     var tableView: UITableView = {
@@ -96,7 +105,7 @@ extension GroupView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100).isActive = true
+        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -75).isActive = true
         topContentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         topContentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         topContentView.heightAnchor.constraint(equalToConstant: 200).isActive = true
