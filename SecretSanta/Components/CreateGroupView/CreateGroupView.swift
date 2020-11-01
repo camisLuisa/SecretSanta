@@ -1,11 +1,3 @@
-//
-//  CreateGroupView.swift
-//  SecretSanta
-//
-//  Created by Camila Luisa Farias de Lima on 11/04/20.
-//  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
-//
-
 import UIKit
 
 enum CreateGroupViewType {

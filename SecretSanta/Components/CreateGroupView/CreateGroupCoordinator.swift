@@ -17,8 +17,7 @@ final class CreateGroupCoordinator: Coordinator {
         self.navigationController = navigationController
         self.navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController.navigationBar.shadowImage = UIImage()
-        
-        self.navigationController.navigationBar.barTintColor = ColorName.white1.color
+        self.navigationController.navigationBar.isTranslucent = true        
     }
     
     func start() {

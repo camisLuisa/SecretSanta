@@ -20,16 +20,28 @@ final class GroupView: UIView {
         view.layer.shadowOpacity = 0.1
         return view
     }()
-    
+
     lazy var userImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.cornerRadius = 71/2
+        imageView.clipsToBounds = true
+        imageView.layer.borderColor = ColorName.red3.color.cgColor
+        imageView.layer.borderWidth = 3
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Grupos"
+        label.textColor = ColorName.gray3.color
+        label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 22)
         return label
+    }()
+    
+    private let addButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(Asset.add.image, for: .normal)
+        return button
     }()
     
     var tableView: UITableView = {
@@ -44,6 +56,7 @@ final class GroupView: UIView {
         super.init(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
+        userImageView.image = UIImage.init(asset: ImageAsset(name: "lu"))
         setupViews()
     }
 
@@ -96,6 +109,9 @@ extension GroupView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(topContentView)
+        topContentView.addSubview(userImageView)
+        topContentView.addSubview(titleLabel)
+        topContentView.addSubview(addButton)
     }
 
     func setupContraints() {
@@ -105,10 +121,24 @@ extension GroupView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -75).isActive = true
+        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -20).isActive = true
         topContentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         topContentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        topContentView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        topContentView.heightAnchor.constraint(equalToConstant: 225).isActive = true
         topContentView.translatesAutoresizingMaskIntoConstraints = false
+
+        userImageView.topAnchor.constraint(equalTo: topContentView.topAnchor, constant: 70).isActive = true
+        userImageView.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20).isActive = true
+        userImageView.widthAnchor.constraint(equalToConstant: 71).isActive = true
+        userImageView.heightAnchor.constraint(equalToConstant: 71).isActive = true
+        userImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        titleLabel.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -30).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 50).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        addButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -35).isActive = true
+        addButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -50).isActive = true
+        addButton.translatesAutoresizingMaskIntoConstraints = false
     }
 }

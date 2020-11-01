@@ -21,6 +21,9 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#707070"></span>
   /// Alpha: 100% <br/> (0x707070ff)
   internal static let gray1 = ColorName(rgbaValue: 0x707070ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#4b4b4b"></span>
+  /// Alpha: 100% <br/> (0x4b4b4bff)
+  internal static let gray3 = ColorName(rgbaValue: 0x4b4b4bff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#e97e80"></span>
   /// Alpha: 100% <br/> (0xe97e80ff)
   internal static let mediumRed = ColorName(rgbaValue: 0xe97e80ff)
@@ -30,6 +33,9 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f4c7c8"></span>
   /// Alpha: 100% <br/> (0xf4c7c8ff)
   internal static let red2 = ColorName(rgbaValue: 0xf4c7c8ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#eb5757"></span>
+  /// Alpha: 100% <br/> (0xeb5757ff)
+  internal static let red3 = ColorName(rgbaValue: 0xeb5757ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#d38789"></span>
   /// Alpha: 100% <br/> (0xd38789ff)
   internal static let roseRed = ColorName(rgbaValue: 0xd38789ff)

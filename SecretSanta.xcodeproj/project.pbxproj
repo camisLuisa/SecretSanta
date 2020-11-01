@@ -25,6 +25,9 @@
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
 		1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89552C24E029CC000FAFFE /* CreateAccountService.swift */; };
 		1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */; };
+		1EF12238254EE779004275E5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF12237254EE779004275E5 /* UIImageView.swift */; };
+		1EF12239254EE779004275E5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF12237254EE779004275E5 /* UIImageView.swift */; };
+		1EF1223A254EE779004275E5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF12237254EE779004275E5 /* UIImageView.swift */; };
 		3101F993244234FD006D3ED6 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */; };
 		3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F994244235C5006D3ED6 /* CreateGroupView.swift */; };
 		3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */; };
@@ -121,6 +124,7 @@
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
 		1E89552C24E029CC000FAFFE /* CreateAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountService.swift; sourceTree = "<group>"; };
 		1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		1EF12237254EE779004275E5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		3101F994244235C5006D3ED6 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		3101F99624426CCF006D3ED6 /* WhiteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoxView.swift; sourceTree = "<group>"; };
@@ -532,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				31FBA1F72458AF150011F917 /* UITextField+ConfigureBottomBorder.swift */,
+				1EF12237254EE779004275E5 /* UIImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -930,6 +935,7 @@
 				1E3CC26C250EB98C00158B27 /* LoginAccountService.swift in Sources */,
 				31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */,
 				314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */,
+				1EF12238254EE779004275E5 /* UIImageView.swift in Sources */,
 				31FBA205245C7B7E0011F917 /* String+Formatter.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
@@ -963,6 +969,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */,
+				1EF12239254EE779004275E5 /* UIImageView.swift in Sources */,
 				3113CEF6243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				3113CEEE243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
 				3113CEF2243E9B36001DF8CB /* Coordinator.swift in Sources */,
@@ -974,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C239862412E6E9008AC51C /* SecretSantaUITests.swift in Sources */,
+				1EF1223A254EE779004275E5 /* UIImageView.swift in Sources */,
 				3113CEF7243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				3113CEEF243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
 				3113CEF3243E9B36001DF8CB /* Coordinator.swift in Sources */,
