@@ -46,11 +46,21 @@ final class GroupView: UIView {
     
     var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.clear
         return tableView
     }()
     
+    var instructionsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Toque no + para criar um novo grupo de Amigo Secreto"
+        label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 14)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        return label
+    }()
+
     // MARK: - init -
     init() {
         super.init(frame: .zero)
@@ -68,7 +78,7 @@ final class GroupView: UIView {
 // MARK: - TableViewDelegate -
 extension GroupView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,7 +92,7 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! GroupTableViewCell
+        guard let cell = tableView.cellForRow(at: indexPath) as? GroupTableViewCell else { return }
         cell.contentCell.backgroundColor = ColorName.red2.color
     }
 }
@@ -102,8 +112,6 @@ extension GroupView {
     }
 }
 
-// MARK: - TableView
-
 // MARK: - CodeView -
 extension GroupView: CodeView {
     func buildViewHierarchy() {
@@ -112,6 +120,8 @@ extension GroupView: CodeView {
         topContentView.addSubview(userImageView)
         topContentView.addSubview(titleLabel)
         topContentView.addSubview(addButton)
+        contentView.addSubview(tableView)
+        tableView.addSubview(instructionsLabel)
     }
 
     func setupContraints() {
@@ -121,13 +131,13 @@ extension GroupView: CodeView {
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -20).isActive = true
+        topContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -70).isActive = true
         topContentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         topContentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        topContentView.heightAnchor.constraint(equalToConstant: 225).isActive = true
+        topContentView.heightAnchor.constraint(equalToConstant: 270).isActive = true
         topContentView.translatesAutoresizingMaskIntoConstraints = false
 
-        userImageView.topAnchor.constraint(equalTo: topContentView.topAnchor, constant: 70).isActive = true
+        userImageView.topAnchor.constraint(equalTo: topContentView.topAnchor, constant: 120).isActive = true
         userImageView.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 20).isActive = true
         userImageView.widthAnchor.constraint(equalToConstant: 71).isActive = true
         userImageView.heightAnchor.constraint(equalToConstant: 71).isActive = true
@@ -140,5 +150,17 @@ extension GroupView: CodeView {
         addButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -35).isActive = true
         addButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -50).isActive = true
         addButton.translatesAutoresizingMaskIntoConstraints = false
+
+        tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        instructionsLabel.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+        instructionsLabel.topAnchor.constraint(equalTo: tableView.topAnchor, constant: 120).isActive = true
+        instructionsLabel.leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: 90).isActive = true
+        instructionsLabel.trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: -90).isActive = true
+        instructionsLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 }

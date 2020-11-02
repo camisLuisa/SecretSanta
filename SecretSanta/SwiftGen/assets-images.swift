@@ -21,6 +21,7 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum Asset {
   internal static let add = ImageAsset(name: "add")
   internal static let close = ImageAsset(name: "close")
+  internal static let gift = ImageAsset(name: "gift")
   internal static let groupTitle = ImageAsset(name: "group_title")
   internal static let idIcon = ImageAsset(name: "id_icon")
   internal static let line = ImageAsset(name: "line")
