@@ -21,7 +21,7 @@ final class GroupView: UIView {
         return view
     }()
 
-    lazy var userImageView: UIImageView = {
+    private lazy var userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 71/2
         imageView.clipsToBounds = true
@@ -44,21 +44,26 @@ final class GroupView: UIView {
         return button
     }()
     
-    var tableView: UITableView = {
+    private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
         return tableView
     }()
     
-    var instructionsLabel: UILabel = {
+    private let instructionsLabel: UILabel = {
         let label = UILabel()
         label.text = "Toque no + para criar um novo grupo de Amigo Secreto"
         label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 14)
         label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         label.textAlignment = .center
         return label
+    }()
+
+    private let giftIcon: UIImageView = {
+        let img = UIImageView(image: Asset.gift.image)
+        return img
     }()
 
     // MARK: - init -
@@ -122,6 +127,7 @@ extension GroupView: CodeView {
         topContentView.addSubview(addButton)
         contentView.addSubview(tableView)
         tableView.addSubview(instructionsLabel)
+        tableView.addSubview(giftIcon)
     }
 
     func setupContraints() {
@@ -159,8 +165,12 @@ extension GroupView: CodeView {
 
         instructionsLabel.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
         instructionsLabel.topAnchor.constraint(equalTo: tableView.topAnchor, constant: 120).isActive = true
-        instructionsLabel.leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: 90).isActive = true
-        instructionsLabel.trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: -90).isActive = true
+        instructionsLabel.leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: 80).isActive = true
+        instructionsLabel.trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: -80).isActive = true
         instructionsLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        giftIcon.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+        giftIcon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40).isActive = true
+        giftIcon.translatesAutoresizingMaskIntoConstraints = false
     }
 }
