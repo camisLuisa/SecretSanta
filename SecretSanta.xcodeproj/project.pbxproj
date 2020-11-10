@@ -15,6 +15,7 @@
 		1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */; };
 		1E60AA8A25093A4C0008C7D3 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */; };
 		1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8B25093D400008C7D3 /* CustomTextField.swift */; };
+		1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E623A352559BF1900F79D7F /* loading-gif.gif */; };
 		1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E5F1F24C10A36005805FC /* BaseWebService.swift */; };
 		1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866824D7435C002D6CAE /* TutorialViewController.swift */; };
 		1E6E866E24DCDEB5002D6CAE /* CreateUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */; };
@@ -24,6 +25,7 @@
 		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
 		1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89552C24E029CC000FAFFE /* CreateAccountService.swift */; };
+		1EA59E7225558537007B1F6B /* UIImageView+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA59E7125558537007B1F6B /* UIImageView+Gif.swift */; };
 		1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */; };
 		1EF12238254EE779004275E5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF12237254EE779004275E5 /* UIImageView.swift */; };
 		1EF12239254EE779004275E5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF12237254EE779004275E5 /* UIImageView.swift */; };
@@ -114,6 +116,7 @@
 		1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInputView.swift; sourceTree = "<group>"; };
 		1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		1E60AA8B25093D400008C7D3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1E623A352559BF1900F79D7F /* loading-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-gif.gif"; sourceTree = "<group>"; };
 		1E6E5F1F24C10A36005805FC /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		1E6E866824D7435C002D6CAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserLoginViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
 		1E89552C24E029CC000FAFFE /* CreateAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountService.swift; sourceTree = "<group>"; };
+		1EA59E7125558537007B1F6B /* UIImageView+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Gif.swift"; sourceTree = "<group>"; };
 		1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		1EF12237254EE779004275E5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3101F992244234FD006D3ED6 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +263,14 @@
 				1E84394924A03AE50029718E /* AddParticipantView.swift */,
 			);
 			path = AddParticipants;
+			sourceTree = "<group>";
+		};
+		1EA59E7625558564007B1F6B /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				1E623A352559BF1900F79D7F /* loading-gif.gif */,
+			);
+			path = Gifs;
 			sourceTree = "<group>";
 		};
 		1EA9E1B124A91A2D00622DEA /* GroupViewCell */ = {
@@ -493,6 +505,7 @@
 		31FBA1F02455DCE20011F917 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1EA59E7625558564007B1F6B /* Gifs */,
 				31FBA1F12455DCF60011F917 /* Fonts */,
 			);
 			path = Resources;
@@ -537,6 +550,7 @@
 			children = (
 				31FBA1F72458AF150011F917 /* UITextField+ConfigureBottomBorder.swift */,
 				1EF12237254EE779004275E5 /* UIImageView.swift */,
+				1EA59E7125558537007B1F6B /* UIImageView+Gif.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,6 +701,7 @@
 				31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */,
 				31C224512482EEFB00675155 /* SegoeUIItalic.ttf in Resources */,
 				316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */,
+				1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */,
 				3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */,
 				31C2396D2412E6E9008AC51C /* Assets.xcassets in Resources */,
 				1E3CC274250FF08100158B27 /* QuicksandVariableFontwght.ttf in Resources */,
@@ -947,6 +962,7 @@
 				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
+				1EA59E7225558537007B1F6B /* UIImageView+Gif.swift in Sources */,
 				1E6E867024DCE155002D6CAE /* CreateUserLoginView.swift in Sources */,
 				1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */,
 				3113CEF5243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
