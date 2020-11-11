@@ -3,7 +3,7 @@ import UIKit
 final class GroupViewController: UIViewController {
     
     // MARK: - Attributes -
-    private let viewGroup: GroupView
+    let viewGroup: GroupView
     private let coordinator: CreateGroupCoordinator
     
     // MARK: - Init -

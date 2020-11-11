@@ -17,6 +17,12 @@
 		1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8B25093D400008C7D3 /* CustomTextField.swift */; };
 		1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E623A352559BF1900F79D7F /* loading-gif.gif */; };
 		1E623A7B255C1A0700F79D7F /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */; };
+		1E623A80255C5C7900F79D7F /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7F255C5C7900F79D7F /* GroupViewModel.swift */; };
+		1E623A81255C5C7900F79D7F /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7F255C5C7900F79D7F /* GroupViewModel.swift */; };
+		1E623A86255C642000F79D7F /* FriendGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A85255C642000F79D7F /* FriendGroup.swift */; };
+		1E623A87255C642000F79D7F /* FriendGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A85255C642000F79D7F /* FriendGroup.swift */; };
+		1E623A8D255C675600F79D7F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A8C255C675600F79D7F /* Friend.swift */; };
+		1E623A8E255C675600F79D7F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A8C255C675600F79D7F /* Friend.swift */; };
 		1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E5F1F24C10A36005805FC /* BaseWebService.swift */; };
 		1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866824D7435C002D6CAE /* TutorialViewController.swift */; };
 		1E6E866E24DCDEB5002D6CAE /* CreateUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */; };
@@ -119,6 +125,9 @@
 		1E60AA8B25093D400008C7D3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1E623A352559BF1900F79D7F /* loading-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-gif.gif"; sourceTree = "<group>"; };
 		1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		1E623A7F255C5C7900F79D7F /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		1E623A85255C642000F79D7F /* FriendGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroup.swift; sourceTree = "<group>"; };
+		1E623A8C255C675600F79D7F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		1E6E5F1F24C10A36005805FC /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		1E6E866824D7435C002D6CAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserLoginViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +249,15 @@
 			path = LoadingView;
 			sourceTree = "<group>";
 		};
+		1E623A8B255C670100F79D7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E623A85255C642000F79D7F /* FriendGroup.swift */,
+				1E623A8C255C675600F79D7F /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1E6E866724D74319002D6CAE /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +328,7 @@
 				1EA9E1B124A91A2D00622DEA /* GroupViewCell */,
 				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
 				3113CEFC243EAE02001DF8CB /* GroupView.swift */,
+				1E623A7F255C5C7900F79D7F /* GroupViewModel.swift */,
 			);
 			path = GroupView;
 			sourceTree = "<group>";
@@ -447,6 +466,7 @@
 				31C2396C2412E6E9008AC51C /* Assets.xcassets */,
 				3113CEDA243A7703001DF8CB /* SwiftGen */,
 				3113CED4243A6171001DF8CB /* Components */,
+				1E623A8B255C670100F79D7F /* Model */,
 				314DC82A243A60F500CDF881 /* Utils */,
 				314DC825243A52EA00CDF881 /* Service */,
 				316CE74F241F14A500411DDF /* GoogleService-Info.plist */,
@@ -940,6 +960,7 @@
 				1E5E28F824A0F3680077B3E3 /* ParticipantTextField.swift in Sources */,
 				3113CEE9243A9162001DF8CB /* AssetsColors.swift in Sources */,
 				31FBA1FF245C75F80011F917 /* TexFieldMasker.swift in Sources */,
+				1E623A8D255C675600F79D7F /* Friend.swift in Sources */,
 				1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */,
 				31FBA207245C7EEF0011F917 /* BaseTextField.swift in Sources */,
 				1E3CC270250EBD7700158B27 /* UserLoginView.swift in Sources */,
@@ -958,10 +979,12 @@
 				3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */,
 				1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */,
 				315FB8FF24511B6800872A20 /* FormInputView.swift in Sources */,
+				1E623A86255C642000F79D7F /* FriendGroup.swift in Sources */,
 				31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */,
 				1E3CC26C250EB98C00158B27 /* LoginAccountService.swift in Sources */,
 				31AB51CA2421D5C400018DF6 /* MenuView.swift in Sources */,
 				314DC829243A601B00CDF881 /* HTTPMethod.swift in Sources */,
+				1E623A80255C5C7900F79D7F /* GroupViewModel.swift in Sources */,
 				1EF12238254EE779004275E5 /* UIImageView.swift in Sources */,
 				31FBA205245C7B7E0011F917 /* String+Formatter.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
@@ -998,9 +1021,12 @@
 			files = (
 				31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */,
 				1EF12239254EE779004275E5 /* UIImageView.swift in Sources */,
+				1E623A81255C5C7900F79D7F /* GroupViewModel.swift in Sources */,
 				3113CEF6243E9F3C001DF8CB /* MainCoordinator.swift in Sources */,
 				3113CEEE243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
+				1E623A87255C642000F79D7F /* FriendGroup.swift in Sources */,
 				3113CEF2243E9B36001DF8CB /* Coordinator.swift in Sources */,
+				1E623A8E255C675600F79D7F /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

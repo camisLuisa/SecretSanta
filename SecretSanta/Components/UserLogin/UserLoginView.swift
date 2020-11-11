@@ -38,6 +38,7 @@ final class UserLoginView: UIView {
     
     private let inputPassword: CustomTextField = {
         let textfield = CustomTextField()
+        textfield.isSecureTextEntry = true
         textfield.attributedPlaceholder = NSAttributedString(string: L10n.password,
                                                              attributes: [.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always

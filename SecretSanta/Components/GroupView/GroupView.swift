@@ -51,7 +51,7 @@ final class GroupView: UIView {
         return tableView
     }()
     
-    private let instructionsLabel: UILabel = {
+    let instructionsLabel: UILabel = {
         let label = UILabel()
         label.text = "Toque no + para criar um novo grupo de Amigo Secreto"
         label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 14)
@@ -83,7 +83,7 @@ final class GroupView: UIView {
 // MARK: - TableViewDelegate -
 extension GroupView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
