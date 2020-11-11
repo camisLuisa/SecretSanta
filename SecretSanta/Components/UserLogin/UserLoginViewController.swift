@@ -54,10 +54,7 @@ extension UserLoginViewController {
     private func login(with email: String, password: String) {
         LoginAccountService.loginAccount(with: email, password: password) { [weak self] result in
             guard let self = self, let spinnerVC = self.spinnerVC else { return }
-
-            spinnerVC.willMove(toParent: nil)
-            spinnerVC.view.removeFromSuperview()
-            spinnerVC.removeFromParent()
+            spinnerVC.stopLoading()
             
             switch result {
             case .success(let result):
@@ -100,19 +97,19 @@ extension UserLoginViewController: GIDSignInDelegate {
         if let error = error {
             guard let spinnerVC = self.spinnerVC else { return }
             spinnerVC.stopLoading()
-            
+
             print(error.localizedDescription)
             return
         }
-        
+
         guard let auth = user.authentication else { return }
-        
+
         let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         Auth.auth().signIn(with: credentials) { [weak self] (_, error) in
             guard let self = self, let spinnerVC = self.spinnerVC else { return }
 
             spinnerVC.stopLoading()
-            
+
             if let error = error {
                 print(error.localizedDescription)
             } else {

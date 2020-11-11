@@ -36,7 +36,7 @@ final class MainCoordinator: Coordinator {
     
     func GoToCreateAccount() {
         let createAccountViewController = CreateUserLoginViewController()
-        
+        navigationController.navigationBar.tintColor = .white
         navigationController.pushViewController(createAccountViewController, animated: true)
     }
 }
