@@ -6,6 +6,7 @@ final class UserLoginViewController: UIViewController {
 
     // MARK: - Attributes
     private let userLoginView: UserLoginView
+    private var spinnerVC: SpinnerViewController?
     weak var coordinator: MainCoordinator?
 
     // MARK: - init
@@ -29,10 +30,13 @@ final class UserLoginViewController: UIViewController {
         userLoginView.didTapEnterButton = { [weak self] email, password in
             guard let self = self else { return }
             self.login(with: email, password: password)
+            self.createSpinnerView()
         }
         
-        userLoginView.didTapEnterWithGoogleButton = {
+        userLoginView.didTapEnterWithGoogleButton = { [weak self] in
+            guard let self = self else { return }
             GIDSignIn.sharedInstance().signIn()
+            self.createSpinnerView()
         }
         
         userLoginView.didTapEnterWithFacebookButton = {
@@ -48,7 +52,13 @@ final class UserLoginViewController: UIViewController {
 // MARK: - Actions
 extension UserLoginViewController {
     private func login(with email: String, password: String) {
-        LoginAccountService.loginAccount(with: email, password: password) { (result) in
+        LoginAccountService.loginAccount(with: email, password: password) { [weak self] result in
+            guard let self = self, let spinnerVC = self.spinnerVC else { return }
+
+            spinnerVC.willMove(toParent: nil)
+            spinnerVC.view.removeFromSuperview()
+            spinnerVC.removeFromParent()
+            
             switch result {
             case .success(let result):
                 print(result.credential.debugDescription)
@@ -67,12 +77,30 @@ extension UserLoginViewController {
         
         self.navigationController?.present(alert, animated: true, completion: nil)
     }
+    
+    func createSpinnerView() {
+        spinnerVC = SpinnerViewController()
+        
+        guard let spinnerVC = self.spinnerVC else { return }
+
+        // add the spinner view controller
+        addChild(spinnerVC)
+        spinnerVC.view.frame = view.frame
+        view.addSubview(spinnerVC.view)
+        spinnerVC.view.translatesAutoresizingMaskIntoConstraints = false
+        spinnerVC.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinnerVC.view.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        spinnerVC.didMove(toParent: self)
+    }
 }
 
 // MARK: - GoogleSignIn
 extension UserLoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
+            guard let spinnerVC = self.spinnerVC else { return }
+            spinnerVC.stopLoading()
+            
             print(error.localizedDescription)
             return
         }
@@ -80,7 +108,11 @@ extension UserLoginViewController: GIDSignInDelegate {
         guard let auth = user.authentication else { return }
         
         let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
-        Auth.auth().signIn(with: credentials) { (_, error) in
+        Auth.auth().signIn(with: credentials) { [weak self] (_, error) in
+            guard let self = self, let spinnerVC = self.spinnerVC else { return }
+
+            spinnerVC.stopLoading()
+            
             if let error = error {
                 print(error.localizedDescription)
             } else {

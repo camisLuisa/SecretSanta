@@ -68,7 +68,7 @@ final class UserLoginView: UIView {
     }()
 
     private let forgotPasswordButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         let attributeString = NSMutableAttributedString(string: L10n.forgotPassword,
                                                         attributes: [
                                                             .font: UIFont.systemFont(ofSize: 14),

@@ -1,4 +1,3 @@
-
 //
 //  Gif.swift
 //  SwiftGif
@@ -29,7 +28,6 @@ extension UIImageView {
             }
         }
     }
-
 }
 
 extension UIImage {
@@ -222,5 +220,4 @@ extension UIImage {
 
         return animation
     }
-
 }

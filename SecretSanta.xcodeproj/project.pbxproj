@@ -16,6 +16,7 @@
 		1E60AA8A25093A4C0008C7D3 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */; };
 		1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60AA8B25093D400008C7D3 /* CustomTextField.swift */; };
 		1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E623A352559BF1900F79D7F /* loading-gif.gif */; };
+		1E623A7B255C1A0700F79D7F /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */; };
 		1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E5F1F24C10A36005805FC /* BaseWebService.swift */; };
 		1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866824D7435C002D6CAE /* TutorialViewController.swift */; };
 		1E6E866E24DCDEB5002D6CAE /* CreateUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */; };
@@ -117,6 +118,7 @@
 		1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		1E60AA8B25093D400008C7D3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1E623A352559BF1900F79D7F /* loading-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-gif.gif"; sourceTree = "<group>"; };
+		1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		1E6E5F1F24C10A36005805FC /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		1E6E866824D7435C002D6CAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserLoginViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,14 @@
 				1E3CC26F250EBD7700158B27 /* UserLoginView.swift */,
 			);
 			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		1E623A79255C19DE00F79D7F /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		1E6E866724D74319002D6CAE /* Tutorial */ = {
@@ -375,6 +385,7 @@
 		314DC82A243A60F500CDF881 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1E623A79255C19DE00F79D7F /* LoadingView */,
 				31FBA1FD245C75D00011F917 /* TextFieldMask */,
 				31FBA1DF245367320011F917 /* Validator */,
 				31FBA1DE245367290011F917 /* View */,
@@ -934,6 +945,7 @@
 				1E3CC270250EBD7700158B27 /* UserLoginView.swift in Sources */,
 				3113CEFD243EAE02001DF8CB /* GroupView.swift in Sources */,
 				3113CEF1243E9B36001DF8CB /* Coordinator.swift in Sources */,
+				1E623A7B255C1A0700F79D7F /* SpinnerViewController.swift in Sources */,
 				1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */,
 				1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */,
 				3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */,
