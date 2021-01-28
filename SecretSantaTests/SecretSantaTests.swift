@@ -6,12 +6,11 @@
 //  Copyright © 2020 Camila Luisa Farias de Lima. All rights reserved.
 //
 
-//import XCTest
 import Quick
 import Nimble
 @testable import SecretSanta
 
-class SecretSantaTests: XCTestCase {
+class SecretSantaTests: QuickSpec {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

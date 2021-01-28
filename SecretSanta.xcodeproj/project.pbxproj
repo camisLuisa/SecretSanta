@@ -97,6 +97,7 @@
 		AEE1B7C825C326EE005C2F96 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDC243A7D73001DF8CB /* assets-images.swift */; };
 		AEE1B7CC25C326F1005C2F96 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDB243A7D73001DF8CB /* strings.swift */; };
 		AEE1B7D025C326F5005C2F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
+		AEE1B82A25C33A33005C2F96 /* GroupViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */; };
 		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
 		D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -205,6 +206,7 @@
 		71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.release.xcconfig"; sourceTree = "<group>"; };
 		AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewControllerTests.swift; sourceTree = "<group>"; };
+		AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTest.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 		31C239792412E6E9008AC51C /* SecretSantaTests */ = {
 			isa = PBXGroup;
 			children = (
+				AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */,
 				AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */,
 				31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */,
 				31C2397C2412E6E9008AC51C /* Info.plist */,
@@ -1047,6 +1050,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C2397B2412E6E9008AC51C /* SecretSantaTests.swift in Sources */,
+				AEE1B82A25C33A33005C2F96 /* GroupViewTest.swift in Sources */,
 				AEE1B7CC25C326F1005C2F96 /* strings.swift in Sources */,
 				1EF12239254EE779004275E5 /* UIImageView.swift in Sources */,
 				AEE1B7BC25C326E5005C2F96 /* assets-fonts.swift in Sources */,
