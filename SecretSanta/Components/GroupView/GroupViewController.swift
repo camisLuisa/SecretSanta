@@ -5,6 +5,7 @@ final class GroupViewController: UIViewController {
     // MARK: - Attributes -
     let viewGroup: GroupView
     private let coordinator: CreateGroupCoordinator
+    let viewModel = GroupViewModel()
     
     // MARK: - Init -
     init(coordinator: CreateGroupCoordinator) {
@@ -20,10 +21,24 @@ final class GroupViewController: UIViewController {
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         view = viewGroup
+        viewGroup.viewModel = viewModel
         super.viewDidLoad()
 
         viewGroup.didSelectAddGroup = {
-            self.coordinator.goToCreateGroup()
+            do {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy"
+                let eventDate = formatter.date(from: "10/08/2021")
+                
+                try self.viewModel.addNewFriendGroup(element: FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!))
+                self.viewGroup.tableView.reloadData()
+            } catch {
+                let alert = UIAlertController(title: "Ops!", message: "Não foi possível criar o grupo.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+//            self.coordinator.goToCreateGroup()
         }
         
         viewGroup.setupTableView()

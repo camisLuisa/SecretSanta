@@ -3,6 +3,7 @@ import UIKit
 final class GroupView: UIView {
     
     // MARK: - Properties -
+    var viewModel: GroupViewModel?
     var didSelectAddGroup: (() -> Void)?
     
     private let contentView: UIView = {
@@ -41,10 +42,11 @@ final class GroupView: UIView {
     private let addButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(Asset.add.image, for: .normal)
+        button.addTarget(self, action: #selector(didTapAtAddGroup), for: .touchUpInside)
         return button
     }()
     
-    private let tableView: UITableView = {
+    let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
@@ -71,7 +73,6 @@ final class GroupView: UIView {
         super.init(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
-        userImageView.image = UIImage.init(asset: ImageAsset(name: "lu"))
         setupViews()
     }
 
@@ -83,7 +84,12 @@ final class GroupView: UIView {
 // MARK: - TableViewDelegate -
 extension GroupView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        userImageView.image = UIImage.init(asset: ImageAsset(name: "lu"))
+        if viewModel?.friendsGroups.count ?? 0 > 0 {
+            instructionsLabel.isHidden = true
+        }
+        
+        return viewModel?.friendsGroups.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
