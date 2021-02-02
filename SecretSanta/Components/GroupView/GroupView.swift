@@ -87,8 +87,10 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        cell.selectionStyle = .none
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendGroupTableViewCell", for: indexPath) as? FriendGroupTableViewCell else {
+            return UITableViewCell()
+        }
+        
         return cell
     }
     
@@ -97,15 +99,18 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? GroupTableViewCell else { return }
-        cell.contentCell.backgroundColor = ColorName.red2.color
+        guard let cell = tableView.cellForRow(at: indexPath) as? FriendGroupTableViewCell else { return }
     }
 }
 
 // MARK: - SetupView -
 extension GroupView {
     func setupTableView() {
-        tableView.register(GroupTableViewCell.self, forCellReuseIdentifier: "groupCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        let cell = UINib(nibName: "FriendGroupTableViewCell",
+                                  bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "FriendGroupTableViewCell")
     }
 }
 

@@ -24,7 +24,19 @@ final class GroupViewModel {
         return friendsGroups
     }
     
+    @discardableResult
+    func deleteFriendGroup(at position: Int) throws -> [FriendGroup] {
+        if position < 0 ||  position >= friendsGroups.count {
+            throw ProblemWithGroup.positionNotExist
+        }
+        
+        friendsGroups.remove(at: position)
+        
+        return friendsGroups
+    }
+    
     public enum ProblemWithGroup: Error {
         case dayHasPassed
+        case positionNotExist
     }
 }

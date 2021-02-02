@@ -48,4 +48,27 @@ class GroupViewTest: XCTestCase {
             XCTAssertEqual(errorThrown as? SecretSanta.GroupViewModel.ProblemWithGroup, SecretSanta.GroupViewModel.ProblemWithGroup.dayHasPassed)
             }
     }
+    
+    func testRemoveFriendGroup() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let eventDate = formatter.date(from: "10/08/2021")
+        
+        let friendGroupOne = SecretSanta.FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!)
+        
+        do {
+            try groupViewModel?.addNewFriendGroup(element: friendGroupOne)
+            try groupViewModel?.deleteFriendGroup(at: 0)
+        } catch {
+            
+        }
+        
+        XCTAssertEqual(0, groupViewModel?.friendsGroups.count)
+    }
+    
+    func testDeleteFriendGroupPositionHightThanArrayLength() {
+        XCTAssertThrowsError(try groupViewModel?.deleteFriendGroup(at: 2), "The addNewFriendGroup() should have thrown an error if position is higher then array's length") { (errorThrown) in
+            XCTAssertEqual(errorThrown as? SecretSanta.GroupViewModel.ProblemWithGroup, SecretSanta.GroupViewModel.ProblemWithGroup.positionNotExist)
+        }
+    }
 }

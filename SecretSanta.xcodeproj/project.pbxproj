@@ -90,6 +90,8 @@
 		31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE9E99242C2B0B0034368F /* CodeView.swift */; };
 		416E45F70D38E5EB91552594 /* Pods_SecretSantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */; };
 		AE561D4025BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */; };
+		AE958C0025C89390009FEABD /* FriendGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */; };
+		AE958C0125C89390009FEABD /* FriendGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */; };
 		AEE1B78025C32542005C2F96 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */; };
 		AEE1B7BC25C326E5005C2F96 /* assets-fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C224532482F42000675155 /* assets-fonts.swift */; };
 		AEE1B7C025C326E8005C2F96 /* AssetsColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEE7243A9162001DF8CB /* AssetsColors.swift */; };
@@ -206,6 +208,8 @@
 		71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.release.xcconfig"; sourceTree = "<group>"; };
 		AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewControllerTests.swift; sourceTree = "<group>"; };
+		AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupTableViewCell.swift; sourceTree = "<group>"; };
+		AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupTableViewCell.xib; sourceTree = "<group>"; };
 		AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTest.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */,
+				AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */,
+				AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */,
 			);
 			path = GroupViewCell;
 			sourceTree = "<group>";
@@ -742,6 +748,7 @@
 				3113CEEA243A9162001DF8CB /* colors.txt in Resources */,
 				31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */,
 				31C224512482EEFB00675155 /* SegoeUIItalic.ttf in Resources */,
+				AE958C0125C89390009FEABD /* FriendGroupTableViewCell.xib in Resources */,
 				316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */,
 				1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */,
 				3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */,
@@ -1000,6 +1007,7 @@
 				1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */,
 				1E6E5F2024C10A36005805FC /* BaseWebService.swift in Sources */,
 				3113CF04243FF8E2001DF8CB /* CustomButton.swift in Sources */,
+				AE958C0025C89390009FEABD /* FriendGroupTableViewCell.swift in Sources */,
 				31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */,
 				31FBA1F82458AF150011F917 /* UITextField+ConfigureBottomBorder.swift in Sources */,
 				31FBA1FA2458BFC70011F917 /* AmountTextField.swift in Sources */,
