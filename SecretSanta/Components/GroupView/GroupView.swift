@@ -4,7 +4,8 @@ final class GroupView: UIView {
     
     // MARK: - Properties -
     var viewModel: GroupViewModel?
-    var didSelectAddGroup: (() -> Void)?
+    var deletePosition: Int?
+    var createGroupDelegate: CreateGroupDelegate?
     
     private let contentView: UIView = {
        let contentView = UIView()
@@ -43,6 +44,14 @@ final class GroupView: UIView {
         let button = UIButton(type: .system)
         button.setImage(Asset.add.image, for: .normal)
         button.addTarget(self, action: #selector(didTapAtAddGroup), for: .touchUpInside)
+        return button
+    }()
+    
+    private let deleteButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(Asset.delete.image, for: .normal)
+        button.addTarget(self, action: #selector(didTapAtDeleteGroup), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
     
@@ -87,6 +96,8 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
         userImageView.image = UIImage.init(asset: ImageAsset(name: "lu"))
         if viewModel?.friendsGroups.count ?? 0 > 0 {
             instructionsLabel.isHidden = true
+        } else {
+            instructionsLabel.isHidden = false
         }
         
         return viewModel?.friendsGroups.count ?? 0
@@ -106,6 +117,10 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? FriendGroupTableViewCell else { return }
+        
+        deleteButton.isHidden = false
+        addButton.isHidden = true
+        deletePosition = indexPath.item
     }
 }
 
@@ -124,7 +139,17 @@ extension GroupView {
 extension GroupView {
     @objc
     func didTapAtAddGroup() {
-        self.didSelectAddGroup?()
+        self.createGroupDelegate?.addFriendGroup()
+    }
+    
+    @objc
+    func didTapAtDeleteGroup() {
+        guard let position = deletePosition else {
+            return
+        }
+        self.createGroupDelegate?.deleteFriendGroup(position: position)
+        deleteButton.isHidden = true
+        addButton.isHidden = false
     }
 }
 
@@ -136,6 +161,7 @@ extension GroupView: CodeView {
         topContentView.addSubview(userImageView)
         topContentView.addSubview(titleLabel)
         topContentView.addSubview(addButton)
+        topContentView.addSubview(deleteButton)
         contentView.addSubview(tableView)
         tableView.addSubview(instructionsLabel)
         tableView.addSubview(giftIcon)
@@ -167,6 +193,10 @@ extension GroupView: CodeView {
         addButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -35).isActive = true
         addButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -50).isActive = true
         addButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        deleteButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -35).isActive = true
+        deleteButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -50).isActive = true
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
 
         tableView.topAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: 20).isActive = true
         tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true

@@ -92,6 +92,7 @@
 		AE561D4025BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */; };
 		AE958C0025C89390009FEABD /* FriendGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */; };
 		AE958C0125C89390009FEABD /* FriendGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */; };
+		AE958C0625CC2F69009FEABD /* CreateGroupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE958C0525CC2F69009FEABD /* CreateGroupDelegate.swift */; };
 		AEE1B78025C32542005C2F96 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E623A7A255C1A0600F79D7F /* SpinnerViewController.swift */; };
 		AEE1B7BC25C326E5005C2F96 /* assets-fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C224532482F42000675155 /* assets-fonts.swift */; };
 		AEE1B7C025C326E8005C2F96 /* AssetsColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEE7243A9162001DF8CB /* AssetsColors.swift */; };
@@ -210,6 +211,7 @@
 		AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewControllerTests.swift; sourceTree = "<group>"; };
 		AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupTableViewCell.swift; sourceTree = "<group>"; };
 		AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupTableViewCell.xib; sourceTree = "<group>"; };
+		AE958C0525CC2F69009FEABD /* CreateGroupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupDelegate.swift; sourceTree = "<group>"; };
 		AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTest.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,6 +345,7 @@
 				3113CEFA243EAB4B001DF8CB /* GroupViewController.swift */,
 				3113CEFC243EAE02001DF8CB /* GroupView.swift */,
 				1E623A7F255C5C7900F79D7F /* GroupViewModel.swift */,
+				AE958C0525CC2F69009FEABD /* CreateGroupDelegate.swift */,
 			);
 			path = GroupView;
 			sourceTree = "<group>";
@@ -1047,6 +1050,7 @@
 				31FBA1E3245367C80011F917 /* ValidatorResponse.swift in Sources */,
 				31FBA1F42455DFE00011F917 /* FormTextField.swift in Sources */,
 				31C224542482F42000675155 /* assets-fonts.swift in Sources */,
+				AE958C0625CC2F69009FEABD /* CreateGroupDelegate.swift in Sources */,
 				1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */,
 				1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
