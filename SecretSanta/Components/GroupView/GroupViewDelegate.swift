@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CreateGroupDelegate {
+protocol GroupViewDelegate {
     func addFriendGroup()
     func deleteFriendGroup(position: Int)
 }

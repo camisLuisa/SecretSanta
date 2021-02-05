@@ -5,7 +5,7 @@ final class GroupView: UIView {
     // MARK: - Properties -
     var viewModel: GroupViewModel?
     var deletePosition: Int?
-    var createGroupDelegate: CreateGroupDelegate?
+    var createGroupDelegate: GroupViewDelegate?
     
     private let contentView: UIView = {
        let contentView = UIView()

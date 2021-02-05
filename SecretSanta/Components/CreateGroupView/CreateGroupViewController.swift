@@ -16,6 +16,7 @@ final class CreateGroupViewController: UIViewController {
     // MARK: - Init -
     init(type: CreateGroupViewType, coordinator: CreateGroupCoordinator) {
         viewCreateGroup = CreateGroupView(type: type)
+
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,7 +30,8 @@ final class CreateGroupViewController: UIViewController {
         view = viewCreateGroup
         super.viewDidLoad()
         
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.backgroundColor = ColorName.red1.color
         
         viewCreateGroup.didTapAtCloseButton = {
             self.navigationController?.popViewController(animated: true)
