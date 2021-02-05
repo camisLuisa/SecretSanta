@@ -16,7 +16,8 @@ final class CreateGroupCoordinator: Coordinator {
     init(navigationController: UINavigationController = UINavigationController()) {
         self.navigationController = navigationController
         self.navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController.navigationBar.isTranslucent = true
+        self.navigationController.navigationBar.shadowImage = UIImage()
+        self.navigationController.navigationBar.isTranslucent = true        
     }
     
     func start() {
@@ -40,8 +41,7 @@ final class CreateGroupCoordinator: Coordinator {
     }
     
     func goToCreateGroup() {
-        let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)
-        
+        let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)        
         navigationController.pushViewController(controller, animated: true)
     }
     

@@ -27,11 +27,6 @@ final class GroupViewController: UIViewController {
         
         viewGroup.setupTableView()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.backgroundColor = .white
-    }
 }
 
 extension GroupViewController: GroupViewDelegate {

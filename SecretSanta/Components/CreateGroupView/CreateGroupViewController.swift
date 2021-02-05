@@ -16,7 +16,6 @@ final class CreateGroupViewController: UIViewController {
     // MARK: - Init -
     init(type: CreateGroupViewType, coordinator: CreateGroupCoordinator) {
         viewCreateGroup = CreateGroupView(type: type)
-
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,9 +29,6 @@ final class CreateGroupViewController: UIViewController {
         view = viewCreateGroup
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.backgroundColor = ColorName.red1.color
-        
         viewCreateGroup.didTapAtCloseButton = {
             self.navigationController?.popViewController(animated: true)
         }
@@ -40,5 +36,19 @@ final class CreateGroupViewController: UIViewController {
         self.viewCreateGroup.didTapAtNextButton = { type in
             self.coordinator.goToNextCreateGroup(type: type)
         }
+    }
+    
+    override func loadView() {
+        setupView()
+    }
+    
+    // MARK: - Setup View -
+    func setupView() {
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 }
