@@ -148,9 +148,6 @@ extension GroupView {
         if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: tableView)
             if let indexPath = tableView.indexPathForRow(at: touchPoint) {
-                // your code here, get the row for the indexPath or do whatever you want
-                print(indexPath)
-                
                 deleteButton.isHidden = false
                 addButton.isHidden = true
                 cancelButton.isHidden = false
