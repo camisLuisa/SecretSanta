@@ -15,8 +15,8 @@ final class FormInputView: UIView {
     // MARK: - Views -
     private let titleFieldLabel: UILabel = {
         let label  = UILabel()
-        label.textColor = ColorName.red1.color
-        label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 25.0)
+        label.textColor = .black
+        label.font = UIFont(font: FontFamily.Quicksand.regular, size: 22.0)
         return label
     }()
     

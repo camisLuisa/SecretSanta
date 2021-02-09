@@ -6,6 +6,7 @@ final class GroupViewController: UIViewController {
     let viewGroup: GroupView
     private let coordinator: CreateGroupCoordinator
     let viewModel = GroupViewModel()
+    var friendGroup: FriendGroup?
     
     // MARK: - Init -
     init(coordinator: CreateGroupCoordinator) {
@@ -26,25 +27,41 @@ final class GroupViewController: UIViewController {
         super.viewDidLoad()
         
         viewGroup.setupTableView()
+        
+        if let friendGroup = friendGroup {
+            do {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy"
+                let eventDate = formatter.date(from: "10/08/2021")
+
+                try self.viewModel.addNewFriendGroup(element: FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!))
+                self.viewGroup.tableView.reloadData()
+            } catch {
+                let alert = UIAlertController(title: "Ops!", message: "Não foi possível criar o grupo.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }
 
 extension GroupViewController: GroupViewDelegate {
     func addFriendGroup() {
-        coordinator.goToCreateGroup()
-//        do {
-//            let formatter = DateFormatter()
-//            formatter.dateFormat = "dd/MM/yyyy"
-//            let eventDate = formatter.date(from: "10/08/2021")
-//
-//            try self.viewModel.addNewFriendGroup(element: FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!))
-//            self.viewGroup.tableView.reloadData()
-//        } catch {
-//            let alert = UIAlertController(title: "Ops!", message: "Não foi possível criar o grupo.", preferredStyle: .alert)
-//            let action = UIAlertAction(title: "ok", style: .cancel, handler: nil)
-//            alert.addAction(action)
-//            self.present(alert, animated: true, completion: nil)
-//        }
+//        coordinator.goToCreateGroup()
+        do {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy"
+            let eventDate = formatter.date(from: "10/08/2021")
+
+            try self.viewModel.addNewFriendGroup(element: FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!))
+            self.viewGroup.tableView.reloadData()
+        } catch {
+            let alert = UIAlertController(title: "Ops!", message: "Não foi possível criar o grupo.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func deleteFriendGroup(position: Int) {

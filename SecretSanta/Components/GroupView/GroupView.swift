@@ -76,6 +76,14 @@ final class GroupView: UIView {
         let img = UIImageView(image: Asset.gift.image)
         return img
     }()
+    
+    private let cancelButton: UIButton = {
+        let button  = UIButton(type: .system)
+        button.setImage(Asset.cancelRed.image, for: .normal)
+        button.addTarget(self, action: #selector(cancelDeletButton), for: .touchUpInside)
+        button.isHidden = true
+        return button
+    }()
 
     // MARK: - init -
     init() {
@@ -117,10 +125,6 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? FriendGroupTableViewCell else { return }
-        
-        deleteButton.isHidden = false
-        addButton.isHidden = true
-        deletePosition = indexPath.item
     }
 }
 
@@ -132,6 +136,28 @@ extension GroupView {
         let cell = UINib(nibName: "FriendGroupTableViewCell",
                                   bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "FriendGroupTableViewCell")
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
+        tableView.addGestureRecognizer(longPress)
+
+    }
+    
+    @objc
+    func longPress(sender: UILongPressGestureRecognizer) {
+        print(sender.state.rawValue)
+        if sender.state == UIGestureRecognizer.State.began {
+            let touchPoint = sender.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                // your code here, get the row for the indexPath or do whatever you want
+                print(indexPath)
+                
+                deleteButton.isHidden = false
+                addButton.isHidden = true
+                cancelButton.isHidden = false
+                titleLabel.isHidden = true
+                deletePosition = indexPath.item
+            }
+        }
     }
 }
 
@@ -150,6 +176,16 @@ extension GroupView {
         self.createGroupDelegate?.deleteFriendGroup(position: position)
         deleteButton.isHidden = true
         addButton.isHidden = false
+        cancelButton.isHidden = true
+        titleLabel.isHidden = false
+    }
+    
+    @objc
+    func cancelDeletButton() {
+        deleteButton.isHidden = true
+        addButton.isHidden = false
+        cancelButton.isHidden = true
+        titleLabel.isHidden = false
     }
 }
 
@@ -161,6 +197,7 @@ extension GroupView: CodeView {
         topContentView.addSubview(userImageView)
         topContentView.addSubview(titleLabel)
         topContentView.addSubview(addButton)
+        topContentView.addSubview(cancelButton)
         topContentView.addSubview(deleteButton)
         contentView.addSubview(tableView)
         tableView.addSubview(instructionsLabel)
@@ -189,6 +226,10 @@ extension GroupView: CodeView {
         titleLabel.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -30).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 50).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        cancelButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -30).isActive = true
+        cancelButton.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 50).isActive = true
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
 
         addButton.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor, constant: -35).isActive = true
         addButton.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -50).isActive = true

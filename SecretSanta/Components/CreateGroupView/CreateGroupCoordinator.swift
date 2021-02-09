@@ -12,6 +12,7 @@ final class CreateGroupCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController? { return navigationController }
+    var friendGroup: FriendGroup?
     
     init(navigationController: UINavigationController = UINavigationController()) {
         self.navigationController = navigationController
@@ -25,7 +26,7 @@ final class CreateGroupCoordinator: Coordinator {
         navigationController.setViewControllers([controller], animated: false)
     }
     
-    func goToNextCreateGroup(type: FormInputViewType) {
+    func goToNextCreateGroup(type: FormInputViewType, content: String = "") {
         switch type {
         case .groupName:
             let controller = CreateGroupViewController(type: CreateGroupViewType.amount, coordinator: self)
@@ -35,12 +36,28 @@ final class CreateGroupCoordinator: Coordinator {
             let controller = CreateGroupViewController(type: CreateGroupViewType.eventDate, coordinator: self)
             
             navigationController.pushViewController(controller, animated: true)
+//            friendGroup?.name = content
         case .eventDate:
-           goToParticipants()
+//           goToParticipants()
+            navigationController.popToRootViewController(animated: true)
+        
         }
     }
     
+    func goToGroupScreen() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let eventDate = formatter.date(from: "10/08/2021")
+
+        let friendGroup = FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!)
+        
+        let controller = GroupViewController(coordinator: self)
+        controller.friendGroup = friendGroup
+        navigationController.setViewControllers([controller], animated: false)
+    }
+    
     func goToCreateGroup() {
+//        friendGroup = FriendGroup(name: "", friends: [], minimumValue: 0.0, eventDate: Date())
         let controller = CreateGroupViewController(type: CreateGroupViewType.groupName, coordinator: self)        
         navigationController.pushViewController(controller, animated: true)
     }
