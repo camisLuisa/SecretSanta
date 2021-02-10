@@ -6,11 +6,16 @@ enum FormInputViewType {
     case eventDate
 }
 
+protocol FormInputViewDelegate {
+    func validateImput(validatorStatus: ValidatorResponse)
+}
+
 final class FormInputView: UIView {
     // MARK: - Properties
     private let type: FormInputViewType
     private weak var textFieldDelegate: UITextFieldDelegate?
     public private(set) var hasValidContent: Bool?
+    var delegate: FormInputViewDelegate?
     
     // MARK: - Views -
     private let titleFieldLabel: UILabel = {
@@ -34,8 +39,7 @@ final class FormInputView: UIView {
             textField.keyboardType = .numberPad
         }
         
-        textField.font = UIFont(font: FontFamily.SegoeUI.bold, size: 12.0)
-        textField.textColor = .red
+        textField.font = UIFont(font: FontFamily.Quicksand.regular, size: 16.0)
         textField.delegate = textFieldDelegate
         textField.addTarget(self, action: #selector(validateField), for: .editingChanged)
         
@@ -148,7 +152,7 @@ private extension FormInputView {
     }
     
     func setupTextsForGroupName() {
-        formTextField.placeholder = ""
+        formTextField.placeholder = "Escreva o nome do grupo"
         titleFieldLabel.text = "Nome do grupo"
     }
     
@@ -175,6 +179,8 @@ private extension FormInputView {
             hasValidContent = false
             setValidationLabel(forFieldError: error)
         }
+        
+        delegate?.validateImput(validatorStatus: validator.validation(text: formTextField.text))
     }
     
     @objc

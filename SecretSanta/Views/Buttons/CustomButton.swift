@@ -19,7 +19,7 @@ final class CustomButton: UIButton {
             if isEnabled {
                 backgroundColor = background
             } else {
-                backgroundColor = .gray
+                backgroundColor = ColorName.gray4.color
             }
         }
     }

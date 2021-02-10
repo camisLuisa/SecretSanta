@@ -6,6 +6,8 @@ RoseRed: #D38789
 Gray1: #707070
 gray2: #EFF3F4
 Gray3: #4B4B4B
+gray4: #ADADAD
+gray5: #A9A9A9
 WhiteBlur: #FFFFFF00
 white1: #FFFEFE
 appYellow: #F5F18E

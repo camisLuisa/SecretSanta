@@ -39,13 +39,14 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     private let nextButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
         button.setTitle("Próximo", for: .normal)
-        button.isEnabled = true
+        button.isEnabled = false
         button.addTarget(self, action: #selector(didTapAtNextButton), for: .touchUpInside)
         return button
     }()
     
     private lazy var forminputView: FormInputView = {
         let input = FormInputView(frame: .zero, type: self.type, delegate: self)
+        input.delegate = self
         return input
     }()
     
@@ -67,6 +68,20 @@ extension WhiteBoxView {
     func didTapAtNextButton() {
         self.didTapNextButton?(type)
     }
+}
+
+// MARK: - FormInputViewDelegate -
+extension WhiteBoxView: FormInputViewDelegate {
+    func validateImput(validatorStatus: ValidatorResponse) {
+        switch validatorStatus {
+        case .success:
+            nextButton.isEnabled = true
+        default:
+            nextButton.isEnabled = false
+        }
+    }
+    
+    
 }
 
 // MARK: - CodeView -
@@ -91,15 +106,16 @@ extension WhiteBoxView: CodeView {
         stepImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stepImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor).isActive = true
+        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 10).isActive = true
         forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        forminputView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
+        forminputView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30).isActive = true
+        forminputView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30).isActive = true
         forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
         forminputView.translatesAutoresizingMaskIntoConstraints = false
 
         nextButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 49).isActive = true
-        nextButton.widthAnchor.constraint(equalToConstant: 159).isActive = true
+        nextButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
         nextButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -33).isActive = true
         nextButton.translatesAutoresizingMaskIntoConstraints = false
     }    

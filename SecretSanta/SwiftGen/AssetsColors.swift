@@ -48,6 +48,12 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#eff3f4"></span>
   /// Alpha: 100% <br/> (0xeff3f4ff)
   internal static let gray2 = ColorName(rgbaValue: 0xeff3f4ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#adadad"></span>
+  /// Alpha: 100% <br/> (0xadadadff)
+  internal static let gray4 = ColorName(rgbaValue: 0xadadadff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#a9a9a9"></span>
+  /// Alpha: 100% <br/> (0xa9a9a9ff)
+  internal static let gray5 = ColorName(rgbaValue: 0xa9a9a9ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fffefe"></span>
   /// Alpha: 100% <br/> (0xfffefeff)
   internal static let white1 = ColorName(rgbaValue: 0xfffefeff)
