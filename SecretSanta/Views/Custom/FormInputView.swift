@@ -29,10 +29,10 @@ final class FormInputView: UIView {
         let textField: FormTextField
         switch type {
         case .groupName:
-            textField = BaseTextField(masker: AlphaNumericMasker.self)
+            textField = BaseTextField(maxLength: 10, masker: AlphaNumericMasker.self)
             textField.keyboardType = .default
         case .amount:
-            textField = AmountTextField(frame: .zero)
+            textField = AmountTextField()
             textField.keyboardType = .numberPad
         case .eventDate:
             textField = EventDateTextField(frame: .zero)
@@ -48,7 +48,7 @@ final class FormInputView: UIView {
     
     let validationLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(font: FontFamily.SegoeUI.bold, size: 12.0)
+        label.font = UIFont(font: FontFamily.Quicksand.regular, size: 12.0)
         label.numberOfLines = 0
         return label
     }()
@@ -101,9 +101,9 @@ private extension FormInputView {
             validationLabel.text = "Digite a data do evento."
         }
     }
-    
+        
     func setValidationLabelIncomplete() {
-        validationLabel.textColor = .blue
+        validationLabel.textColor = .red
         switch type {
         case .groupName:
             validationLabel.text = "Digite o nome do grupo"
@@ -157,7 +157,7 @@ private extension FormInputView {
     }
     
     func setupTextsForAmount() {
-        formTextField.placeholder = ""
+        formTextField.placeholder = "R$ 00,00"
         titleFieldLabel.text = "Valor Mínimo"
     }
     

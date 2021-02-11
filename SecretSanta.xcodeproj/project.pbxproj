@@ -101,6 +101,7 @@
 		AEE1B7CC25C326F1005C2F96 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113CEDB243A7D73001DF8CB /* strings.swift */; };
 		AEE1B7D025C326F5005C2F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
 		AEE1B82A25C33A33005C2F96 /* GroupViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */; };
+		AEF5521725D47BB300DED381 /* NameMasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5521625D47BB300DED381 /* NameMasker.swift */; };
 		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
 		D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -213,6 +214,7 @@
 		AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupTableViewCell.xib; sourceTree = "<group>"; };
 		AE958C0525CC2F69009FEABD /* GroupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewDelegate.swift; sourceTree = "<group>"; };
 		AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTest.swift; sourceTree = "<group>"; };
+		AEF5521625D47BB300DED381 /* NameMasker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameMasker.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				31FBA1FE245C75F80011F917 /* TexFieldMasker.swift */,
 				31FBA200245C76870011F917 /* EventDateMasker.swift */,
 				31FBA202245C79330011F917 /* AlphaNumericMasker.swift */,
+				AEF5521625D47BB300DED381 /* NameMasker.swift */,
 			);
 			path = TextFieldMask;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
 				1E60AA8A25093A4C0008C7D3 /* CustomInputView.swift in Sources */,
 				1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */,
+				AEF5521725D47BB300DED381 /* NameMasker.swift in Sources */,
 				3101F995244235C5006D3ED6 /* CreateGroupView.swift in Sources */,
 				31FBA1E924539A0A0011F917 /* AmountValidator.swift in Sources */,
 				31FBA203245C79330011F917 /* AlphaNumericMasker.swift in Sources */,

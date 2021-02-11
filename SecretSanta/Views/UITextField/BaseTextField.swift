@@ -15,9 +15,9 @@ final class BaseTextField: FormTextField {
     init(frame: CGRect = .zero, maxLength: Int? = nil, masker: TextFieldMasker.Type? = nil) {
         self.maxLength = maxLength
         self.masker = masker
-//        self.addTarget(self, action: #selector(textDidChange), for: .editingDidEnd)
 //        autocorrectionType = .no
         super.init(frame: frame)
+        self.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
     required init?(coder: NSCoder) {

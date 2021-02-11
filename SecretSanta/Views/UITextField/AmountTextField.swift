@@ -63,8 +63,17 @@ extension AmountTextField {
     @objc
     func editingChange() {
         if self.text == "" {
-            let text = NSMutableAttributedString(string: "R$ \(self.text ?? "")", attributes: [.font: UIFont(font: FontFamily.SegoeUI.regular, size: 25.0) ?? ""])
+            let text = NSMutableAttributedString(string: "R$ \(self.text ?? "")", attributes: [.font: UIFont(font: FontFamily.Quicksand.regular, size: 25.0) ?? ""])
         self.attributedText = text
+        }
+        
+        guard var textAux = text else { return }
+        
+        if textAux.count > 9 {
+            textAux.removeLast()
+            self.text = textAux
+        } else {
+            return
         }
     }
     
