@@ -36,6 +36,17 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         return stepImageView
     }()
     
+    private lazy var datePickView: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        if #available(iOS 14.0, *) {
+            datePicker.preferredDatePickerStyle = .inline
+        } else {
+            // Fallback on earlier versions
+        }
+        return datePicker
+        
+    }()
+    
     private let nextButton: CustomButton = {
         let button = CustomButton(backgroundColor: ColorName.red1.color, titleColor: .white)
         button.setTitle("Próximo", for: .normal)
@@ -89,7 +100,11 @@ extension WhiteBoxView: CodeView {
     func buildViewHierarchy() {
         addSubview(contentView)
         contentView.addSubview(stepImageView)
-        contentView.addSubview(forminputView)
+        if type == .eventDate {
+            contentView.addSubview(datePickView)
+        } else {
+            contentView.addSubview(forminputView)
+        }
         contentView.addSubview(nextButton)
     }
     
@@ -99,19 +114,32 @@ extension WhiteBoxView: CodeView {
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         contentView.widthAnchor.constraint(equalToConstant: 325.0).isActive = true
-        contentView.heightAnchor.constraint(equalToConstant: 303.0).isActive = true
+        if type == .eventDate {
+            contentView.heightAnchor.constraint(equalToConstant: 510.0).isActive = true
+        } else {
+            contentView.heightAnchor.constraint(equalToConstant: 303.0).isActive = true
+        }
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         stepImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 33.0).isActive = true
         stepImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stepImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 10).isActive = true
-        forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        forminputView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30).isActive = true
-        forminputView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30).isActive = true
-        forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
-        forminputView.translatesAutoresizingMaskIntoConstraints = false
+        if type == .eventDate {
+            datePickView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 10).isActive = true
+            datePickView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+            datePickView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+            datePickView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
+            datePickView.heightAnchor.constraint(equalToConstant: 310.0).isActive = true
+            datePickView.translatesAutoresizingMaskIntoConstraints = false
+        } else {
+            forminputView.topAnchor.constraint(equalTo: stepImageView.bottomAnchor, constant: 10).isActive = true
+            forminputView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+            forminputView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30).isActive = true
+            forminputView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30).isActive = true
+            forminputView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+            forminputView.translatesAutoresizingMaskIntoConstraints = false
+        }
 
         nextButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 49).isActive = true

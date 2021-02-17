@@ -27,6 +27,7 @@ final class UserLoginView: UIView {
         textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
                                                              attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always
+        textfield.textColor = .white
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
         imgView.image = Asset.idIcon.image
         
@@ -42,6 +43,7 @@ final class UserLoginView: UIView {
         textfield.attributedPlaceholder = NSAttributedString(string: L10n.password,
                                                              attributes: [.foregroundColor: ColorName.roseRed.color])
         textfield.leftViewMode = .always
+        textfield.textColor = .white
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
         imgView.image = Asset.passwordIcon.image
         

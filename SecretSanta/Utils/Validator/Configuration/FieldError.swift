@@ -3,6 +3,8 @@ import Foundation
 enum FieldError: Error {
     case empty
     case incomplete
+    case tooShort
+    case tooLong
     case invalid(InvalidFieldReason)
 }
 
@@ -18,6 +20,10 @@ extension FieldError: Equatable {
         case (.empty, .empty):
             return true
         case (.incomplete, .incomplete):
+            return true
+        case (.tooShort, .tooShort):
+            return true
+        case (.tooLong, .tooLong):
             return true
         case (.invalid(let lhsReason), .invalid(let rhsReason)):
             if lhsReason == rhsReason {

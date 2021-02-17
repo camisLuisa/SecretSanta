@@ -102,6 +102,10 @@
 		AEE1B7D025C326F5005C2F96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3113CEFE243EB048001DF8CB /* Localizable.strings */; };
 		AEE1B82A25C33A33005C2F96 /* GroupViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */; };
 		AEF5521725D47BB300DED381 /* NameMasker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5521625D47BB300DED381 /* NameMasker.swift */; };
+		AEF5522425DD89FD00DED381 /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522325DD89FD00DED381 /* LoginInputView.swift */; };
+		AEF5522525DD89FD00DED381 /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522325DD89FD00DED381 /* LoginInputView.swift */; };
+		AEF5522A25DD941000DED381 /* LoginEmailValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */; };
+		AEF5522F25DD9D3700DED381 /* LoginEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */; };
 		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
 		D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -215,6 +219,9 @@
 		AE958C0525CC2F69009FEABD /* GroupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewDelegate.swift; sourceTree = "<group>"; };
 		AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTest.swift; sourceTree = "<group>"; };
 		AEF5521625D47BB300DED381 /* NameMasker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameMasker.swift; sourceTree = "<group>"; };
+		AEF5522325DD89FD00DED381 /* LoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputView.swift; sourceTree = "<group>"; };
+		AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidatorTest.swift; sourceTree = "<group>"; };
+		AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidator.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -449,6 +456,7 @@
 				31FBA1E624536C320011F917 /* EventDateValidator.swift */,
 				31FBA1E824539A0A0011F917 /* AmountValidator.swift */,
 				31FBA1EA2455CEAF0011F917 /* GroupNameValidator.swift */,
+				AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 		31C239792412E6E9008AC51C /* SecretSantaTests */ = {
 			isa = PBXGroup;
 			children = (
+				AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */,
 				AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */,
 				AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */,
 				31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */,
@@ -550,6 +559,7 @@
 				315FB8FE24511B6800872A20 /* FormInputView.swift */,
 				1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */,
 				1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */,
+				AEF5522325DD89FD00DED381 /* LoginInputView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -1022,6 +1032,7 @@
 				31C239682412E6E4008AC51C /* ViewController.swift in Sources */,
 				3101F99724426CCF006D3ED6 /* WhiteBoxView.swift in Sources */,
 				1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */,
+				AEF5522425DD89FD00DED381 /* LoginInputView.swift in Sources */,
 				315FB8FF24511B6800872A20 /* FormInputView.swift in Sources */,
 				1E623A86255C642000F79D7F /* FriendGroup.swift in Sources */,
 				31FBA1E12453674E0011F917 /* FieldValidator.swift in Sources */,
@@ -1031,6 +1042,7 @@
 				1E623A80255C5C7900F79D7F /* GroupViewModel.swift in Sources */,
 				1EF12238254EE779004275E5 /* UIImageView.swift in Sources */,
 				31FBA205245C7B7E0011F917 /* String+Formatter.swift in Sources */,
+				AEF5522F25DD9D3700DED381 /* LoginEmailValidator.swift in Sources */,
 				31C239662412E6E4008AC51C /* AppDelegate.swift in Sources */,
 				3113CEDD243A7D73001DF8CB /* strings.swift in Sources */,
 				1E60AA8A25093A4C0008C7D3 /* CustomInputView.swift in Sources */,
@@ -1070,8 +1082,10 @@
 				AEE1B7CC25C326F1005C2F96 /* strings.swift in Sources */,
 				1EF12239254EE779004275E5 /* UIImageView.swift in Sources */,
 				AEE1B7BC25C326E5005C2F96 /* assets-fonts.swift in Sources */,
+				AEF5522525DD89FD00DED381 /* LoginInputView.swift in Sources */,
 				AEE1B7C025C326E8005C2F96 /* AssetsColors.swift in Sources */,
 				3113CEEE243E9AED001DF8CB /* ApplicationCoordinator.swift in Sources */,
+				AEF5522A25DD941000DED381 /* LoginEmailValidatorTest.swift in Sources */,
 				AEE1B7C825C326EE005C2F96 /* assets-images.swift in Sources */,
 				1E623A87255C642000F79D7F /* FriendGroup.swift in Sources */,
 				AE561D4025BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift in Sources */,
@@ -1251,13 +1265,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H2GRK7445L;
+				DEVELOPMENT_TEAM = Q353MJK483;
 				INFOPLIST_FILE = SecretSanta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.camsluisa.amigusecreto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.camsluisa.amigusecret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1272,13 +1286,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H2GRK7445L;
+				DEVELOPMENT_TEAM = Q353MJK483;
 				INFOPLIST_FILE = SecretSanta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.camsluisa.amigusecreto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.camsluisa.amigusecret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -74,6 +74,8 @@ private extension ParticipantInputView {
             setValidationLabelIncomplete()
         case let .invalid(reason):
             setValidationLabelInvalid(reason: reason)
+        default:
+            print("TO DO")
         }
     }
     
