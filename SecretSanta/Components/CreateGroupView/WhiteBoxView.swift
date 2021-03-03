@@ -83,7 +83,7 @@ extension WhiteBoxView {
 
 // MARK: - FormInputViewDelegate -
 extension WhiteBoxView: FormInputViewDelegate {
-    func validateImput(validatorStatus: ValidatorResponse) {
+    func validateInput(validatorStatus: ValidatorResponse) {
         switch validatorStatus {
         case .success:
             nextButton.isEnabled = true

@@ -1,7 +1,7 @@
 import UIKit
 
 final class CustomInputView: UIView {
-    // MARK: = Properties
+    // MARK: - Properties
     private weak var textFieldDelegate: UITextFieldDelegate?
     
     override init(frame: CGRect) {

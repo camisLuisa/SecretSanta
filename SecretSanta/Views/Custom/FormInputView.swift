@@ -7,7 +7,7 @@ enum FormInputViewType {
 }
 
 protocol FormInputViewDelegate {
-    func validateImput(validatorStatus: ValidatorResponse)
+    func validateInput(validatorStatus: ValidatorResponse)
 }
 
 final class FormInputView: UIView {
@@ -182,7 +182,7 @@ private extension FormInputView {
             setValidationLabel(forFieldError: error)
         }
         
-        delegate?.validateImput(validatorStatus: validator.validation(text: formTextField.text))
+        delegate?.validateInput(validatorStatus: validator.validation(text: formTextField.text))
     }
     
     @objc
