@@ -22,19 +22,24 @@ final class UserLoginView: UIView {
         return label
     }()
     
-    private let inputEmail: CustomTextField = {
-        let textfield = CustomTextField(frame: .zero)
-        textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
-                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
-        textfield.leftViewMode = .always
-        textfield.textColor = .white
-        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
-        imgView.image = Asset.idIcon.image
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
-        view.addSubview(imgView)
-        textfield.leftView = view
-        return textfield
+//    private let inputEmail: CustomTextField = {
+//        let textfield = CustomTextField(frame: .zero)
+//        textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
+//                                                             attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
+//        textfield.leftViewMode = .always
+//        textfield.textColor = .white
+//        let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
+//        imgView.image = Asset.idIcon.image
+//
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+//        view.addSubview(imgView)
+//        textfield.leftView = view
+//        return textfield
+//    }()
+    
+    private let inputEmail: LoginInputView = {
+        let inputEmail = LoginInputView(type: .email)
+        return inputEmail
     }()
     
     private let inputPassword: CustomTextField = {
@@ -158,7 +163,7 @@ final class UserLoginView: UIView {
 private extension UserLoginView {
     @objc
     func didTapAtEnterButton() {
-        self.didTapEnterButton?(inputEmail.text!, inputPassword.text!)
+//        self.didTapEnterButton?(inputEmail.text!, inputPassword.text!)
     }
     
     @objc
@@ -207,7 +212,7 @@ extension UserLoginView: CodeView {
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        inputEmail.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+        inputEmail.heightAnchor.constraint(equalToConstant: 25.0).isActive = true
         inputEmail.widthAnchor.constraint(equalToConstant: 276).isActive = true
         inputEmail.translatesAutoresizingMaskIntoConstraints = false
 
@@ -220,6 +225,8 @@ extension UserLoginView: CodeView {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
 
         stackViewOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.0).isActive = true
+        stackViewOne.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30).isActive = true
+        stackViewOne.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30).isActive = true
         stackViewOne.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         stackViewOne.translatesAutoresizingMaskIntoConstraints = false
 

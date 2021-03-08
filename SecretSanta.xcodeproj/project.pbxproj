@@ -89,7 +89,7 @@
 		31FBA207245C7EEF0011F917 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA206245C7EEF0011F917 /* BaseTextField.swift */; };
 		31FE9E9A242C2B0B0034368F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE9E99242C2B0B0034368F /* CodeView.swift */; };
 		416E45F70D38E5EB91552594 /* Pods_SecretSantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */; };
-		AE561D4025BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */; };
+		AE561D4025BF6B6E00A6A5AF /* PasswordValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE561D3F25BF6B6E00A6A5AF /* PasswordValidatorTest.swift */; };
 		AE958C0025C89390009FEABD /* FriendGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */; };
 		AE958C0125C89390009FEABD /* FriendGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */; };
 		AE958C0625CC2F69009FEABD /* GroupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE958C0525CC2F69009FEABD /* GroupViewDelegate.swift */; };
@@ -106,6 +106,9 @@
 		AEF5522525DD89FD00DED381 /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522325DD89FD00DED381 /* LoginInputView.swift */; };
 		AEF5522A25DD941000DED381 /* LoginEmailValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */; };
 		AEF5522F25DD9D3700DED381 /* LoginEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */; };
+		AEFF851325F00CAC00C9E371 /* InputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF851225F00CAC00C9E371 /* InputDelegate.swift */; };
+		AEFF851825F00F3600C9E371 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF851725F00F3600C9E371 /* PasswordValidator.swift */; };
+		AEFF851925F00F3600C9E371 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF851725F00F3600C9E371 /* PasswordValidator.swift */; };
 		D031512CB8E1EE5147119B15 /* Pods_SecretSanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DDD857D30430AE0B419DD /* Pods_SecretSanta.framework */; };
 		D30C3D51172BA5F7781B4C64 /* Pods_SecretSanta_SecretSantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -213,7 +216,7 @@
 		613C63F4D913B75BF03213C3 /* Pods-SecretSantaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.release.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.release.xcconfig"; sourceTree = "<group>"; };
 		71A5F36B81E6B0788D857847 /* Pods-SecretSanta-SecretSantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSanta-SecretSantaUITests/Pods-SecretSanta-SecretSantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BE5D6343CC99BFC4D4E8896 /* Pods-SecretSanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSanta.release.xcconfig"; path = "Target Support Files/Pods-SecretSanta/Pods-SecretSanta.release.xcconfig"; sourceTree = "<group>"; };
-		AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewControllerTests.swift; sourceTree = "<group>"; };
+		AE561D3F25BF6B6E00A6A5AF /* PasswordValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTest.swift; sourceTree = "<group>"; };
 		AE958BFE25C89390009FEABD /* FriendGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupTableViewCell.swift; sourceTree = "<group>"; };
 		AE958BFF25C89390009FEABD /* FriendGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupTableViewCell.xib; sourceTree = "<group>"; };
 		AE958C0525CC2F69009FEABD /* GroupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 		AEF5522325DD89FD00DED381 /* LoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputView.swift; sourceTree = "<group>"; };
 		AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidatorTest.swift; sourceTree = "<group>"; };
 		AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidator.swift; sourceTree = "<group>"; };
+		AEFF851225F00CAC00C9E371 /* InputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDelegate.swift; sourceTree = "<group>"; };
+		AEFF851725F00F3600C9E371 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		C0661FA2CDAA98626A521D47 /* Pods_SecretSanta_SecretSantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSanta_SecretSantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE66FD438C42FBB2FE57B2A /* Pods_SecretSantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretSantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25722D576155D40643D9629 /* Pods-SecretSantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretSantaTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretSantaTests/Pods-SecretSantaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -457,6 +462,7 @@
 				31FBA1E824539A0A0011F917 /* AmountValidator.swift */,
 				31FBA1EA2455CEAF0011F917 /* GroupNameValidator.swift */,
 				AEF5522E25DD9D3700DED381 /* LoginEmailValidator.swift */,
+				AEFF851725F00F3600C9E371 /* PasswordValidator.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -512,7 +518,7 @@
 			children = (
 				AEF5522925DD941000DED381 /* LoginEmailValidatorTest.swift */,
 				AEE1B82925C33A33005C2F96 /* GroupViewTest.swift */,
-				AE561D3F25BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift */,
+				AE561D3F25BF6B6E00A6A5AF /* PasswordValidatorTest.swift */,
 				31C2397A2412E6E9008AC51C /* SecretSantaTests.swift */,
 				31C2397C2412E6E9008AC51C /* Info.plist */,
 			);
@@ -560,6 +566,7 @@
 				1E5E291924A4038B0077B3E3 /* ParticipantInputView.swift */,
 				1E60AA8925093A4C0008C7D3 /* CustomInputView.swift */,
 				AEF5522325DD89FD00DED381 /* LoginInputView.swift */,
+				AEFF851225F00CAC00C9E371 /* InputDelegate.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -1006,6 +1013,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF851325F00CAC00C9E371 /* InputDelegate.swift in Sources */,
 				1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */,
 				1E3CC26E250EBBD600158B27 /* UserLoginViewController.swift in Sources */,
 				3113CF01243EB4BF001DF8CB /* CreateGroupCoordinator.swift in Sources */,
@@ -1054,6 +1062,7 @@
 				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
+				AEFF851825F00F3600C9E371 /* PasswordValidator.swift in Sources */,
 				1EA59E7225558537007B1F6B /* UIImageView+Gif.swift in Sources */,
 				1E6E867024DCE155002D6CAE /* CreateUserLoginView.swift in Sources */,
 				1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */,
@@ -1088,7 +1097,8 @@
 				AEF5522A25DD941000DED381 /* LoginEmailValidatorTest.swift in Sources */,
 				AEE1B7C825C326EE005C2F96 /* assets-images.swift in Sources */,
 				1E623A87255C642000F79D7F /* FriendGroup.swift in Sources */,
-				AE561D4025BF6B6E00A6A5AF /* UserLoginViewControllerTests.swift in Sources */,
+				AEFF851925F00F3600C9E371 /* PasswordValidator.swift in Sources */,
+				AE561D4025BF6B6E00A6A5AF /* PasswordValidatorTest.swift in Sources */,
 				3113CEF2243E9B36001DF8CB /* Coordinator.swift in Sources */,
 				AEE1B78025C32542005C2F96 /* SpinnerViewController.swift in Sources */,
 				1E623A8E255C675600F79D7F /* Friend.swift in Sources */,

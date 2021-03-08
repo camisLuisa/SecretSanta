@@ -6,16 +6,12 @@ enum FormInputViewType {
     case eventDate
 }
 
-protocol FormInputViewDelegate {
-    func validateInput(validatorStatus: ValidatorResponse)
-}
-
 final class FormInputView: UIView {
     // MARK: - Properties
     private let type: FormInputViewType
     private weak var textFieldDelegate: UITextFieldDelegate?
     public private(set) var hasValidContent: Bool?
-    var delegate: FormInputViewDelegate?
+    var delegate: InputDelegate?
     
     // MARK: - Views -
     private let titleFieldLabel: UILabel = {

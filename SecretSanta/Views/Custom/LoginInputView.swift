@@ -13,25 +13,20 @@ enum LoginInputViewType {
     case password
 }
 
-protocol  LoginInputViewDelegate {
-    func validateInput(validatorStatus: ValidatorResponse)
-}
-
 final class LoginInputView: UIView {
     
     // MARK: - Attributes
     private weak var textFieldDelegate: UITextFieldDelegate?
     private let type: LoginInputViewType
-    var delegate: LoginInputViewDelegate?
+    var delegate: InputDelegate?
     
     private lazy var loginInput: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)
-        textfield.backgroundColor = .blue
         textfield.leftViewMode = .always
         textfield.textColor = .white
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
         var textPlaceholder = L10n.email
-        
+
         switch type {
         case .email:
             imgView.image = Asset.idIcon.image
@@ -40,19 +35,21 @@ final class LoginInputView: UIView {
             textfield.isSecureTextEntry = true
             textPlaceholder = L10n.password
         }
-        
+
         textfield.attributedPlaceholder = NSAttributedString(string: L10n.email,
                                                              attributes: [NSAttributedString.Key.foregroundColor: ColorName.roseRed.color])
-        
+
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
         view.addSubview(imgView)
         textfield.leftView = view
-        
+
         return textfield
     }()
 
     let validationLabel: UILabel = {
         let label = UILabel()
+        label.text = "Vai funcionar com a graça do universo"
+        label.textColor = .blue
         label.font = UIFont(font: FontFamily.Quicksand.regular, size: 12.0)
         label.numberOfLines = 0
         return label
@@ -71,7 +68,7 @@ final class LoginInputView: UIView {
         self.type = type
         self.textFieldDelegate = delegate
         super.init(frame: frame)
-        self.backgroundColor = .yellow
+        self.setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -154,17 +151,16 @@ extension LoginInputView: CodeView {
     
     func setupContraints() {
         loginInput.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        loginInput.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        loginInput.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        loginInput.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        loginInput.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        loginInput.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         loginInput.translatesAutoresizingMaskIntoConstraints = false
         
-        validationLabel.topAnchor.constraint(equalTo: loginInput.bottomAnchor, constant: -5).isActive = true
+        validationLabel.topAnchor.constraint(equalTo: loginInput.bottomAnchor, constant: 8).isActive = true
         validationLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         validationLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-//    func setupAdditionalConfiguration() {
+    func setupAdditionalConfiguration() {
 //        setupTexts()
-//    }
+    }
 }

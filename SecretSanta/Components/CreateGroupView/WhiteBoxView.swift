@@ -82,7 +82,7 @@ extension WhiteBoxView {
 }
 
 // MARK: - FormInputViewDelegate -
-extension WhiteBoxView: FormInputViewDelegate {
+extension WhiteBoxView: InputDelegate {
     func validateInput(validatorStatus: ValidatorResponse) {
         switch validatorStatus {
         case .success:

@@ -9,17 +9,24 @@
 @testable import SecretSanta
 import XCTest
 
-class UserLoginViewControllerTests: XCTestCase {
+class PasswordValidatorTest: XCTestCase {
+    var sut: PasswordValidator?
 
-    override func setUpWithError() throws {
+    override func setUpWith() {
+        sut = PasswordValidator()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDownWithError() throws {
+    override func tearDownW() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testEmptyFields() {
+    testPasswordValidator_WhenTooShortPasswordProvided_ShouldReturnFailed() {
+        //Arrange
+        //Act
+        
+        //Assert
+        
         
     }
 }
