@@ -68,7 +68,7 @@ extension AmountTextField {
         }
         
         guard var textAux = text else { return }
-        
+
         if textAux.count > 9 {
             textAux.removeLast()
             self.text = textAux
@@ -89,7 +89,7 @@ extension AmountTextField {
             addBottomBorder()
         }
     }
-    
+
     @objc
     func editingDidEnd() {
         switch bottomBorderState {
@@ -104,7 +104,7 @@ extension AmountTextField {
     private func addBottomBorder() {
         configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .gray)
     }
-    
+
     private func removeBottomBorder() {
         configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .clear)
     }

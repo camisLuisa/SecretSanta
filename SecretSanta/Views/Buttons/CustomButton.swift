@@ -2,7 +2,7 @@ import UIKit.UIButton
 
 final class CustomButton: UIButton {
     
-    // MARK: = Properties -
+    // MARK: - Properties -
     let background: UIColor
     let titleColor: UIColor
     

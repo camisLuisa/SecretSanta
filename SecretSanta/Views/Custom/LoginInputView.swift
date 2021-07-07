@@ -18,7 +18,7 @@ final class LoginInputView: UIView {
     // MARK: - Attributes
     private weak var textFieldDelegate: UITextFieldDelegate?
     private let type: LoginInputViewType
-    var delegate: InputDelegate?
+    vweak ar delegate: InputDelegate?
     
     private lazy var loginInput: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)
@@ -90,7 +90,7 @@ private extension LoginInputView {
             print("TO DO")
         }
     }
-    
+
     func setValidationLabelEmpty() {
         validationLabel.textColor = .black
         switch type {
@@ -100,7 +100,7 @@ private extension LoginInputView {
             validationLabel.text = "Digite sua senha"
         }
     }
-    
+
     func setValidationLabelTooShort() {
         validationLabel.textColor = .black
         switch type {
@@ -139,7 +139,7 @@ private extension LoginInputView {
 
 // MARK: - Set Texts for type -
 private extension LoginInputView {
-    
+
 }
 
 // MARK: - CodeView
@@ -154,12 +154,12 @@ extension LoginInputView: CodeView {
         loginInput.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         loginInput.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         loginInput.translatesAutoresizingMaskIntoConstraints = false
-        
+
         validationLabel.topAnchor.constraint(equalTo: loginInput.bottomAnchor, constant: 8).isActive = true
         validationLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         validationLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     func setupAdditionalConfiguration() {
 //        setupTexts()
     }

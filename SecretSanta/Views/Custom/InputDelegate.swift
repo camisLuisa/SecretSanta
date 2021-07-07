@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol  InputDelegate {
+protocol InputDelegate: AnyObject {
     func validateInput(validatorStatus: ValidatorResponse)
 }

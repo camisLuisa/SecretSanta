@@ -7,8 +7,6 @@ class FormTextField: UITextField {
         super.init(frame: .zero)
         tintColor = .black
         if bottomBorder {
-            addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
-            addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
             autocorrectionType = .no
         }
     }
@@ -17,8 +15,6 @@ class FormTextField: UITextField {
         super.init(frame: frame)
         tintColor = .gray
         configureBottomBorder(backgroundColor: UIColor.white, borderColor: ColorName.red1.color)
-        addTarget(self, action: #selector(didBegin), for: .editingDidBegin)
-        addTarget(self, action: #selector(didEnd), for: .editingDidEnd)
         autocorrectionType = .no
     }
     
@@ -32,15 +28,5 @@ class FormTextField: UITextField {
     
     override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
-    }
-    
-    @objc
-    private func didBegin() {
-//        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
-    }
-    
-    @objc
-    private func didEnd() {
-//        configureBottomBorder(backgroundColor: backgroundColor ?? .clear, borderColor: .blue)
     }
 }

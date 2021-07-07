@@ -14,7 +14,3 @@ extension String {
         return self.filter { okayChars.contains($0) }
     }
 }
-
-extension Formatter {
-    
-}
