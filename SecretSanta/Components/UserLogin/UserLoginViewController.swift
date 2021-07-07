@@ -29,8 +29,8 @@ final class UserLoginViewController: UIViewController {
         
         userLoginView.didTapEnterButton = { [weak self] email, password in
             guard let self = self else { return }
-            self.login(with: email, password: password)
             self.createSpinnerView()
+            self.login(with: email, password: password)
         }
         
         userLoginView.didTapEnterWithGoogleButton = { [weak self] in
@@ -40,7 +40,7 @@ final class UserLoginViewController: UIViewController {
         }
         
         userLoginView.didTapEnterWithFacebookButton = {
-
+            // To Do
         }
         
         userLoginView.didTapCreateAccountButton = {

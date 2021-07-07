@@ -173,9 +173,9 @@ final class UserLoginView: UIView, UIGestureRecognizerDelegate {
 private extension UserLoginView {
     @objc
     func didTapAtEnterButton() {
-//        self.didTapEnterButton?(inputEmail.text!, inputPassword.text!)
+        self.didTapEnterButton?(inputEmail.getContentText() ?? "", inputPassword.text ?? "")
     }
-    
+
     @objc
     func didTapAtEnterWithGoogle() {
         self.didTapEnterWithGoogleButton?()

@@ -13,7 +13,7 @@ struct LoginEmailValidator: FieldValidator {
         guard let text = text, !text.isEmpty else {
             return .failure(.empty)
         }
-        
+
         if text.count < 10 {
             return .failure(.tooShort)
         }

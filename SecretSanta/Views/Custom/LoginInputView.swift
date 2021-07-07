@@ -19,6 +19,7 @@ final class LoginInputView: UIView {
     private weak var textFieldDelegate: UITextFieldDelegate?
     private let type: LoginInputViewType
     weak var delegate: InputDelegate?
+    public private(set) var hasValidContent: Bool?
     
     private lazy var loginInput: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)
@@ -26,6 +27,7 @@ final class LoginInputView: UIView {
         textfield.textColor = .white
         let imgView = UIImageView(frame: CGRect(x: 0, y: 8.0, width: 20.0, height: 20.0))
         var textPlaceholder = L10n.email
+        textfield.addTarget(self, action: #selector(validateField), for: .editingChanged)
 
         switch type {
         case .email:
@@ -48,13 +50,13 @@ final class LoginInputView: UIView {
 
     let validationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Vai funcionar com a graça do universo"
+        label.text = ""
         label.textColor = .blue
         label.font = UIFont(font: FontFamily.Quicksand.regular, size: 12.0)
         label.numberOfLines = 0
         return label
     }()
-    
+
     var validator: FieldValidator {
         switch type {
         case .email:
@@ -73,6 +75,13 @@ final class LoginInputView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - Actions
+extension LoginInputView {
+    func getContentText() -> String? {
+        return self.loginInput.text
     }
 }
 
@@ -120,7 +129,7 @@ private extension LoginInputView {
             validationLabel.text = "Digite uma senha com menos de 8 caracteres"
         }
     }
-    
+
     func setValidationLabelInvalid(reason: InvalidFieldReason) {
         validationLabel.textColor = .red
         switch type {
@@ -133,6 +142,21 @@ private extension LoginInputView {
             }
         default:
             validationLabel.text = ""
+        }
+    }
+}
+
+// MARK: - Target -
+private extension LoginInputView {
+    @objc
+    func validateField() {
+        switch validator.validation(text: loginInput.text) {
+        case .success:
+            hasValidContent = true
+            validationLabel.text = ""
+        case .failure(let error):
+            hasValidContent = false
+            setValidationLabel(forFieldError: error)
         }
     }
 }
