@@ -1,6 +1,6 @@
 import UIKit
 
-final class UserLoginView: UIView {
+final class UserLoginView: UIView, UIGestureRecognizerDelegate {
     
     // MARK: - Attributes
     var didTapEnterButton: ((String, String) -> Void)?
@@ -14,13 +14,23 @@ final class UserLoginView: UIView {
         return view
     }()
     
-    private let titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = L10n.enterNow
         label.font = UIFont.init(font: FontFamily.Quicksand.medium, size: 24)
         label.textColor = UIColor.white
+        let menuItemTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleMenuItemTap(_:)))
+        menuItemTapGestureRecognizer.numberOfTapsRequired = 1
+        menuItemTapGestureRecognizer.numberOfTouchesRequired = 1
+        menuItemTapGestureRecognizer.delegate = self
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(menuItemTapGestureRecognizer)
         return label
     }()
+    
+    @objc func handleMenuItemTap(_ sender: UITapGestureRecognizer? = nil) {
+        print("testes")
+    }
     
 //    private let inputEmail: CustomTextField = {
 //        let textfield = CustomTextField(frame: .zero)

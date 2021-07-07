@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "021E3E04C2747EEA4F96B8A3DF4B302B"
-               BuildableName = "GTMOAuth2.framework"
-               BlueprintName = "GTMOAuth2"
+               BlueprintIdentifier = "10C5885FCB0908EF785774EE52473DAB"
+               BuildableName = "FBSDKLoginKit.framework"
+               BlueprintName = "FBSDKLoginKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

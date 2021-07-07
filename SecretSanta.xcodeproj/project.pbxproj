@@ -26,6 +26,8 @@
 		1E6E866924D7435C002D6CAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866824D7435C002D6CAE /* TutorialViewController.swift */; };
 		1E6E866E24DCDEB5002D6CAE /* CreateUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */; };
 		1E6E867024DCE155002D6CAE /* CreateUserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E866F24DCE155002D6CAE /* CreateUserLoginView.swift */; };
+		1E7597B72624D4CD001CC459 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7597B62624D4CD001CC459 /* Test.swift */; };
+		1E7597BC2624D4EF001CC459 /* testt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7597BB2624D4EF001CC459 /* testt.xib */; };
 		1E84394324A02B6E0029718E /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394224A02B6E0029718E /* ParticipantsViewController.swift */; };
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
@@ -149,6 +151,8 @@
 		1E6E866824D7435C002D6CAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		1E6E866D24DCDEB5002D6CAE /* CreateUserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserLoginViewController.swift; sourceTree = "<group>"; };
 		1E6E866F24DCE155002D6CAE /* CreateUserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserLoginView.swift; sourceTree = "<group>"; };
+		1E7597B62624D4CD001CC459 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		1E7597BB2624D4EF001CC459 /* testt.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testt.xib; sourceTree = "<group>"; };
 		1E84394224A02B6E0029718E /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 			children = (
 				1E3CC26D250EBBD600158B27 /* UserLoginViewController.swift */,
 				1E3CC26F250EBD7700158B27 /* UserLoginView.swift */,
+				1E7597B62624D4CD001CC459 /* Test.swift */,
+				1E7597BB2624D4EF001CC459 /* testt.xib */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -772,6 +778,7 @@
 				31C239702412E6E9008AC51C /* LaunchScreen.storyboard in Resources */,
 				31C224512482EEFB00675155 /* SegoeUIItalic.ttf in Resources */,
 				AE958C0125C89390009FEABD /* FriendGroupTableViewCell.xib in Resources */,
+				1E7597BC2624D4EF001CC459 /* testt.xib in Resources */,
 				316CE750241F14A600411DDF /* GoogleService-Info.plist in Resources */,
 				1E623A362559BF1900F79D7F /* loading-gif.gif in Resources */,
 				3113CEFF243EB048001DF8CB /* Localizable.strings in Resources */,
@@ -1062,6 +1069,7 @@
 				3113CEFB243EAB4B001DF8CB /* GroupViewController.swift in Sources */,
 				1E60AA8C25093D400008C7D3 /* CustomTextField.swift in Sources */,
 				314DC827243A581100CDF881 /* Reachability.swift in Sources */,
+				1E7597B72624D4CD001CC459 /* Test.swift in Sources */,
 				AEFF851825F00F3600C9E371 /* PasswordValidator.swift in Sources */,
 				1EA59E7225558537007B1F6B /* UIImageView+Gif.swift in Sources */,
 				1E6E867024DCE155002D6CAE /* CreateUserLoginView.swift in Sources */,
