@@ -16,11 +16,13 @@ final class CustomButton: UIButton {
     
     override var isEnabled: Bool {
         didSet {
-            if isEnabled {
-                backgroundColor = background
-            } else {
-                backgroundColor = ColorName.gray4.color
-            }
+            backgroundColor = isEnabled ? background : ColorName.gray4.color
+        }
+    }
+    
+    override public var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? ColorName.gray4.color : background
         }
     }
     
