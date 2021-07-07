@@ -18,7 +18,7 @@ final class LoginInputView: UIView {
     // MARK: - Attributes
     private weak var textFieldDelegate: UITextFieldDelegate?
     private let type: LoginInputViewType
-    vweak ar delegate: InputDelegate?
+    weak var delegate: InputDelegate?
     
     private lazy var loginInput: CustomTextField = {
         let textfield = CustomTextField(frame: .zero)

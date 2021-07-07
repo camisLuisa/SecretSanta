@@ -2,12 +2,12 @@ import UIKit
 
 final class UserLoginView: UIView, UIGestureRecognizerDelegate {
     
-    // MARK: - Attributes
+    //MARK: - Attributes
     var didTapEnterButton: ((String, String) -> Void)?
     var didTapEnterWithGoogleButton: (() -> Void)?
     var didTapEnterWithFacebookButton: (() -> Void)?
     var didTapCreateAccountButton: (() -> Void)?
-    
+
     private let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = ColorName.red1.color
