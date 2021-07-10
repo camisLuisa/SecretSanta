@@ -9,11 +9,11 @@
 import UIKit
 
 final class WhiteBoxView: UIView, UITextFieldDelegate {
-    
     // MARK: - Properties -
     private let type: FormInputViewType
+    private var content: String?
     
-    var didTapNextButton: ((FormInputViewType) -> Void)?
+    var didTapNextButton: ((FormInputViewType, String) -> Void)?
     
     private let contentView: UIView = {
         let contentView = UIView()
@@ -40,9 +40,8 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
         let datePicker = UIDatePicker()
         if #available(iOS 14.0, *) {
             datePicker.preferredDatePickerStyle = .inline
-        } else {
-            // Fallback on earlier versions
         }
+        
         return datePicker
         
     }()
@@ -64,6 +63,10 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
     // MARK: - init -
     init(type: FormInputViewType) {
         self.type = type
+        if type == .eventDate {
+            nextButton.isEnabled = true
+        }
+        
         super.init(frame: .zero)
         setupViews()
     }
@@ -76,8 +79,12 @@ final class WhiteBoxView: UIView, UITextFieldDelegate {
 // MARK: - Actions -
 extension WhiteBoxView {
     @objc
-    func didTapAtNextButton() {
-        self.didTapNextButton?(type)
+    func didTapAtNextButton() {        
+        if type == .eventDate {
+            content = datePickView.date.description
+        }
+        
+        self.didTapNextButton?(type, content ?? "")
     }
 }
 
@@ -92,7 +99,9 @@ extension WhiteBoxView: InputDelegate {
         }
     }
     
-    
+    func getContent(content: String) {
+        self.content = content
+    }
 }
 
 // MARK: - CodeView -

@@ -32,6 +32,8 @@
 		1E84394524A02C2C0029718E /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394424A02C2C0029718E /* ParticipantsView.swift */; };
 		1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394724A039850029718E /* AddParticipantAlertViewController.swift */; };
 		1E84394A24A03AE50029718E /* AddParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84394924A03AE50029718E /* AddParticipantView.swift */; };
+		1E84B120269A071A00D31EBE /* Float+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84B11F269A071A00D31EBE /* Float+String.swift */; };
+		1E84B125269A09AA00D31EBE /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84B124269A09AA00D31EBE /* Date+String.swift */; };
 		1E89552D24E029CC000FAFFE /* CreateAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89552C24E029CC000FAFFE /* CreateAccountService.swift */; };
 		1EA59E7225558537007B1F6B /* UIImageView+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA59E7125558537007B1F6B /* UIImageView+Gif.swift */; };
 		1EA9E1B324A91A6600622DEA /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */; };
@@ -157,6 +159,8 @@
 		1E84394424A02C2C0029718E /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		1E84394724A039850029718E /* AddParticipantAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantAlertViewController.swift; sourceTree = "<group>"; };
 		1E84394924A03AE50029718E /* AddParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantView.swift; sourceTree = "<group>"; };
+		1E84B11F269A071A00D31EBE /* Float+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+String.swift"; sourceTree = "<group>"; };
+		1E84B124269A09AA00D31EBE /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		1E89552C24E029CC000FAFFE /* CreateAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountService.swift; sourceTree = "<group>"; };
 		1EA59E7125558537007B1F6B /* UIImageView+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Gif.swift"; sourceTree = "<group>"; };
 		1EA9E1B224A91A6600622DEA /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -616,6 +620,8 @@
 			children = (
 				31FBA208245C81AB0011F917 /* Formatter */,
 				31FBA1F62458AEEE0011F917 /* View */,
+				1E84B11F269A071A00D31EBE /* Float+String.swift */,
+				1E84B124269A09AA00D31EBE /* Date+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1041,6 +1047,7 @@
 				AE958C0025C89390009FEABD /* FriendGroupTableViewCell.swift in Sources */,
 				31FBA1E724536C320011F917 /* EventDateValidator.swift in Sources */,
 				31FBA1F82458AF150011F917 /* UITextField+ConfigureBottomBorder.swift in Sources */,
+				1E84B120269A071A00D31EBE /* Float+String.swift in Sources */,
 				31FBA1FA2458BFC70011F917 /* AmountTextField.swift in Sources */,
 				31FBA1EB2455CEAF0011F917 /* GroupNameValidator.swift in Sources */,
 				31FBA201245C76870011F917 /* EventDateMasker.swift in Sources */,
@@ -1087,6 +1094,7 @@
 				1E5E291A24A4038B0077B3E3 /* ParticipantInputView.swift in Sources */,
 				1E84394824A039850029718E /* AddParticipantAlertViewController.swift in Sources */,
 				31FBA1E5245368550011F917 /* FieldError.swift in Sources */,
+				1E84B125269A09AA00D31EBE /* Date+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

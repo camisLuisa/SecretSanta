@@ -119,7 +119,7 @@ private extension LoginInputView {
             validationLabel.text = "Digite uma senha com mais de 6 caracteres"
         }
     }
-    
+
     func setValidationLabelTooLong() {
         validationLabel.textColor = .black
         switch type {

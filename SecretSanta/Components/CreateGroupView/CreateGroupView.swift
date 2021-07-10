@@ -20,7 +20,7 @@ enum CreateGroupViewType {
 final class CreateGroupView: UIView {
     // MARK: - Properties -
     var didTapAtCloseButton: (() -> Void)?
-    var didTapAtNextButton: ((FormInputViewType) -> Void)?
+    var didTapAtNextButton: ((FormInputViewType, String) -> Void)?
     let type: CreateGroupViewType
     
     private lazy var validator: FieldValidator = {
@@ -52,25 +52,25 @@ final class CreateGroupView: UIView {
         let imageView = UIImageView(image: Asset.line.image)
     return imageView
     }()
-    
+
     private lazy var whiteBox: WhiteBoxView = {
         let whiteBox = WhiteBoxView(type: self.type.formInputViewType)
         return whiteBox
     }()
-    
+
     // MARK: - init -
     init(type: CreateGroupViewType) {
         self.type = type
         
         super.init(frame: .zero)
         
-        self.whiteBox.didTapNextButton = { type in
-            self.didTapAtNextButton?(type)            
+        self.whiteBox.didTapNextButton = { type, content in
+            self.didTapAtNextButton?(type, content)
         }
         
         setupViews()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -110,19 +110,22 @@ extension GroupView: UITableViewDelegate, UITableViewDataSource {
         
         return viewModel?.friendsGroups.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendGroupTableViewCell", for: indexPath) as? FriendGroupTableViewCell else {
+        guard let cell: FriendGroupTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FriendGroupTableViewCell", for: indexPath) as? FriendGroupTableViewCell else {
             return UITableViewCell()
         }
         
+        guard let friendGroup = viewModel?.friendsGroups[indexPath.row] else { return UITableViewCell() }
+        cell.setData(groupInfo: friendGroup)
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? FriendGroupTableViewCell else { return }
     }

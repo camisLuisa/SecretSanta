@@ -179,6 +179,7 @@ private extension FormInputView {
         }
         
         delegate?.validateInput(validatorStatus: validator.validation(text: formTextField.text))
+        delegate?.getContent(content: formTextField.text ?? "")
     }
     
     @objc

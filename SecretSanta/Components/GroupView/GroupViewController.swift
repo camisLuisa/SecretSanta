@@ -30,11 +30,7 @@ final class GroupViewController: UIViewController {
         
         if let friendGroup = friendGroup {
             do {
-                let formatter = DateFormatter()
-                formatter.dateFormat = "dd/MM/yyyy"
-                let eventDate = formatter.date(from: "10/08/2021")
-
-                try self.viewModel.addNewFriendGroup(element: FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!))
+                try self.viewModel.addNewFriendGroup(element: friendGroup)
                 self.viewGroup.tableView.reloadData()
             } catch {
                 let alert = UIAlertController(title: "Ops!", message: "Não foi possível criar o grupo.", preferredStyle: .alert)

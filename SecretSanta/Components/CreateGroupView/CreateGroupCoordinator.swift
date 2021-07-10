@@ -12,7 +12,8 @@ final class CreateGroupCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController? { return navigationController }
-    var friendGroup: FriendGroup?
+    typealias FriendGroupData = (title: String, amount: Float, eventDate: Date)
+    var friendGroupData: FriendGroupData = FriendGroupData("", 0, Date())
     
     init(navigationController: UINavigationController = UINavigationController()) {
         self.navigationController = navigationController
@@ -30,26 +31,26 @@ final class CreateGroupCoordinator: Coordinator {
         switch type {
         case .groupName:
             let controller = CreateGroupViewController(type: CreateGroupViewType.amount, coordinator: self)
-            
+            friendGroupData.title = content
             navigationController.pushViewController(controller, animated: true)
         case .amount:
             let controller = CreateGroupViewController(type: CreateGroupViewType.eventDate, coordinator: self)
-            
+            friendGroupData.amount = content.getFloatFromString()
             navigationController.pushViewController(controller, animated: true)
-//            friendGroup?.name = content
         case .eventDate:
+            friendGroupData.eventDate = content.getDateFromString()
+            goToGroupScreen()
 //           goToParticipants()
-            navigationController.popToRootViewController(animated: true)
+//            navigationController.popToRootViewController(animated: true)
         
         }
     }
     
     func goToGroupScreen() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        let eventDate = formatter.date(from: "10/08/2021")
-
-        let friendGroup = FriendGroup(name: "Amigos", friends: [], minimumValue: 200.0, eventDate: eventDate!)
+        let friendGroup = FriendGroup(name: friendGroupData.title,
+                                      friends: [],
+                                      minimumValue: friendGroupData.amount,
+                                      eventDate: friendGroupData.eventDate)
         
         let controller = GroupViewController(coordinator: self)
         controller.friendGroup = friendGroup

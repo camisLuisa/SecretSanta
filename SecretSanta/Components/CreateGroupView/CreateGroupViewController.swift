@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol CreateGroupDelegate: AnyObject {
+    func getGroupInfo(content: String, type: CreateGroupViewType)
+}
+
 final class CreateGroupViewController: UIViewController {
     // MARK: - Attributes -
     private let viewCreateGroup: CreateGroupView
     private let coordinator: CreateGroupCoordinator
+    weak var delegate: CreateGroupDelegate?
     
     // MARK: - Init -
     init(type: CreateGroupViewType, coordinator: CreateGroupCoordinator) {
@@ -33,8 +38,8 @@ final class CreateGroupViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-        self.viewCreateGroup.didTapAtNextButton = { type in
-            self.coordinator.goToNextCreateGroup(type: type)
+        self.viewCreateGroup.didTapAtNextButton = { type, content in
+            self.coordinator.goToNextCreateGroup(type: type, content: content)
         }
     }
     

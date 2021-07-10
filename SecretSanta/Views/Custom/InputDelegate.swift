@@ -10,4 +10,5 @@ import Foundation
 
 protocol InputDelegate: AnyObject {
     func validateInput(validatorStatus: ValidatorResponse)
+    func getContent(content: String)
 }
